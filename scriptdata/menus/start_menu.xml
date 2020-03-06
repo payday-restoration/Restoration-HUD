@@ -1,7 +1,7 @@
 <table>
     <menu search="menu;id='start_menu'">
         <node search="node;name='main'">
-            <item index="after:item;name='options'" next_node="res_credits" help_id="res_credits_help" name="res_credits" text_id="res_credits" trial_buy="true"/>
+            <item index="after:item;name='options'" next_node="res_credits" help_id="res_credits_help" name="res_credits" text_id="res_credits"/>
         </node>
         <node search="node;name='lobby'">
             <item index="after:item;name='crimenet'" callback="open_side_jobs" help_id="menu_cn_challenge_desc" name="menu_cn_challenge" text_id="menu_cn_challenge"/>

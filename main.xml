@@ -3,7 +3,6 @@
     <Classes directory="classes">
 		<class file="callbacks.lua"/>
 		<class file="hooks.lua"/>
-		<class file="radialmousemenu.lua"/>
     </Classes>
 	<!-- <AssetUpdates id="428" version="9.6.5" provider="modworkshop" use_local_dir="true" use_local_path="true"/> -->
 	<ScriptMods directory="scriptdata/menus">
@@ -45,12 +44,12 @@
 		<hook file="managers/menu/NewsFeedGUI.lua" source_file="lib/managers/menu/NewsFeedGUI"/>
 		<hook file="managers/UserManager.lua" source_file="lib/managers/usermanager"/>
 		<hook file="managers/musicmanager.lua" source_file="lib/managers/musicmanager"/>
-		<!-- Restoration HUD SC Hooks -->
+		
 		<hook file="tweak_data/assetstweakdata.lua" source_file="lib/tweak_data/assetstweakdata"/>
 		<hook file="tweak_data/interactiontweakdata.lua" source_file="lib/tweak_data/interactiontweakdata"/>
 		<hook file="managers/menumanagerpd2.lua" source_file="lib/managers/menumanagerpd2"/>
 		<hook file="managers/menumanager.lua" source_file="lib/managers/menumanager"/>
-		<hook file="menunodegui.lua" source_file="lib/managers/menu/menunodegui"/>
+		<hook file="managers/menu/menunodegui.lua" source_file="lib/managers/menu/menunodegui"/>
     </Hooks>
     <Localization directory="loc" default="english.txt">
     </Localization>
