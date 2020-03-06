@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<mod name="RestorationHUD" global_key="restorationhud">
+	<tweak definition="restorationmod_postprocessor_tweak.xml"/>
+</mod>

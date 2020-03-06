@@ -1,0 +1,19 @@
+<table>
+    <menu search="menu;id='start_menu'">
+        <node search="node;name='main'">
+            <item index="after:item;name='options'" next_node="res_credits" help_id="res_credits_help" name="res_credits" text_id="res_credits" trial_buy="true"/>
+        </node>
+        <node search="node;name='lobby'">
+            <item index="after:item;name='crimenet'" callback="open_side_jobs" help_id="menu_cn_challenge_desc" name="menu_cn_challenge" text_id="menu_cn_challenge"/>
+            <item index="after:item;name='inventory'" callback="open_crew_management" help_id="menu_crew_management_help" name="crew_management" text_id="menu_crew_management" visible_callback="is_server is_multiplayer"/>
+        </node>
+        <node search="node;name='crime_spree_lobby'">
+            <item index="after:item;name='inventory'" callback="open_side_jobs" help_id="menu_cn_challenge_desc" name="menu_cn_challenge" text_id="menu_cn_challenge"/>
+        </node>
+        <node align_line="0.5" credits_file="trial" gui_class="MenuNodeCreditsGui" menu_components="" name="res_credits" stencil_align="right" stencil_image="bg_stats" topic_id="res_credits" use_info_rect="false">
+			<legend name="menu_legend_back"/>
+			<default_item name="back"/>
+			<item back="true" name="back" previous_node="true" text_id="menu_back" visible_callback="is_pc_controller"/>
+		</node>
+    </menu>
+</table>
