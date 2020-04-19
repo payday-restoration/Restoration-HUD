@@ -1,6 +1,6 @@
 --THIS MUST ALWAYS HOOK TO core/lib/managers/coresequencemanager
 --local map = Global.level_data.level_id
-
+--[[
 local rnd = math.random (3)
 local rnd2 = math.random (2)
 local rnd3 = math.random (4)
@@ -336,3 +336,4 @@ Hooks:Add("BeardLibCreateScriptDataMods", "DiamondFixCallBeardLibSequenceFuncs",
 		BeardLib:ReplaceScriptData(mod_path .. "scriptdata/diamondFIX.custom_xml", "custom_xml", "units/pd2_dlc_dah/props/dah_props_diamond_stands/dah_prop_diamond_stand_01", "sequence_manager", true)
 	end
 end)
+]]
