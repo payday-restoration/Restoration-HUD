@@ -86,6 +86,7 @@
 					<option type="bool" default_value="false" name="StealthOrigPos"/>
 					<option type="bool" default_value="false" name="LowerBag"/>
 					<option type="bool" default_value="true" name="MusicShuffle"/>
+					<option type="bool" default_value="false" name="ClassicMovies"/>
 					<!-- <option type="bool" default_value="false" name="CasingTicker"/> -->
 				</option_group>
 				<option_group name="UI">
