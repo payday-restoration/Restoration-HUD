@@ -4,7 +4,7 @@
 	"menu_es_personal" : "Personal",
 	"menu_es_bad" : "Bad",
 	"menu_es_other" : "Other",
-	"RestorationPDTHHudNeeded" : "PD:TH HUD REBORN IS REQUIRED!",
+	"RestorationPDTHHudNeeded" : "PD:TH Challenges Standalone IS REQUIRED!",
 	"menu_paygrade" : "Pay grade: ",
 	"menu_diffgrade" : "Difficulty: ",
 	"menu_utility_radial_menu_name" : "Utility Radial Menu",
@@ -12,9 +12,7 @@
 	
 	"res_credits" : "Restoration Mod Credits",
 	"res_credits_help" : "View the credits for RESTORATION MOD.",
-	
-	"res_saveboost" : "HOLD $BTN_INTERACT TO BOOST TO LEVEL 100",
-	
+
 	"RestorationModOptionsButtonTitleID" : "Restoration Mod Options",
 	"RestorationModOptionsButtonDescID" : "Restoration Mod's Options.",
 	"RestorationModHUDOptionsButtonTitleID" : "Restoration HUD & UI Options",
@@ -49,6 +47,8 @@
 	"RestorationModEnv_FSD3DescID" : "Select an environment for Firestarter Day 3.",
 	"RestorationModEnv_WDD1NTitleID" : "Watchdogs Day 1 (Night)",
 	"RestorationModEnv_WDD1NDescID" : "Select an environment for Watchdogs Day 1 (Night).",
+	"RestorationModEnv_WDD1DTitleID" : "Watchdogs Day 1 (Day)",
+	"RestorationModEnv_WDD1DDescID" : "Select an environment for Watchdogs Day 1 (Day).",
 	"RestorationModEnv_WDD2DTitleID" : "Watchdogs Day 2 (Day)",
 	"RestorationModEnv_WDD2DDescID" : "Select an environment for Watchdogs Day 2 (Day).",
 	"RestorationModEnv_Alex3TitleID" : "Rats Day 3",
@@ -61,11 +61,16 @@
 	"RestorationModEnv_UkraDescID" : "Select an environment for Ukrainian Job.",
 	"RestorationModEnv_KosugiTitleID" : "Shadow Raid",
 	"RestorationModEnv_KosugiDescID" : "Select an environment for Shadow Raid Job.",
+	"RestorationModEnv_PetaTitleID" : "Goat Simulator Day 1",
+	"RestorationModEnv_PetaDescID" : "Select an environment for Goat Simulator Day 1.",
+
 
 	"RestorationModAltLastDownColorTitleID" : "Alternative Last Down Color Grading",
 	"RestorationModAltLastDownColorDescID" : "Switches the last down color grading to color_sin_classic.",
 	"RestorationModNoBleedoutTiltTitleID" : "Disable Bleedout Camera Tilt",
 	"RestorationModNoBleedoutTiltDescID" : "Disables the camera tilt that happens while in bleedout",
+	"RestorationModClassicMoviesTitleID" : "Classic Loadout Backgrounds",
+	"RestorationModClassicMoviesDescID" : "Enable or disable PD:TH loadout backgrounds when playing on Classic heists.",
 	
 	"default" : "Default",
 	"random" : "Random",
@@ -126,7 +131,7 @@
 	"RestorationModDistrictDescID" : "Enable or disable district descriptions in CRIME.NET.  Not gameplay accurate.",
 	"RestorationModSCOptionsButtonTitleID" : "Restoration Overhaul Options",
 	"RestorationModSCOptionsButtonDescID" : "Restoration Overhaul Options",
-	"RestorationModSCTitleID" : "Complete Overhaul",
+	"RestorationModSCTitleID" : "Complete Overhaul (DEBUG)",
 	"RestorationModSCDescID" : "Enable or disable Restoration's complete game overhaul. Toggling this option will automatically exit your game to prevent save corruption.",
 	"RestorationModHolidayTitleID" : "Holiday Effects",
 	"RestorationModHolidayDescID" : "Enable or disable Holiday effects for the overhaul.",
@@ -272,7 +277,7 @@
 	"heist_greattrain_name" : "Time Window",
 	"heist_easystore_name" : "Twenty-Four Seven",
 	"heist_sin_villa_name" : "SCORE: Villa Vivaldi",
-	"heist_monalisaoverdrive_name" : "Stonefist",
+	"heist_dragon_name" : "Stonefist",
 	"heist_jkl_base_name" : "Jackal's Safehouse",
 	"heist_junger_name" : "Distorted Angels",
 	"heist_deep_name" : "Deep Six",
@@ -305,8 +310,6 @@
 	
 	"menu_l_global_value_veritas" : "Restoration Mod",
 	"menu_l_global_value_veritas_desc" : "This is a Restoration Mod item!",
-	
-	"menu_alex_1_zipline" : "Bag Zipline",
 	
 	"menu_asset_wet_intel" : "Intel",
 	"menu_asset_risk_murky" : "Murkywater Mercenaries",
@@ -380,7 +383,13 @@
 	"bm_msk_vyse_wolf_desc" : "Vyse challenged Bear Grylls to a piss drinking completion... Vyse won, and Mr. Grylls used his survival skills to help make this mask.",
 	
 	"bm_msk_secret_old_hoxton" : "Secret Hoxton Reborn",
-	"bm_msk_secret_old_hoxton_desc" : "Hoxton left the Old Country to get his Payday in the new. When Bain first told him about the Secret, he fancied the idea of going after ancient items for their potential value, never really caring whether or not the legendary power Bain talked about was real or not.",	
+	"bm_msk_secret_old_hoxton_desc" : "Hoxton left the Old Country to get his Payday in the new. When Bain first told him about the Secret, he fancied the idea of going after ancient items for their potential value, never really caring whether or not the legendary power Bain talked about was real or not.",
+	
+	"bm_msk_secret_clover" : "Secret Clover",
+	"bm_msk_secret_clover_desc" : "When Bain told Clover about the secret she was skeptical. Bain's talk of ancient objects with mythical power always seemed farfetched but when she came face to face with the assembly from the three boxes all doubt left her mind.",	
+	
+	"bm_msk_secret_dragan" : "Secret Dragan",
+	"bm_msk_secret_dragan_desc" : "Being an ex cop Dragan had an eye for evidence and when Bain showed him his research for the secret he was raring to go hunt for ancient objects of power.",	
    
     "bm_all_seeing" : "The All Seeing Anchor",
 	"bm_all_seeing_desc" : "A horrifying vision, a nightmarish sight.\n\nThe powers that be have seen you, and ensure you are rewarded for your contributions.",	
@@ -393,7 +402,17 @@
 	
 	"bm_j4" : "J-4",
 	"bm_j4_desc" : "Jackal's mask. Or at least, a recreation.\n\nThe real mask is important to Jackal, and some say the real thing is loaded with sensitive data.\n\nThis recreation, however, the system running the display is very rudimentary, and only seeks to replicate the real thing.",
-	  
+	 
+	 
+	"bm_msk_finger" : "The Griefer",
+	"bm_msk_finger_desc" : "The Griefer is a mythical beast, known to have been a part of this world long ago. The beast deliberately chased and harassed common folk in villages and towns, hunting them down in unsuspecting ways. The Griefer derived pleasure from these acts and was a threat to the peace until the King's men finally found him and destroyed him.",
+    
+	"bm_msk_instinct" : "The Intuition",
+	"bm_msk_instinct_desc" : "This mask belonged to a mysterious warrior from far away place. He walked the lands, guided by his intuition, hunting evil forces across the world. He ventured to dungeons and slew thousands of evil beings he came across. In the end, he found peace, knowing that the next generation would continue as he did.",
+    
+	"bm_msk_unforsaken" : "The Unforsaken",
+	"bm_msk_unforsaken_desc" : "This legendary mask is a token of our appreciation of our community's dedication, understanding and continued support. From us in the OVERKILL crew - we salute you.\n\nThrough thick and thin, let those helmets fly.",
+	
 	"pattern_jkl_patt01_title" : "Jackals",
 	"pattern_jkl_patt02_title" : "Company",
 	"material_jkl_matt01_title" : "Fighting Feathers",
@@ -526,6 +545,8 @@
 
     "menu_jukebox_resmusic_wetwork" : "Spectre Shark",
     "menu_jukebox_screen_resmusic_wetwork" : "Spectre Shark",
+	"menu_jukebox_resmusic_bluewave" : "Spectre Shark 2020",
+    "menu_jukebox_screen_resmusic_bluewave" : "Spectre Shark 2020",
     "menu_jukebox_resmusic_burnout" : "Brute Force",
     "menu_jukebox_screen_resmusic_burnout" : "Brute Force",
     "menu_jukebox_resmusic_doghouse" : "Bleeding Edge",
@@ -540,9 +561,14 @@
     "menu_jukebox_screen_resmusic_speciesnova" : "Species Nova",
 	"menu_jukebox_resmusic_madvlad" : "Mad Vlad",
     "menu_jukebox_screen_resmusic_madvlad" : "Mad Vlad",
+	"menu_jukebox_resmusic_proto" : "Jackknife",
+    "menu_jukebox_screen_resmusic_proto" : "Jackknife",
     "menu_jukebox_screen_m1" : "Criminal Intent (Old Version)",
 	"menu_jukebox_screen_m2" : "Preparations (Old Version)",
 	"menu_jukebox_screen_m3" : "Blueprints (Prototype Version)",
+	"menu_jukebox_screen_m4" : "Resistance",
+	"menu_jukebox_screen_m5" : "Fortress",
+	"menu_jukebox_screen_m6" : "Payday Royale Theme",
 	
 	"look_dad" : "no_errors",
 	
@@ -554,6 +580,46 @@
 	"color_plus" : "E3 PAYDAY+",
 	"color_rvd1" : "Inverted",
 	"color_e3nice" : "E3 Nice",
-	"color_force" : "E3 BHD"
+	"color_force" : "E3 BHD",
+
+	"gm_gms_purchase" : "Purchase with Continental Coins",
+	"gm_gms_purchase_window_title" : "Are you sure?",
+	"gm_gms_purchase_window_message" : "Do you really want to buy '{1}'?\n\nIt will cost you {2} {3}.",
+	"gm_gms_purchase_failed" : "Cannot Purchase",
+	"gm_gms_free_of_charge_message" : "{1} is free of charge and can be applied to as many weapons as you wish.",
+	"gm_gms_cannot_afford_message" : "You cannot purchase {1}, as you do not have enough {3} to afford it. To purchase {1}, you need {2} {3}",
+
+	"pdth_hud_challenges" : "Challenges",
+	"pdth_hud_challenges_hint" : "View your completed and active challenges",
+	"pdth_hud_active_challenges" : "Active Challenges",
+	"pdth_hud_active_challenges_hint" : "Your current Challenges",
+	"pdth_hud_completed_challenges" : "Completed Challenges",
+	"pdth_hud_completed_challenges_hint" : "Your current completed Challenges",
+
+	"ch_deploy_ammobag_hl" : "Last Bullet!",
+	"ch_deploy_ammobag" : "Deploy $count Ammo Bags",
+	"ch_plant_tripmine_hl" : "Trip Mine Plantation",
+	"ch_plant_tripmine" : "Deploy $count Trip Mines",
+	"ch_deploy_medicbag_hl" : "I neeeeeeeed a medic bag!",
+	"ch_deploy_medicbag" : "Deploy $count Medic Bags",
+	"ch_deploy_ecm_hl" : "Electric Bomb",
+	"ch_deploy_ecm" : "Deploy $count Ecm's",
+	"ch_deploy_fak_hl" : "Cupcakes are nice",
+	"ch_deploy_fak" : "Deploy $count First Aid Kits",
+	"ch_deploy_sentry_hl" : "NEED A SENTRY HERE",
+	"ch_deploy_sentry" : "Deploy $count Sentries",
+
+	"ch_vs_desc" : "Using the $weapon, defeat $count $eneType. Using melee does not contribute to this",
+	"ch_vs_head_shots_desc" : "Using the $weapon, defeat $count $eneType with Headshots.",
+	"ch_vs" : "$weapon VS. $eneType $no",
+	"ch_vs_head_shots" : "$weapon VS. $eneType HEADSHOTS $no",
+
+	"ene_law" : "THE LAW",
+    "ene_law_desc" : "law enforcers",
+ 
+	"menu_me" : "YOU",
+
+	"RestorationModPDTHChallengesTitleID" : "Show PDTH Challenges",
+	"RestorationModPDTHChallengesDescID" : "Toggles the visibility of the PDTH challenges in the menu and the hud"
 		
 }
