@@ -337,7 +337,7 @@ function HUDAssaultCorner:init(hud, full_hud)
 	})
 	buffs_panel:set_top(0)
 	buffs_panel:set_right(self._hud_panel:w())
-	
+	self.buff_icon = "guis/textures/pd2/hud_buff_shield"
 	local vip_icon_ = buffs_panel:bitmap({
 		halign = "center",
 		valign = "center",
