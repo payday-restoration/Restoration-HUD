@@ -1,4 +1,3 @@
---if not RestorationTweak then
 restoration.textures = {}
 
 -- Color Grading Changer Standalone V3 Support
@@ -121,7 +120,6 @@ if restoration:all_enabled("HUD/MainHUD", "HUD/Teammate") then
 			48
 		}
 	}
-
 	
 tweak_data.hud_icons.equipment_ammo_bag = {
 		texture = "guis/textures/restoration/hud_icons",
@@ -142,7 +140,6 @@ tweak_data.hud_icons.equipment_doctor_bag = {
 		48
 	}
 }
-
 tweak_data.hud_icons.equipment_sentry = {
 		texture = "guis/textures/restoration/hud_icons",
 		texture_rect = {
@@ -152,7 +149,6 @@ tweak_data.hud_icons.equipment_sentry = {
 			48
 		}
 	}
-
 tweak_data.hud_icons.equipment_trip_mine = {
 		texture = "guis/textures/restoration/hud_icons",
 		texture_rect = {
@@ -162,7 +158,6 @@ tweak_data.hud_icons.equipment_trip_mine = {
 			48
 		}
 	}
-
 	
 tweak_data.hud_icons.equipment_ecm_jammer = {
 		texture = "guis/textures/restoration/hud_icons",
@@ -327,17 +322,17 @@ table.insert (tweak_data.gui.crime_net.codex,
 				}
 			},
 			{
-				id = "sina",
-				name_id = "heist_contact_sin",
+				id = "akashic",
+				name_id = "heist_contact_akashic",
 				{
-					desc_id = "heist_contact_sin_description",
+					desc_id = "heist_contact_akashic_description",
 					videos = {"shatter1"}
 				}
 			}
 
 		} )
 
---Jackal narrative entry
+--Jackal & Raze narrative entry
 tweak_data.narrative.contacts.shatter				= {}
 tweak_data.narrative.contacts.shatter.name_id					= "heist_contact_shatter"
 tweak_data.narrative.contacts.shatter.description_id	= "heist_contact_shatter_description"
@@ -345,13 +340,13 @@ tweak_data.narrative.contacts.shatter.image		= "guis/textures/pd2/crimenet_portr
 tweak_data.narrative.contacts.shatter.package = "packages/contact_interupt"
 tweak_data.narrative.contacts.shatter.assets_gui = Idstring( "guis/mission_briefing/preload_contact_interupt" )
 
---Sin narrative entry
-tweak_data.narrative.contacts.sina				= {}
-tweak_data.narrative.contacts.sina.name_id					= "heist_contact_sin"
-tweak_data.narrative.contacts.sina.description_id	= "heist_contact_shatter_description"
-tweak_data.narrative.contacts.sina.image		= "guis/textures/pd2/crimenet_portrait_hector"
-tweak_data.narrative.contacts.sina.package = "packages/contact_hector"
-tweak_data.narrative.contacts.sina.assets_gui = Idstring( "guis/mission_briefing/preload_contact_hector" )
+--Nicolas narrative entry
+tweak_data.narrative.contacts.akashic				= {}
+tweak_data.narrative.contacts.akashic.name_id					= "heist_contact_akashic"
+tweak_data.narrative.contacts.akashic.description_id	= "heist_contact_akashic_description"
+tweak_data.narrative.contacts.akashic.image		= "guis/textures/pd2/crimenet_portrait_hector"
+tweak_data.narrative.contacts.akashic.package = "packages/contact_hector"
+tweak_data.narrative.contacts.akashic.assets_gui = Idstring( "guis/mission_briefing/preload_contact_hector" )
 --District descriptions
 if restoration.Options:GetValue("HUD/UI/District") then
 	tweak_data.gui.crime_net.regions = {
