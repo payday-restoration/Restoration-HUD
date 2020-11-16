@@ -737,16 +737,5 @@ Hooks:Add("LocalizationManagerPostInit", "ResHUD_english_Localization", function
 		["ch_watchdogs_d1_heavy_wpn1_hl"] = "HEAVY ARMOR, AND HEAVIER WEAPONS",
 		["ch_watchdogs_d1_heavy_wpn1"] = "Complete day one of the WATCHDOGS job, wearing an ICTV and using miniguns, the Thanatos sniper, or RPG's only, on the OVERKILL difficulty or above.  You must have played from the start of the heist to complete this challenge."
 	})
-
-	local job = Global.level_data and Global.level_data.level_id
-	for _,j4 in ipairs(restoration.what_a_horrible_heist_to_have_a_curse) do
-		if job == j4 then
-			log("Spooky!")
-			LocalizationManager:add_localized_strings({	
-				["hud_assault_vip"] = "FACE YOUR NIGHTMARES AND WAKE UP",
-			})
-			break
-		end
-	end			
 	
 end)
