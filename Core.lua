@@ -3,6 +3,7 @@ restoration._mod_path = restoration:GetPath()
 function restoration:Init()
 end
 
+restoration._mod_path = restoration:GetPath()
 function restoration:all_enabled(...)
 	for _, opt in pairs({...}) do
 		if self.Options:GetValue(opt) == false then
