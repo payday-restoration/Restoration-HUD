@@ -1,5 +1,5 @@
-
-Hooks:Add("LocalizationManagerPostInit", "ResHUD_english_Localization", function(loc)
+-- ResMod english.json
+Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function(loc)
 	LocalizationManager:add_localized_strings({
 		["menu_es_boost"] = "Boost",
 		["menu_es_crew"] = "Crew",
@@ -25,8 +25,8 @@ Hooks:Add("LocalizationManagerPostInit", "ResHUD_english_Localization", function
 		["RestorationModOptionsButtonDescID"] = "Restoration HUD's Options.",
 		["RestorationModHUDOptionsButtonTitleID"] = "Restoration HUD & UI Options",
 		["RestorationModHUDOptionsButtonDescID"] = "Restoration's HUD & UI Options.",
-		["RestorationModOTHEROptionsButtonTitleID"] = "Extra Restoration Mod Options",
-		["RestorationModOTHEROptionsButtonDescID"] = "Extra Restoration Mod options.",
+		["RestorationModOTHEROptionsButtonTitleID"] = "Extra Restoration HUD Options",
+		["RestorationModOTHEROptionsButtonDescID"] = "Extra Restoration HUD options.",
 		["RestorationModUIOptionsButtonTitleID"] = "Alpha UI",
 		["RestorationModUIOptionsButtonDescID"] = "Alpha UI options.",
 		["RestorationModTimeOfDayTitleID"] = "New + Randomized Time-of-days",
@@ -196,6 +196,8 @@ Hooks:Add("LocalizationManagerPostInit", "ResHUD_english_Localization", function
 		["RestorationModSCDescID"] = "Enable or disable Restoration's complete game overhaul. Toggling this option will automatically exit your game to prevent save corruption.",
 		["RestorationModHolidayTitleID"] = "Holiday Effects",
 		["RestorationModHolidayDescID"] = "Enable or disable Holiday effects for the overhaul.",
+		["RestorationModRestoreHitFlashTitleID"] = "Restore Hit Flash",
+		["RestorationModRestoreHitFlashDescID"] = "Enable or disable the restored hit flash when taking damage.",	
 		["RestorationModNotifyTitleID"] = "Feature Notification",
 		["RestorationModNotifyDescID"] = "Enable or disable the notification for this feature.",
 		["RestorationModPauseTitleID"] = "Alpha Pause Menu",
@@ -204,7 +206,6 @@ Hooks:Add("LocalizationManagerPostInit", "ResHUD_english_Localization", function
 		["menu_support"] = "Overhaul Guide/Support",
 		["menu_support_help"] = "View the guide for Restoration Mod's Overhaul, get support, find crew mates.",
 		["menu_manual_header"] = "Placeholder Text",
-		["hud_instruct_mask_on_alpha"] = "Hold $BTN_USE_ITEM to put on your mask",
 		["hud_assault_alpha"] = "POLICE ASSAULT",
 		["hud_loot_secured_title"] = "LOOT SECURED!",
 		["debug_none"] = "OBJECTIVE",
@@ -332,6 +333,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResHUD_english_Localization", function
 		["restoration_level_data_mex_cooking"] = "TIME CLASSIFIED, Mexico - Coyopa Compound",
 		["restoration_level_data_bex"] = "TIME CLASSIFIED, Mexico - San Martín Bank",
 		["restoration_level_data_pex"] = "TIME CLASSIFIED, Mexico - Police Station",
+		["restoration_level_data_fex"] = "TIME CLASSIFIED, Mexico - Buluc's Mansion",
 		["restoration_level_data_wetwork"] = "TIME CLASSIFIED, LOCATION CLASSIFIED",
 		["restoration_level_data_junk"] = "TIME CLASSIFIED, LOCATION CLASSIFIED",
 		["restoration_level_data_holly"] = "5:00 PM, Los Angeles - Lukas' Mansion",
@@ -572,6 +574,10 @@ Hooks:Add("LocalizationManagerPostInit", "ResHUD_english_Localization", function
 		["RestorationModUppercaseNamesDescID"] = "Enable or disable uppercase names.",
 		["RestorationModPeerColorsTitleID"] = "Alpha Peer Colors",
 		["RestorationModPeerColorsDescID"] = "Enable or disable the alpha peer colors.",
+		["RestorationModPocoCrimenetAlignSortTitleID"] = "Poco Align and Sort CRIMENET",
+		["RestorationModPocoCrimenetAlignSortDescID"] = "Aligns and sorts CRIMENET by difficulty.",
+		["RestorationModPocoCrimenetScaleTitleID"] = "Poco CRIMENET Scale",
+		["RestorationModPocoCrimenetScaleDescID"] = "Allows you to set the scale of CRIMENET.",
 		["alpha_assault"] = "Early Alpha Corner",
 		["beta_assault"] = "Alpha Tape",
 
@@ -735,7 +741,16 @@ Hooks:Add("LocalizationManagerPostInit", "ResHUD_english_Localization", function
 
 
 		["ch_watchdogs_d1_heavy_wpn1_hl"] = "HEAVY ARMOR, AND HEAVIER WEAPONS",
-		["ch_watchdogs_d1_heavy_wpn1"] = "Complete day one of the WATCHDOGS job, wearing an ICTV and using miniguns, the Thanatos sniper, or RPG's only, on the OVERKILL difficulty or above.  You must have played from the start of the heist to complete this challenge."
+		["ch_watchdogs_d1_heavy_wpn1"] = "Complete day one of the WATCHDOGS job, wearing an ICTV and using miniguns, the Thanatos sniper, or RPG's only, on the OVERKILL difficulty or above.  You must have played from the start of the heist to complete this challenge.",
+		
+		["test_net"] = "Fast.Net",
+		["menu_test"] = "",
+		["state_filter"] = "State",
+		["menu_state_filter"] = "State Filter",
+		["menu_state_filter_help"] = "Shows the lobby state",
+		["menu_state_lobby"] = "Lobby",
+		["menu_state_loading"] = "Loading",
+		["menu_state_ingame"] = "Ingame"
 	})
 	
 end)
