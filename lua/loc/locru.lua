@@ -1,4 +1,52 @@
 
+local r = tweak_data.levels.ai_groups.russia --LevelsTweakData.LevelType.Russia
+local difficulty = Global.game_settings and Global.game_settings.difficulty or "normal"
+local difficulty_index = tweak_data:difficulty_to_index(difficulty)
+local m = tweak_data.levels.ai_groups.murkywater --LevelsTweakData.LevelType.Murkywater
+local z = tweak_data.levels.ai_groups.zombie --LevelsTweakData.LevelType.Zombie
+local f = tweak_data.levels.ai_groups.federales
+local ai_type = tweak_data.levels:get_ai_group_type()
+
+if ai_type == r then
+	Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Ticker", function(loc)
+		LocalizationManager:add_localized_strings({
+			["hud_assault_assault"] = "Идёт штурм наёмников",
+			["hud_assault_cover"] = "ОСТАВАЙТЕСЬ В УКРЫТИИ",
+			["hud_assault_alpha"] = "ШTУPM HAЕMHИKOB"
+		})
+	end)
+elseif ai_type == z then
+	Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Ticker", function(loc)
+		LocalizationManager:add_localized_strings({
+			["hud_assault_assault"] = "Итдё Плоиецский Шрутм",
+			["hud_assault_cover"] = "ОСТВЙТСЬ В УРКЫТИИ...МЯСО",
+			["hud_assault_alpha"] = "ПЛОИЕЦСКИЙ ШРУТМ"
+		})
+	end)
+elseif ai_type == f then
+	Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Ticker", function(loc)
+		LocalizationManager:add_localized_strings({
+			["hud_assault_assault"] = "Asalto Federal En Marcha",
+			["hud_assault_cover"] = "MANTENTE A CUBIERTO",
+			["hud_assault_alpha"] = "ASALTO FEDERAL"
+		})
+	end)
+elseif ai_type == m and difficulty_index <= 7 then
+	Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Ticker", function(loc)
+		LocalizationManager:add_localized_strings({
+			["hud_assault_assault"] = "Идёт штурм Murkywater",
+			["hud_assault_alpha"] = "ШТУРМ MURKYWATER"
+		})
+	end)
+elseif ai_type == m then
+	Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Ticker", function(loc)
+		LocalizationManager:add_localized_strings({
+			["hud_assault_assault"] = "Идёт рейд OMNIA",
+			["hud_assault_alpha"] = "РЕЙД OMNIA"
+		})
+	end)
+end
+
 -- ResMod english.json
 Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function(loc)
 	LocalizationManager:add_localized_strings({
@@ -334,7 +382,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["restoration_level_data_mex_cooking"] = "ВРЕМЯ ЗАСЕКРЕЧЕНО, Мексика - база Койопов",
 		["restoration_level_data_bex"] = "ВРЕМЯ ЗАСЕКРЕЧЕНО, Мексика - Банк Сан Мартин",
 		["restoration_level_data_pex"] = "ВРЕМЯ ЗАСЕКРЕЧЕНО, Мексика - Полицейский участок",
-		["restoration_level_data_fex"] = "TIME CLASSIFIED, Mexico - Buluc's Mansion",
+		["restoration_level_data_fex"] = "ВРЕМЯ ЗАСЕКРЕЧЕНО, Мексика - Особняк Булука",
 		["restoration_level_data_wetwork"] = "ВРЕМЯ ЗАСЕКРЕЧЕНО, ЛОКАЦИЯ ЗАСЕКРЕЧЕНА",
 		["restoration_level_data_junk"] = "ВРЕМЯ ЗАСЕКРЕЧЕНО, ЛОКАЦИЯ ЗАСЕКРЕЧЕНА",
 		["restoration_level_data_holly"] = "5:00 PM, Los Angeles - Lukas' Mansion",
@@ -575,10 +623,10 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["RestorationModUppercaseNamesDescID"] = "Включить или выключить отображение ников игроков заглавными буквами.",
 		["RestorationModPeerColorsTitleID"] = "Цвета товарищей из Альфы",
 		["RestorationModPeerColorsDescID"] = "Включить или выключить цвета товарищей из альфа-версии игры.",
-		["RestorationModPocoCrimenetAlignSortTitleID"] = "Poco Align and Sort CRIMENET",
-		["RestorationModPocoCrimenetAlignSortDescID"] = "Aligns and sorts CRIMENET by difficulty.",
-		["RestorationModPocoCrimenetScaleTitleID"] = "Poco CRIMENET Scale",
-		["RestorationModPocoCrimenetScaleDescID"] = "Allows you to set the scale of CRIMENET.",
+		["RestorationModPocoCrimenetAlignSortTitleID"] = "Подгонка и сортировка CRIMENET",
+		["RestorationModPocoCrimenetAlignSortDescID"] = "Подгоняет и сортирует CRIMENET по сложности.",
+		["RestorationModPocoCrimenetScaleTitleID"] = "Масштаб CRIMENET",
+		["RestorationModPocoCrimenetScaleDescID"] = "Позволяет менять масштаб CRIMENET.",
 		["alpha_assault"] = "Уголок",
 		["beta_assault"] = "Лента",
 
@@ -746,11 +794,108 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		
 		["test_net"] = "Fast.Net",
 		["menu_test"] = "",
-		["state_filter"] = "State",
-		["menu_state_filter"] = "State Filter",
-		["menu_state_filter_help"] = "Shows the lobby state",
-		["menu_state_lobby"] = "Lobby",
-		["menu_state_loading"] = "Loading",
-		["menu_state_ingame"] = "Ingame"
+		["state_filter"] = "Статус",
+		["menu_state_filter"] = "Фильтр по статусу",
+		["menu_state_filter_help"] = "Показывает статус лобби",
+		["menu_state_lobby"] = "В лобби",
+		["menu_state_loading"] = "Загружается",
+		["menu_state_ingame"] = "В игре",
+
+		["hud_instruct_mask_on"] = "УДЕРЖИВАЙТЕ $BTN_USE_ITEM чтобы надеть маску",
+		["hud_instruct_mask_on_alpha"] = "УДЕРЖИВАЙТЕ $BTN_USE_ITEM чтобы надеть маску",
+				
+		-- ///Stuff ripped from the various locale files we had ///
+
+		--Halloween Dozer Sword
+		["bm_melee_halloween_sword"] = "Меч Безголового Бульдозера",
+		["menu_l_global_value_halloween_sword"] = "Это предмет из Хеллоуина 2013!",
+
+		--S&W .500
+		["bm_w_shatters_fury"] = "Феникс .500",
+
+		["bm_wp_wpn_fps_pis_shatters_fury_b_comp1"] = "Ствол 'Горус'",
+		["bm_wp_wpn_fps_pis_shatters_fury_b_comp2"] = "Ствол 'Шаттер'",
+		["bm_wp_wpn_fps_pis_shatters_fury_b_long"] = "Ствол 'Хатхор'",
+		["bm_wp_wpn_fps_pis_shatters_fury_b_short"] = "Ствол 'Фаерберд'",
+
+		["bm_wp_wpn_fps_pis_shatters_fury_g_ergo"] = "Эргономичная рукоять",
+
+		["bm_wp_wpn_fps_pis_shatters_fury_body_smooth"] = "Гладкий барабан",
+
+		["menu_l_global_value_shatters_fury"] = "Это предмет ВЕРИТАС!",
+
+		--MK-23
+		--Semi-automatic pistol. Hold down ¦ to aim. Release to fire.
+		["bm_w_socom"] = "Анубис .45",
+		["bm_w_x_socom"] = "Парные Анубис .45",
+		["bm_wp_wpn_fps_upg_fl_pis_socomlam"] = "Комбинированный модуль 'Ра'",
+		["bm_wp_wpn_fps_upg_fl_pis_socomlam_desc"] = "Включается на кнопку $BTN_GADGET.",
+
+		--Ranted NMH
+		["heist_no_mercy_ranted_name"] = "Нет милосердию",
+		["heist_no_mercy_ranted_brief"] = "Мы отправляется в госпиталь 'Милосердие' за кровью. У местного пациента обнаружили какой-то редкий вирус, образец которого нам нужно заполучить. Пусть вас ничего не останавливает, ибо платят очень хорошо. Конец света не наступит, если мы прольём немного крови за большие деньги, не так ли?",
+
+		["heist_nmh_res_name"] = "Госпиталь 'Милосердие'",
+		["heist_nmh_res_brief"] = "Нашему клиенту нужен образец крови пациента, находящегося в отделе интенсивной терапии в госпитале 'Милосердие'. Вам нужно будет войти туда, вырубить камеры, проконтролировать толпу и дать мне доступ в базу данных, чтобы я смог найти цель. Учитывая слабую охрану там, это должна быть чистая и красивая работа. Я заберу вас с крыши, когда вы закончите. Работа немного мутная, заказана через третьих лиц, у которых есть знакомые в военной сфере, но это стоит того. За работу мы получим кое-что, что нам пригодится в будущем, и довольно неплохие деньги.",
+
+		["heist_nmh_new"] = "Возьмите и протестируйте кровь у пациента",
+		["heist_nmh_new_desc"] = "Вам нужно найти центрифугу и проверить образцы крови.",
+
+		["heist_nmh_new2"] = "Вызовите лифт",
+		["heist_nmh_new2_desc"] = "Нажмите кнопку и ожидайте лифт",
+
+		["heist_nmh_new3"] = "Вызовите лифт",
+		["heist_nmh_new3_desc"] = "Нажмите кнопку и ожидайте лифт",	
+
+		--OICW--
+		["bm_w_osipr"] = "SABR",
+		["bm_w_osipr_gl"] = "SABR - подствольный гранатомёт",
+
+		--GO Bank remastered
+		["menu_nh_mod_gobank_v2"] = "Банк GO - Ремастер",
+
+		["heist_gobank_v2_name"] = "Банк GO - Ремастер",
+		["heist_gobank_v2_brief"] = "Классическое ограбление банка. Взломайте хранилище, опустошите клиентские ячейки и вынесите ценности. Бэйн говорит, что у этих банков самый низкий рейтинг ограблений в стране. Пора изменить это.\n\n» Найдите ключ-карты. Для хранилищна нужно две\n» Если не получится - используйте термобур\n» Взломайте клиентские ячейки\n» Соберите небесный крюк\n» Вытащите деньги",
+
+		["heist_roberts_v2_name"] = "Банк Робертс",
+		["heist_roberts_v2_brief"] = "У нас есть наводка на банк. Не самый большой, но есть информация, что в его хранилище временно хранится очень много наличных. Иностранная валюта для обмена.\n\nВ любом случае, вы знаете, как действовать: как вам захочется. Тихо прокрадитесь в банк или устройте пекло и погром. В любом случае, я знаю, как вытащить оттуда деньги. Вы узнаете, о чём я, когда увидите. Я думаю, вам это понравится.",
+
+		["csgo_plane_timer_text"] = "Ожидайте самолет &&TIMER",
+		["csgo_plane_timer_desc"] = "Ожидайте самолет &&TIMER",
+
+		["hud_equipment_pickup_spraycan"] = "Нажмите $BTN_INTERACT чтобы подобрать краску",
+		["hud_action_spraypaint"] = "Нажмите $BTN_INTERACT чтобы рисовать",
+		["hud_action_spraypaint_none"] = "Необходима краска",
+		["spraycan_obtained"] = "Краска получена",
+		["hud_equipment_obtained_spraycan"] = "Краска получена",
+
+		["trophy_csgo01"] = "Ящик с граффити",
+		["trophy_csgo01_desc"] = "И за него даже не пришлось платить!",
+		["trophy_csgo01_objective"] = "На ограблении Банк GO - Ремастер, найдите краску и нарисуйте граффити в хранилище.",
+
+		["END"] = "КОНЕЦ",	
+
+		--Whurr Heat Street Edit
+		["heist_heat_street_new_name"] = "Схватка на улице (классика)",
+		["heist_heat_street_new_brief"] = "Говорят, что ничего не бывает наверняка, но эта работа выглядит как нельзя проще: зайти, взять кейс, уйти. Ваш доверенный водитель Мэтт будет ждать вас в ближайшей аллее, и, если вы доберётесь до фургона, всё пройдёт как по маслу.",
+		["heist_street_new_name"] = "Схватка на улице (классика)",
+		["heist_street_new_brief"] = "Говорят, что ничего не бывает наверняка, но эта работа выглядит как нельзя проще: зайти, взять кейс, уйти. Ваш доверенный водитель Мэтт будет ждать вас в ближайшей аллее, и, если вы доберётесь до фургона, всё пройдёт как по маслу.",
+
+		--Heat Street, Skirmish edition
+		["heist_skm_heat_street_name"] = "Жилой район - здание 'Инквелл'",
+		["heist_skm_heat_street_brief"] = "Недавно копы допросили заключенного, который утверждает, что видел лицо Бейна и может его опознать. Разумеется, это неправда - но об этом не догадываются ни копы, ни наши враги, поэтому мы воспользуемся ситуацией, чтобы срубить немного денег. Перехватите заключенного, когда его будут перевозить около старой фабрики, где еще разбился тот идиот Мэтт, когда пытался убежать тот нас.",
+		["heist_skm_street_name"] = "Скирмиш: Жилой район - здание 'Инквелл'",
+		["heist_skm_street_brief"] = "Недавно копы допросили заключенного, который утверждает, что видел лицо Бейна и может его опознать. Разумеется, это неправда - но об этом не догадываются ни копы, ни наши враги, поэтому мы воспользуемся ситуацией, чтобы срубить немного денег. Перехватите заключенного, когда его будут перевозить около старой фабрики, где еще разбился тот идиот Мэтт, когда пытался убежать тот нас.",	
+
+		--Xmas Hoxout and Breaking Feds
+		["heist_xmn_hox"] = "Рождественское спасение Хокстона",
+		["heist_xmn_hox1"] = "Рождественский побег",
+		["heist_xmn_hox_1_brief"] = "Дантист организовал новое судебное разбирательство для Хокстона. Нет, не для тебя, Хокс. Я имел в виду... Для старого. Ладно, с кличками потом разберёмся. Суд пройдёт быстро. С его статьёй он всё равно не выйдет из тюрьмы. Мы должны перехватить Хокса, пока его ведут с заседания. Спасём Хокстона и покажем огромный средний палец судебной системе. Действуйте громко: взорвите стену в здании суда, хватайте Хокса и сваливайте.$NL;$NL;Улицы вокруг здания суда перекрыты. Они ожидают подвоха, так что готовьте пушки покрупнее и боеприпасов побольше.",
+		["heist_xmn_hox2"] = "Рожденственские поиски",
+		["heist_xmn_hox_2_brief"] = "Парни, спасибо за то, что вытащили меня. Только я уверен в том, что меня подставили. Я не должен был попасть в тюрьму. У федералов было на меня гораздо больше, чем эти сволочи смогли бы раскопать. Кто-то решил меня сдать. Я узнаю, кто это сделал.$NL;$NL;Это будет нелегко, так что мы не будем ходить вокруг да около, ладно? Никаких сделок или связей с контактами. Мы отправимся сразу к месту, где всё началось. В здание имени Эдгара Гувера, самый главный улей FBI. Мы выясним, кто попытался меня поиметь.",
+		["heist_xmn_hox_brief"] = "Дантист сфальсифицировал новое судебное разбирательство для Хокстона. Мы должны перехватить его сразу после слушания. Действовать будете настолько громко, насколько это возможно: взрываете стену, хватаете Хокстона и сбегаете к чертям.$NL;$NL;» Освободите Хокстона$NL;» Проведите его до бронированного грузовика$NL;» Сопровождайте грузовик$NL;» Скройтесь с места преступления вместе с Хокстоном.",
+
+		["heist_xmn_tag_name"] = "Проникновение на Рождество"
 	})
+	
 end)
