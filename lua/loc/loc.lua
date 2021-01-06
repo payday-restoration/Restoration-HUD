@@ -602,6 +602,8 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["RestorationModExtraOptionsButtonDescID"] = "Even more options!",
 		["RestorationModRealAmmoTitleID"] = "Real Ammo",
 		["RestorationModRealAmmoDescID"] = "The total ammo counter ignores ammo currently in your weapon.",
+		["RestorationModVoiceIconTitleID"] = "Voice Chat Icon",
+	    ["RestorationModVoiceIconDescID"] = "Displays when a player is using voice chat in-game.",
 		["RestorationModStealthOrigPosTitleID"] = "Vanilla Detection Meter Positioning",
 		["RestorationModStealthOrigPosDescID"] = "Places the detection meter in the same area as Vanilla.",
 		["RestorationModLowerBagTitleID"] = "Lowered carried bag popup",
