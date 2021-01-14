@@ -603,6 +603,8 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["RestorationModExtraOptionsButtonDescID"] = "Ещё больше опций!",
 		["RestorationModRealAmmoTitleID"] = "Действительный счётчик патронов",
 		["RestorationModRealAmmoDescID"] = "Счётчик патронов в запасе будет игнорировать патроны, которые уже заряжены.",
+		["RestorationModVoiceIconTitleID"] = "Voice Chat Icon",
+	    ["RestorationModVoiceIconDescID"] = "Displays when a player is using voice chat in-game.",
 		["RestorationModStealthOrigPosTitleID"] = "Стандартное расположение обнаружения",
 		["RestorationModStealthOrigPosDescID"] = "Полоска обнаружения будет в том же месте, что и в ванильной игре.",
 		["RestorationModLowerBagTitleID"] = "Понизить текст о подобранной сумке",

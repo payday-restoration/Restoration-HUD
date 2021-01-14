@@ -90,6 +90,7 @@
 					<option type="bool" default_value="true" name="MusicShuffle"/>
 					<option type="bool" default_value="false" name="ClassicMovies"/>
 					<option type="bool" default_value="false" name="RealAmmo"/>
+					<option type="bool" default_value="false" name="VoiceIcon"/>
 					<!-- <option type="bool" default_value="false" name="CasingTicker"/> -->
 				</option_group>
 				<option_group name="UI">
