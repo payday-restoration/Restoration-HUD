@@ -7,7 +7,7 @@ HUDAssaultCorner._custom_lines_casing = {
 	"I'M NOT HERE FOR YOUR ENTERTAINMENT",
 	"DO YOU PLAN ON MASKING UP ANYTIME SOON?",
 	"NOBODY CARED WHO I WAS, CAUSE I STILL HADN'T MASKED UP",
-	"CREDITS    ///    CGNICK, KAILLUS, WILKO, I AM NOT A SPY, BATTLE DOG, ZDANN, SUPER MUFFIN, WOLFY, GREAT BIG BUSHY BEARD, WILLCARIO, OLIPRO, INSANO-MAN, MELONIOUS, BENEDICT, SEVEN, PORKY-DA-CORGI, DOKTOR AKCEL, A.J. VALENTINE, TOM SEA, MUD, KRYMXON, SC, ELYSIUM, GARRETT, WHITE3DESIGNER, BMSTU_HEDGEHOG, SIX-DEMON BAG, SOME NAME HERE, REZULUX, BANGL, TONIS, FENDERMCBENDER, VICIOUSWALRUS, EDISLEADO, RINO, TEACYN, FUGLORE, JAREY, RAVIACLE, HOXI, VXWOLF, KARL LAKNER, AND EVERYONE ELSE AT OVERKILL SOFTWARE AND STARBREEZE AB    ///    THANK YOU EVERYONE <3",
+	"CREDITS    ///    CGNICK, KAILLUS, WILKO, I AM NOT A SPY, BATTLE DOG, ZDANN, SUPER MUFFIN, WOLFY, GREAT BIG BUSHY BEARD, WILLCARIO, OLIPRO, INSANO-MAN, MELONIOUS, BENEDICT, SEVEN, PORKY-DA-CORGI, DOKTOR AKCEL, A.J. VALENTINE, TOM SEA, MUD, KRYMXON, SC, ELYSIUM, GARRETT, WHITE3DESIGNER, BMSTU_HEDGEHOG, SIX-DEMON BAG, SOME NAME HERE, REZULUX, BANGL, TONIS, FENDERMCBENDER, VICIOUSWALRUS, EDISLEADO, RINO, TEACYN, FUGLORE, JAREY, RAVICALE, HOXI, VXWOLF, KARL LAKNER, AND EVERYONE ELSE AT OVERKILL SOFTWARE AND STARBREEZE AB    ///    THANK YOU EVERYONE <3",
 	"CONGRATULATIONS!  YOU ARE OUR 1000TH VISITOR!",
 	"WOW.. THAT CREDITS SURE IS LONG, AIN'T IT?  CAN WE GET IT LONGER...?",
 	"BEGINNING VIRTUOUS MISSION...",
@@ -44,7 +44,7 @@ HUDAssaultCorner._custom_lines_ponr = {
 	"RUN, RUN GOD DAMN IT",
 	"I'm the point of no return ticker!  I'm not in the mod anymore.  Isn't that unfortunate?  If for some reason you're seeing me, please alert the team right away.  Thanks!",
 }
-HUDAssaultCorner._custom_line_chance = 1 -- Chance of a new line, between 0-100
+HUDAssaultCorner._custom_line_chance = 2 -- Chance of a new line, between 0-100
 
 function HUDAssaultCorner:init(hud, full_hud)
 	self._hud_panel = hud.panel
@@ -240,7 +240,7 @@ function HUDAssaultCorner:init(hud, full_hud)
 		h = 100,
 		x = self._hud_panel:w() - size
 	})
-	self._noreturn_color = Color(1, 1, 0, 0)
+	self._noreturn_data = self:_get_noreturn_data()
 	local w = point_of_no_return_panel:w()
 	local size = 200 - tweak_data.hud.location_font_size
 	local point_of_no_return_text = point_of_no_return_panel:text({
@@ -253,11 +253,13 @@ function HUDAssaultCorner:init(hud, full_hud)
 		vertical = "center",
 		x = 0,
 		y = 0,
-		color = self._noreturn_color,
+		color = self._noreturn_data.color,
 		font_size = 30,
 		font = "fonts/font_large_mf"
 	})
-	point_of_no_return_text:set_text(utf8.to_upper(managers.localization:text("hud_assault_point_no_return_in", {time = ""})))
+	point_of_no_return_text:set_text(utf8.to_upper(managers.localization:text(self._noreturn_data.text_id, {
+		time = ""
+	})))
 	local _, _, w, h = point_of_no_return_text:text_rect()
 	point_of_no_return_text:set_size(w, h)
 	point_of_no_return_text:set_right(point_of_no_return_panel:w())
@@ -271,7 +273,7 @@ function HUDAssaultCorner:init(hud, full_hud)
 		vertical = "center",
 		x = 0,
 		y = 0,
-		color = self._noreturn_color,
+		color = self._noreturn_data.color,
 		font_size = 30,
 		font = "fonts/font_large_mf"
 	})
@@ -280,6 +282,7 @@ function HUDAssaultCorner:init(hud, full_hud)
 	point_of_no_return_timer:set_right(point_of_no_return_panel:w())
 	point_of_no_return_timer:set_top(point_of_no_return_text:bottom())
 	--point_of_no_return_text:set_right( math.round( point_of_no_return_timer:left() ) )
+	self:_update_noreturn()
 	if self._hud_panel:child("casing_panel") then
 		self._hud_panel:remove(self._hud_panel:child("casing_panel"))
 	end
@@ -338,7 +341,7 @@ function HUDAssaultCorner:init(hud, full_hud)
 	buffs_panel:set_top(0)
 	buffs_panel:set_right(self._hud_panel:w())
 	self.buff_icon = "guis/textures/pd2/hud_buff_shield"
-	
+
 	local buffs_pad_panel = self._hud_panel:panel({
 		visible = false,
 		name = "buffs_pad_panel",
@@ -358,7 +361,7 @@ function HUDAssaultCorner:init(hud, full_hud)
 	})
 	vip_icon_buff:set_y(15)
 	vip_icon_buff:set_x(0)
-	
+
 	local vip_icon_ = buffs_pad_panel:bitmap({
 		halign = "center",
 		valign = "center",
@@ -795,8 +798,8 @@ function HUDAssaultCorner:_end_assault()
 	corner_panel:stop()
 	local assault_panel = self._hud_panel:child("assault_panel")
 	local text_panel = assault_panel:child("text_panel")
-	-- self._hud_panel:child("assault_panel"):child("text_panel"):stop()
-	-- self._hud_panel:child("assault_panel"):child("text_panel"):clear()
+	--self._hud_panel:child("assault_panel"):child("text_panel"):stop()
+	--self._hud_panel:child("assault_panel"):child("text_panel"):clear()
 	if self:has_waves() then
 		assault_panel:set_visible(restoration.Options:GetValue("HUD/AssaultStyle") == 1)
 		wave_panel = self._hud_panel:child("wave_panel")
@@ -925,15 +928,16 @@ function HUDAssaultCorner:feed_point_of_no_return_timer(time, is_inside)
 	local text = (minutes < 10 and "0" .. minutes or minutes) .. ":" .. (seconds < 10 and "0" .. seconds or seconds)
 	self._hud_panel:child("point_of_no_return_panel"):child("point_of_no_return_timer"):set_text(text)
 end
-function HUDAssaultCorner:show_point_of_no_return_timer()
+function HUDAssaultCorner:show_point_of_no_return_timer(id)
 	local delay_time = self._assault and 1.2 or 0
 	self:_end_assault()
+	self:_update_noreturn(id)
 	local point_of_no_return_panel = self._hud_panel:child("point_of_no_return_panel")
 	point_of_no_return_panel:stop()
 	point_of_no_return_panel:animate(callback(self, self, "_animate_show_noreturn"), delay_time)
 	self:_hide_hostages()
 	self._hud_panel:child("point_of_no_return_panel"):set_visible(true)
-	self:_set_feedback_color(self._noreturn_color)
+	-- self:_set_feedback_color(self._noreturn_color)
 	self._point_of_no_return = true
 end
 function HUDAssaultCorner:hide_point_of_no_return_timer()
@@ -1131,4 +1135,40 @@ end
 
 function HUDAssaultCorner:get_completed_waves_string()
 	return tostring(managers.groupai:state():get_assault_number() or 0)
+end
+
+function HUDAssaultCorner:_get_noreturn_data(id)
+	local noreturn_tweak_data = id and tweak_data.point_of_no_returns[id] or tweak_data.point_of_no_returns.noreturn
+	local noreturn_data = {
+		color = noreturn_tweak_data.color or Color(1, 1, 0, 0),
+		text_id = noreturn_tweak_data.text_id
+	}
+
+	if not noreturn_data.text_id then
+		if _G.IS_VR then
+			noreturn_data.text_id = "hud_assault_point_no_return"
+		else
+			noreturn_data.text_id = "hud_assault_point_no_return_in"
+		end
+	end
+
+	return noreturn_data
+end
+
+function HUDAssaultCorner:_update_noreturn(id)
+	local point_of_no_return_panel = self._hud_panel:child("point_of_no_return_panel")
+	local point_of_no_return_text = point_of_no_return_panel:child("point_of_no_return_text")
+	local point_of_no_return_timer = point_of_no_return_panel:child("point_of_no_return_timer")
+	local noreturn_data = self:_get_noreturn_data(id)
+
+	if noreturn_data.color ~= self._noreturn_data.color then
+		point_of_no_return_text:set_color(noreturn_data.color)
+		point_of_no_return_timer:set_color(noreturn_data.color)
+	end
+
+	if noreturn_data.text_id ~= self._noreturn_data.text_id then
+		point_of_no_return_text:set_text(managers.localization:to_upper_text(noreturn_data.text_id))
+	end
+
+	self._noreturn_data = noreturn_data
 end
