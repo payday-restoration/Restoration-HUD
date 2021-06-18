@@ -4,7 +4,7 @@
             <item index="after:item;name='options'" next_node="res_credits" help_id="res_credits_help" name="res_credits" text_id="res_credits"/>
         </node>
         <node search="node;name='lobby'">
-            <item index="after:item;name='crimenet'" callback="open_side_jobs" help_id="menu_cn_challenge_desc" name="menu_cn_challenge" text_id="menu_cn_challenge"/>
+            <item index="after:item;name='achievements'" callback="open_side_jobs" help_id="menu_cn_challenge_desc" name="menu_cn_challenge" text_id="menu_cn_challenge"/>
             <item index="after:item;name='inventory'" callback="open_crew_management" help_id="menu_crew_management_help" name="crew_management" text_id="menu_crew_management" visible_callback="is_server is_multiplayer"/>
         </node>
         <node search="node;name='crime_spree_lobby'">
