@@ -382,6 +382,8 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["restoration_level_data_bex"] = "TIME CLASSIFIED, Mexico - San Martín Bank",
 		["restoration_level_data_pex"] = "TIME CLASSIFIED, Mexico - Police Station",
 		["restoration_level_data_fex"] = "TIME CLASSIFIED, Mexico - Buluc's Mansion",
+		["restoration_level_data_chas"] = "8:30 PM, San Francisco - Chinatown",
+		["restoration_level_data_sand"] = "10:30 PM, San Francisco - Dockyard",
 		["restoration_level_data_wetwork"] = "TIME CLASSIFIED, LOCATION CLASSIFIED",
 		["restoration_level_data_junk"] = "TIME CLASSIFIED, LOCATION CLASSIFIED",
 		["restoration_level_data_holly"] = "5:00 PM, Los Angeles - Lukas' Mansion",
