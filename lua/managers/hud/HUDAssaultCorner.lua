@@ -820,13 +820,11 @@ function HUDAssaultCorner:_end_assault()
 			self:_popup_wave_finished()
 		end
 	else
-		self:_close_assault_box()
+		self:_close_assault_panel()
 	end
 end
 
-
-local _close_assault_box_original = HUDAssaultCorner._close_assault_box
-function HUDAssaultCorner:_close_assault_box()
+function HUDAssaultCorner:_close_assault_panel()
 	local corner_panel = self._hud_panel:child("corner_panel")
 	corner_panel:set_visible(false)
 	corner_panel:stop()
@@ -836,9 +834,6 @@ function HUDAssaultCorner:_close_assault_box()
 		self:_set_hostage_offseted(false)
 		local hostage_panel = self._hud_panel:child("hostages_panel")
 		hostage_panel:animate(callback(self, self, "_offset_hostage", false))
-	end
-	if not restoration:all_enabled("HUD/MainHUD", "HUD/AssaultPanel") then
-		_close_assault_box_original(self)
 	end
 end
 function HUDAssaultCorner:_show_icon_assaultbox(icon_assaultbox)
@@ -1126,7 +1121,7 @@ function HUDAssaultCorner:_animate_wave_completed(panel, assault_hud)
 	wait(1.4)
 	wave_text:set_text(self:get_completed_waves_string())
 	wait(7.2)
-	self:_close_assault_box()
+	self:_close_assault_panel()
 end
 
 function HUDAssaultCorner:has_waves()
