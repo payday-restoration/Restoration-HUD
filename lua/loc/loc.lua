@@ -9,9 +9,9 @@ local ai_type = tweak_data.levels:get_ai_group_type()
 if ai_type == r then
 	Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Ticker", function(loc)
 		LocalizationManager:add_localized_strings({
-			["hud_assault_assault"] = "ИДЁТ ЩТУРМ НАЁМНИКОВ",
+			["hud_assault_assault"] = "ИДЁТ ШТУРМ НАЁМНИКОВ",
 			["hud_assault_cover"] = "ОСТАВАЙТЕСЬ В УКРЫТИИ",
-			["hud_assault_alpha"] = "ЩTУPM HAЁMHИKOB"
+			["hud_assault_alpha"] = "ШTУPM HAЁMHИKOB"
 		})
 	end)
 elseif ai_type == z then
@@ -45,7 +45,6 @@ elseif ai_type == m then
 		})
 	end)
 end
-
 -- ResMod english.json
 Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function(loc)
 	LocalizationManager:add_localized_strings({
@@ -64,8 +63,8 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["res_credits_help"] = "View the credits for RESTORATION HUD.",
 
 		["Warning_overhaul_title"] = "WARNING: Game closing to prevent save corruption.",
-		["dialog_show_overhaul_dialog"] = "You are DISABLING the Complete Overhaul. It is typically NOT RECOMMENDED to do this, and you should instead REMOVE the mod from your mods folder if you intend not to use the Overhaul actively.\n\nYour game will close automatically in $TIME seconds, or when you press OK.",
-		["dialog_enable_overhaul_dialog"] = "You are ENABLING the Complete Overhaul. The Overhaul should typically remain ON at all times, and only be disabled by removing the mod from your mods folder.\n\nYour game will close automatically in $TIME seconds, or when you press OK.",
+		["dialog_show_overhaul_dialog"] = "You are DISABLING the Complete Overhaul. It is typically NOT RECOMMENDED to do this, and you should instead REMOVE the HUD from your mods folder if you intend not to use the Overhaul actively.\n\nYour game will close automatically in $TIME seconds, or when you press OK.",
+		["dialog_enable_overhaul_dialog"] = "You are ENABLING the Complete Overhaul. The Overhaul should typically remain ON at all times, and only be disabled by removing the HUD from your mods folder.\n\nYour game will close automatically in $TIME seconds, or when you press OK.",
 
 		["res_saveboost"] = "HOLD $BTN_INTERACT TO BOOST TO LEVEL 100",
 
@@ -167,6 +166,10 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["RestorationModInfo_dmg_multiplier_outnumberedDescID"] = "Enables or disables tracking of this specific skill.",
 		["RestorationModInfo_unseen_strikeTitleID"] = "Unseen Strike",
 		["RestorationModInfo_unseen_strikeDescID"] = "Enables or disables tracking of this specific skill.",
+		["RestorationModInfo_survive_one_hitTitleID"] = "Oni Irezumi (Yakuza)",
+		["RestorationModInfo_survive_one_hitDescID"] = "Enables or disables tracking of this specific skill.",
+		["RestorationModInfo_doctor_bag_health_regenTitleID"] = "Doctor Bag Health Regen",
+		["RestorationModInfo_doctor_bag_health_regenDescID"] = "Enables or disables tracking of doctor bag health regen.",
 		["RestorationModAltLastDownColorTitleID"] = "Alternative Last Down Color Grading",
 		["RestorationModAltLastDownColorDescID"] = "Switches the last down color grading to color_sin_classic.",
 		["RestorationModNoBleedoutTiltTitleID"] = "Disable Bleedout Camera Tilt",
@@ -252,7 +255,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["RestorationModPauseDescID"] = "Enable or disable the Alpha Pause Menu.",
 
 		["menu_support"] = "Overhaul Guide/Support",
-		["menu_support_help"] = "View the guide for Restoration Mod's Overhaul, get support, find crew mates.",
+		["menu_support_help"] = "View the guide for Restoration HUD's Overhaul, get support, find crew mates.",
 		["menu_manual_header"] = "Placeholder Text",
 		["hud_assault_alpha"] = "POLICE ASSAULT",
 		["hud_loot_secured_title"] = "LOOT SECURED!",
@@ -412,20 +415,20 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 
 		["heist_vivinite_name"] = "Zero Day",
 
-		["heist_contact_shatter"] = "Jackal & Raze",
+		["heist_contact_shatter"] = "Jackal",
 		["heist_contact_akashic"] = "Nico",
 
 		["menu_contacts_shatter"] = "CRIMENET Affiliates",
-		["heist_contact_shatter_description"] = "Jackal & Raze. CRIMENET's asset and fighting force handlers. They have a healthy hatred for OMNIA Technologies and GenSec.",
+		
 		["heist_contact_jackal_description"] = "Jackal started out working for GenSec, but quit after an incident with human trafficking, tied to GenSec and OMNIA.\n\nNow, he works for CRIMENET, bringing the fight to their front door.",
-		["heist_contact_raze_description"] = "Raze. Jackal's partner in crime, and a skilled fighter.\n\nBorn in 1995, she escaped her family at the age of 15, and ran to the life of crime, never looking back.",
+		
 		["heist_contact_akashic_description"] = "Formerly a high ranking lieutenant working under Hector Morales, Nicolas 'Nico' René is now commanding the remnants of the Sinaloan Cartel operating in the USA.\nTheir numbers are small, and the larger Colombian cartel has no intention of helping them -- or repairing the relationship with CRIMENET.\n\nAbsorbing various smaller gangs operating on the east coast and allying with CRIMENET, he'll provide his resources in exchange for their services.",
 
-		["bm_msk_shatter_true"] = "Raze",
-		["bm_msk_shatter_true_desc"] = "The mask of Raze, Jackal's partner in crime. The Phoenix represents rebirth. Each death bringing about new life. Raze believes that the mask is her 'lucky charm', and often doesn't work without it.",
+		["bm_msk_shatter_true"] = "Shatter",
+		["bm_msk_shatter_true_desc"] = "The legendary mask that has only been spoken of in hushed tones.\n\nOf course, it's just a duplicate.\n\nThere's something much more special about the real one, but I think you'll like a copy just as much.\n\nThe Phoenix symbolizes re-birth, a timeless being that can never truly be killed.  Attempting to smite one down, it will strike back in an awesome show of flames and combustion.",
 
-		["menu_l_global_value_veritas"] = "Restoration Mod",
-		["menu_l_global_value_veritas_desc"] = "This is a Restoration Mod item!",
+		["menu_l_global_value_veritas"] = "Restoration HUD",
+		["menu_l_global_value_veritas_desc"] = "This is a Restoration HUD item!",
 
 		["menu_alex_1_zipline"] = "Bag Zipline",
 
@@ -605,8 +608,6 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["RestorationModExtraOptionsButtonDescID"] = "Even more options!",
 		["RestorationModRealAmmoTitleID"] = "Real Ammo",
 		["RestorationModRealAmmoDescID"] = "The total ammo counter ignores ammo currently in your weapon.",
-		["RestorationModVoiceIconTitleID"] = "Voice Chat Icon",
-	    ["RestorationModVoiceIconDescID"] = "Displays when a player is using voice chat in-game.",
 		["RestorationModStealthOrigPosTitleID"] = "Vanilla Detection Meter Positioning",
 		["RestorationModStealthOrigPosDescID"] = "Places the detection meter in the same area as Vanilla.",
 		["RestorationModLowerBagTitleID"] = "Lowered carried bag popup",
@@ -631,6 +632,8 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["RestorationModPocoCrimenetAlignSortDescID"] = "Aligns and sorts CRIMENET by difficulty.",
 		["RestorationModPocoCrimenetScaleTitleID"] = "Poco CRIMENET Scale",
 		["RestorationModPocoCrimenetScaleDescID"] = "Allows you to set the scale of CRIMENET.",
+		["RestorationModVoiceIconTitleID"] = "Voice Chat Icon",
+	    ["RestorationModVoiceIconDescID"] = "Displays when a player is using voice chat in-game.",
 		["alpha_assault"] = "Early Alpha Corner",
 		["beta_assault"] = "Alpha Tape",
 
@@ -885,10 +888,10 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["heist_street_new_name"] = "Heat Street: The Heist",
 		["heist_street_new_brief"] = "Someone once said there is no such thing as a sure thing, but this job looks easy: get in, get the briefcase, get out. Your trusted wheelman Matt will be waiting for you in the alley and as long as you get to the van there is no way you can fail. Is there?",
 
-		--Heat Street, Skirmish edition
+		--Heat Street, Holdout edition
 		["heist_skm_heat_street_name"] = "Uptown - Inkwell Industrial",
 		["heist_skm_heat_street_brief"] = "The kerels recently interrogated a prisoner that claims to have seen the face of Bain and can identify him. While we know it isn't true, the kerels don't, and neither do our rivals, so we're going to use the situation to gain some cash. Intercept the chop while they're transferring him to witness protection, near the old factory storage yard where that dumkop Matt crashed his car while trying to get away from us.",
-		["heist_skm_street_name"] = "Skirmish: Uptown - Inkwell Industrial",
+		["heist_skm_street_name"] = "Holdout: Uptown - Inkwell Industrial",
 		["heist_skm_street_brief"] = "The kerels recently interrogated a prisoner that claims to have seen the face of Bain and can identify him. While we know it isn't true, the kerels don't, and neither do our rivals, so we're going to use the situation to gain some cash. Intercept the chop while they're transferring him to witness protection, near the old factory storage yard where that dumkop Matt crashed his car while trying to get away from us.",	
 
 		--Xmas Hoxout and Breaking Feds
@@ -900,6 +903,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["heist_xmn_hox_brief"] = "The Dentist got Hoxton a re-trial. We're going to grab him right after the hearing. The plan is as loud as it gets: we blow up a wall, grab Hoxton and get him the hell out.$NL;$NL;» Free Hoxton$NL;» Take Hoxton to the armored truck$NL;» Escort the armored truck with Hoxton in it$NL;» Escape with Hoxton.",
 		
 		["heist_xmn_tag_name"] = "Breakin' Feds Xmas"
-	})
+	})	
 	
 end)
+

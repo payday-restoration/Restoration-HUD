@@ -1,4 +1,3 @@
-
 local r = tweak_data.levels.ai_groups.russia --LevelsTweakData.LevelType.Russia
 local difficulty = Global.game_settings and Global.game_settings.difficulty or "normal"
 local difficulty_index = tweak_data:difficulty_to_index(difficulty)
@@ -48,20 +47,20 @@ elseif ai_type == m then
 end
 
 -- ResMod english.json
-Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function(loc)
+Hooks:Add("LocalizationManagerPostInit", "ResMod_russian_Localization", function(loc)
 	LocalizationManager:add_localized_strings({
-		["menu_es_boost"] = "Лучшие",
-		["menu_es_crew"] = "Командные",
-		["menu_es_personal"] = "Личные",
-		["menu_es_bad"] = "Плохие",
-		["menu_es_other"] = "Прочие",
+		["menu_es_boost"] = "Лучшая",
+		["menu_es_crew"] = "Командная",
+		["menu_es_personal"] = "Личная",
+		["menu_es_bad"] = "Плохая",
+		["menu_es_other"] = "Прочая",
 		["RestorationPDTHHudNeeded"] = "PD:TH HUD REBORN IS REQUIRED!",
 		["menu_paygrade"] = "Степень оплаты: ",
 		["menu_diffgrade"] = "Сложность: ",
 		["menu_utility_radial_menu_name"] = "Utility Radial Menu",
 		["menu_utility_radial_menu_desc"] = "Open the Utility Menu",
 
-		["res_credits"] = "Титры Restoration HUD",
+		["res_credits"] = "Титры RESTORATION HUD",
 		["res_credits_help"] = "Посмотреть титры RESTORATION HUD.",
 
 		["Warning_overhaul_title"] = "WARNING: Game closing to prevent save corruption.",
@@ -168,6 +167,10 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["RestorationModInfo_dmg_multiplier_outnumberedDescID"] = "Включает или выключает отображение иконки данного навыка.",
 		["RestorationModInfo_unseen_strikeTitleID"] = "Удар исподтишка",
 		["RestorationModInfo_unseen_strikeDescID"] = "Включает или выключает отображение иконки данного навыка.",
+		["RestorationModInfo_survive_one_hitTitleID"] = "Татуировка Они (Якудза)",
+		["RestorationModInfo_survive_one_hitDescID"] = "Включает или выключает отображение иконки данного навыка.",
+		["RestorationModInfo_doctor_bag_health_regenTitleID"] = "Лечение от Медицинских сумок",
+		["RestorationModInfo_doctor_bag_health_regenDescID"] = "Включает или выключает отображение лечения от Медицинских сумок.",
 		["RestorationModAltLastDownColorTitleID"] = "Другой фильтр для последнего падения",
 		["RestorationModAltLastDownColorDescID"] = "Переключает цветовой фильтр при последнем падении на color_sin_classic.",
 		["RestorationModNoBleedoutTiltTitleID"] = "Отключить наклон камеру при падении",
@@ -253,7 +256,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["RestorationModPauseDescID"] = "Включить или выключить меню паузы из альфа-версии игры.",
 
 		["menu_support"] = "Гайд/помощь по ребалансу",
-		["menu_support_help"] = "Просмотреть гайд по ребалансу в Restoration Mod, получить помощь, найти других игроков.",
+		["menu_support_help"] = "Просмотреть гайд по ребалансу в Restoration HUD, получить помощь, найти других игроков.",
 		["menu_manual_header"] = "Placeholder Text",
 		["hud_assault_alpha"] = "ПОЛИЦЕЙСКИЙ ШТУРМ",
 		["hud_loot_secured_title"] = "ДОБЫЧА ЗАХВАЧЕНА!",
@@ -383,8 +386,8 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["restoration_level_data_bex"] = "ВРЕМЯ ЗАСЕКРЕЧЕНО, Мексика - Банк Сан Мартин",
 		["restoration_level_data_pex"] = "ВРЕМЯ ЗАСЕКРЕЧЕНО, Мексика - Полицейский участок",
 		["restoration_level_data_fex"] = "ВРЕМЯ ЗАСЕКРЕЧЕНО, Мексика - Особняк Булука",
-		["restoration_level_data_chas"] = "8:30 PM, San Francisco - Chinatown",
-		["restoration_level_data_sand"] = "10:30 PM, San Francisco - Dockyard",
+		["restoration_level_data_chas"] = "20:30, Сан Франциско - Чайнатаун",
+		["restoration_level_data_sand"] = "22:30, Сан Франциско - Порт",		
 		["restoration_level_data_chca"] = "21:24, Залив Сан Франциско - Лайнер Black Cat",
 		["restoration_level_data_wetwork"] = "ВРЕМЯ ЗАСЕКРЕЧЕНО, ЛОКАЦИЯ ЗАСЕКРЕЧЕНА",
 		["restoration_level_data_junk"] = "ВРЕМЯ ЗАСЕКРЕЧЕНО, ЛОКАЦИЯ ЗАСЕКРЕЧЕНА",
@@ -413,20 +416,18 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 
 		["heist_vivinite_name"] = "Zero Day",
 
-		["heist_contact_shatter"] = "Джекел и Рейз",
+		["heist_contact_shatter"] = "Джекел",
 		["heist_contact_akashic"] = "Нико",
 
 		["menu_contacts_shatter"] = "Союзники CRIMENET",
-		["heist_contact_shatter_description"] = "Джекел и Рейз. Ответственны за активы и боевые силы CRIMENET. Испытывают отвращение к OMNIA и GenSec.",
 		["heist_contact_jackal_description"] = "Джекел начал свою карьеру в GenSec, но уволился после инцидента, связанного с торговлей людьми, в котором были замешаны GenSec и OMNIA.\n\nТеперь он работает на CRIMENET, поставляя проблемы им прямо на дом.",
-		["heist_contact_raze_description"] = "Рейз. Напарница Джекела и опытный боец.\n\nРодилась в 1995 и сбежала от семьи в 15 лет, начав криминальную карьеру и никогда не оглядываясь.",
 		["heist_contact_akashic_description"] = "В прошлом - высокопоставленный агент Гектора Моралеса, Николас 'Нико' Рене теперь командует остатками Синалоанского картеля в США. \nИх численность мала, и более крупный Колумбийский картель не собирается ни предоставлять помощь, ни восстанавливать союз с CRIMENET. Нико объединяется с различными мелкими бандами на Восточном побережье, а также с CRIMENET - он предоставит свои ресурсы в обмен на услуги.",
 
-		["bm_msk_shatter_true"] = "Рейз",
-		["bm_msk_shatter_true_desc"] = "Маска Рейз, напарницы Джекела. Феникс символизирует перерождение. С каждой смертью начинается новая жизнь. Рейз верит, что её маска приносит удачу, и почти всегда работает в ней.",
+		["bm_msk_shatter_true"] = "Шаттер",
+		["bm_msk_shatter_true_desc"] = "Легендарная маска, о которой говорят вполголоса.\n\nРазумеется, это просто дубликат.\n\nВ настоящей маске есть кое-что особенное, но думаю, вас устроит и копия.\n\nФеникс символизирует перерождение того, кто не может быть убит. Попробуй его уничтожить, и он лишь нанесёт огненный контр-удар.",
 
-		["menu_l_global_value_veritas"] = "Restoration Mod",
-		["menu_l_global_value_veritas_desc"] = "Это предмет из Restoration Mod!",
+		["menu_l_global_value_veritas"] = "Restoration HUD",
+		["menu_l_global_value_veritas_desc"] = "Это предмет из Restoration HUD!",
 
 		["menu_alex_1_zipline"] = "Зиплайн для сумок",
 
@@ -520,10 +521,10 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["bm_msk_secret_richard_desc"] = "По криминальному миру ходили слухи о киллере, которым вдохновлялся Джекет; киллер, который был ликвидирован неизвестной организацией. Когда Джекет услышал о секрете от Бейна, он вернулся с маской, похожей на ту, что носил его прародитель.",
 
 		["bm_all_seeing"] = "Всевидящий якорь",
-		["bm_all_seeing_desc"] = "Ужасающее видение, кошмарное зрелище.\n\nВысшие силы увидели вас, и решили наградить вас.",
+		["bm_all_seeing_desc"] = "Ужасающее видение, кошмарное зрелище.\n\nВысшие силы увидели вас и решили наградить.",
 
 		["bm_msk_classic_helmet"] = "Классический силовик",
-		["bm_msk_classic_helmet_desc"] = "Подарок от бывшего спецназовца. Прежде чем уйти на пенсию, он вычислил Джекела... И подарил ему единственную экипировку, которая у него осталась, чтобы помочь работе Джекела.\n\nЭто странное событие именно причину: Он увидел своими глазами то, что OMNIA держала в тайне. Но он нестал копать эти тайны и вскоре покинул спецназ навсегда.\n\nДжекел прислал эти шлемы вам. Награда за вашу помощь.",
+		["bm_msk_classic_helmet_desc"] = "Подарок от бывшего спецназовца. Прежде чем уйти на пенсию, он вычислил Джекела... И подарил ему единственную экипировку, которая у него осталась, чтобы помочь работе Джекела.\n\nЭто странное событие было не без причины: Он увидел своими глазами то, что OMNIA держала в тайне. Но он не стал копать эти тайны и вскоре покинул спецназ навсегда.\n\nДжекел прислал эти шлемы вам, в качестве награды за вашу помощь.",
 
 		["bm_cube"] = "devmask.model",
 		["bm_cube_desc"] = "Push the placeholder, we'll get around to it.",
@@ -606,8 +607,6 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["RestorationModExtraOptionsButtonDescID"] = "Ещё больше опций!",
 		["RestorationModRealAmmoTitleID"] = "Действительный счётчик патронов",
 		["RestorationModRealAmmoDescID"] = "Счётчик патронов в запасе будет игнорировать патроны, которые уже заряжены.",
-		["RestorationModVoiceIconTitleID"] = "Voice Chat Icon",
-	    ["RestorationModVoiceIconDescID"] = "Displays when a player is using voice chat in-game.",
 		["RestorationModStealthOrigPosTitleID"] = "Стандартное расположение обнаружения",
 		["RestorationModStealthOrigPosDescID"] = "Полоска обнаружения будет в том же месте, что и в ванильной игре.",
 		["RestorationModLowerBagTitleID"] = "Понизить текст о подобранной сумке",
@@ -632,6 +631,8 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["RestorationModPocoCrimenetAlignSortDescID"] = "Подгоняет и сортирует CRIMENET по сложности.",
 		["RestorationModPocoCrimenetScaleTitleID"] = "Масштаб CRIMENET",
 		["RestorationModPocoCrimenetScaleDescID"] = "Позволяет менять масштаб CRIMENET.",
+		["RestorationModVoiceIconTitleID"] = "Голосовой чат",
+	        ["RestorationModVoiceIconDescID"] = "Отображает иконку, когда игрок использует голосовой чат.",
 		["alpha_assault"] = "Уголок",
 		["beta_assault"] = "Лента",
 
@@ -805,7 +806,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["menu_state_lobby"] = "В лобби",
 		["menu_state_loading"] = "Загружается",
 		["menu_state_ingame"] = "В игре",
-
+		
 		["hud_instruct_mask_on"] = "УДЕРЖИВАЙТЕ $BTN_USE_ITEM чтобы надеть маску",
 		["hud_instruct_mask_on_alpha"] = "УДЕРЖИВАЙТЕ $BTN_USE_ITEM чтобы надеть маску",
 				
@@ -886,10 +887,10 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["heist_street_new_name"] = "Схватка на улице (классика)",
 		["heist_street_new_brief"] = "Говорят, что ничего не бывает наверняка, но эта работа выглядит как нельзя проще: зайти, взять кейс, уйти. Ваш доверенный водитель Мэтт будет ждать вас в ближайшей аллее, и, если вы доберётесь до фургона, всё пройдёт как по маслу.",
 
-		--Heat Street, Skirmish edition
+		--Heat Street, Holdout edition
 		["heist_skm_heat_street_name"] = "Жилой район - здание 'Инквелл'",
 		["heist_skm_heat_street_brief"] = "Недавно копы допросили заключенного, который утверждает, что видел лицо Бейна и может его опознать. Разумеется, это неправда - но об этом не догадываются ни копы, ни наши враги, поэтому мы воспользуемся ситуацией, чтобы срубить немного денег. Перехватите заключенного, когда его будут перевозить около старой фабрики, где еще разбился тот идиот Мэтт, когда пытался убежать тот нас.",
-		["heist_skm_street_name"] = "Скирмиш: Жилой район - здание 'Инквелл'",
+		["heist_skm_street_name"] = "Столкновение: Жилой район - здание 'Инквелл'",
 		["heist_skm_street_brief"] = "Недавно копы допросили заключенного, который утверждает, что видел лицо Бейна и может его опознать. Разумеется, это неправда - но об этом не догадываются ни копы, ни наши враги, поэтому мы воспользуемся ситуацией, чтобы срубить немного денег. Перехватите заключенного, когда его будут перевозить около старой фабрики, где еще разбился тот идиот Мэтт, когда пытался убежать тот нас.",	
 
 		--Xmas Hoxout and Breaking Feds
@@ -900,7 +901,6 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["heist_xmn_hox_2_brief"] = "Парни, спасибо за то, что вытащили меня. Только я уверен в том, что меня подставили. Я не должен был попасть в тюрьму. У федералов было на меня гораздо больше, чем эти сволочи смогли бы раскопать. Кто-то решил меня сдать. Я узнаю, кто это сделал.$NL;$NL;Это будет нелегко, так что мы не будем ходить вокруг да около, ладно? Никаких сделок или связей с контактами. Мы отправимся сразу к месту, где всё началось. В здание имени Эдгара Гувера, самый главный улей FBI. Мы выясним, кто попытался меня поиметь.",
 		["heist_xmn_hox_brief"] = "Дантист сфальсифицировал новое судебное разбирательство для Хокстона. Мы должны перехватить его сразу после слушания. Действовать будете настолько громко, насколько это возможно: взрываете стену, хватаете Хокстона и сбегаете к чертям.$NL;$NL;» Освободите Хокстона$NL;» Проведите его до бронированного грузовика$NL;» Сопровождайте грузовик$NL;» Скройтесь с места преступления вместе с Хокстоном.",
 
-		["heist_xmn_tag_name"] = "Проникновение на Рождество"
+		["heist_xmn_tag_name"] = "Проникновение на Рождество",
 	})
-	
 end)

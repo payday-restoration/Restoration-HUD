@@ -20,3 +20,7 @@ restoration.assault_style = {
 	"beta_assault",
 	"alpha_assault"
 }
+
+if not PackageManager:loaded("core/packages/language_schinese") then
+	PackageManager:load("core/packages/language_schinese")
+end
