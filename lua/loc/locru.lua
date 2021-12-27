@@ -385,6 +385,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["restoration_level_data_fex"] = "ВРЕМЯ ЗАСЕКРЕЧЕНО, Мексика - Особняк Булука",
 		["restoration_level_data_chas"] = "8:30 PM, San Francisco - Chinatown",
 		["restoration_level_data_sand"] = "10:30 PM, San Francisco - Dockyard",
+		["restoration_level_data_chca"] = "21:24, Залив Сан Франциско - Лайнер Black Cat",
 		["restoration_level_data_wetwork"] = "ВРЕМЯ ЗАСЕКРЕЧЕНО, ЛОКАЦИЯ ЗАСЕКРЕЧЕНА",
 		["restoration_level_data_junk"] = "ВРЕМЯ ЗАСЕКРЕЧЕНО, ЛОКАЦИЯ ЗАСЕКРЕЧЕНА",
 		["restoration_level_data_holly"] = "5:00 PM, Los Angeles - Lukas' Mansion",

@@ -46,7 +46,7 @@ end
 
 function MissionBriefingTabItem:reduce_to_small_font()
 	--self._tab_text:set_font(tweak_data.menu.pd2_small_font_id)
-	if managers.crime_spree:is_active() or managers.mutators:are_mutators_active() then
+	if managers.mutators and managers.mutators:are_mutators_active() and managers.mutators:get_enabled_active_mutator_category() == "mutator" then
 		self._tab_text:set_font_size(20)
 	else
 		self._tab_text:set_font_size(tweak_data.menu.pd2_medium_font_size)
@@ -357,14 +357,15 @@ function MissionBriefingGui:init(saferect_ws, fullrect_ws, node)
 	self._multi_profile_item:panel():set_left(0)
 	self._multi_profile_item:set_name_editing_enabled(false)
 	local mutators_panel = self._safe_workspace:panel()
+	local mutator_category = managers.mutators:get_enabled_active_mutator_category()
 	self._lobby_mutators_text = mutators_panel:text({
 		name = "mutated_text",
-		text = managers.localization:to_upper_text("menu_mutators_lobby_wait_title"),
+		text = managers.localization:to_upper_text("menu_" .. mutator_category .. "s" .. "_lobby_wait_title"),
 		align = "right",
 		vertical = "top",
 		font_size = 36,
 		font = tweak_data.menu.medium_font,
-		color = tweak_data.screen_colors.mutators_color_text,
+		color = managers.mutators:get_category_text_color(mutator_category),
 		layer = self._ready_button:layer()
 	})
 	local _, _, w, h = self._lobby_mutators_text:text_rect()
