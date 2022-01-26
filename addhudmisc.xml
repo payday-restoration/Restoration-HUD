@@ -59,6 +59,8 @@
 	<movie path="movies/cn_veritasgroup1" force="true"/>
 	<font path="fonts/font_medium_shadow" force="true"/>
 	<merged_font path="fonts/font_medium_shadow_mf" force="true"/>
+	<merged_font path="fonts/font_small_shadow_mf" force="true"/>
+	<merged_font path="fonts/font_medium_noshadow_mf" force="true"/>
 
 	<!--Assets-->
 	<texture path="guis/textures/pd2/mission_briefing/assets/wetwork_intel" force="false"/>

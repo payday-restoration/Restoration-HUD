@@ -20,3 +20,11 @@ restoration.assault_style = {
 	"beta_assault",
 	"alpha_assault"
 }
+
+-- Needed to prenent a crash when the game language is set to another language
+if not PackageManager:loaded("core/packages/language_schinese") then
+	PackageManager:load("core/packages/language_schinese")
+end
+if not PackageManager:loaded("core/packages/language_korean") then
+	PackageManager:load("core/packages/language_korean")
+end
