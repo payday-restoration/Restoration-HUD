@@ -389,6 +389,8 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_russian_Localization", function
 		["restoration_level_data_chas"] = "20:30, Сан Франциско - Чайнатаун",
 		["restoration_level_data_sand"] = "22:30, Сан Франциско - Порт",		
 		["restoration_level_data_chca"] = "21:24, Залив Сан Франциско - Лайнер Black Cat",
+		["restoration_level_data_pent"] = "11:30 PM, San Francisco - Yufu Wang's Penthouse",
+		["restoration_level_data_ranc"] = "6:24 PM, Texas - Midland Ranch",
 		["restoration_level_data_wetwork"] = "ВРЕМЯ ЗАСЕКРЕЧЕНО, ЛОКАЦИЯ ЗАСЕКРЕЧЕНА",
 		["restoration_level_data_junk"] = "ВРЕМЯ ЗАСЕКРЕЧЕНО, ЛОКАЦИЯ ЗАСЕКРЕЧЕНА",
 		["restoration_level_data_holly"] = "5:00 PM, Los Angeles - Lukas' Mansion",
