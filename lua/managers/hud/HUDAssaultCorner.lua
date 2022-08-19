@@ -742,10 +742,8 @@ function HUDAssaultCorner:_start_assault(text_list)
 	text_panel:animate(callback(self, self, "_animate_text"), nil, nil, nil)
 	self:_set_feedback_color(self._assault_color)
 	
-	local panel = self._hud_panel:child("wave_panel")
-	local wave_text = panel:child("num_waves")
-	if self:has_waves() and wave_text then
-		wave_text:set_text(self:get_completed_waves_string())
+	if self:has_waves() then
+		self._hud_panel:child("wave_panel"):child("num_waves"):set_text(self:get_completed_waves_string())
 		self._hud_panel:child("wave_panel"):set_visible(true)
 	end
 	
