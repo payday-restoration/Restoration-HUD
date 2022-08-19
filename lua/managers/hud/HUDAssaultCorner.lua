@@ -632,12 +632,11 @@ end
 function HUDAssaultCorner:set_assault_wave_number(assault_number)
 	self._wave_number = assault_number
 	local panel = self._hud_panel:child("wave_panel")
-	local num_wave_count = managers.network:session():is_host() and managers.groupai:state():get_assault_number() or self._wave_number	
 	print("found panel")
 	if panel then
 		local wave_text = panel:child("num_waves")
 		if wave_text then
-			wave_text:set_text(num_wave_count)
+			wave_text:set_text(self:get_completed_waves_string())
 		end
 	end
 end
@@ -742,14 +741,17 @@ function HUDAssaultCorner:_start_assault(text_list)
 	assault_panel:animate(callback(self, self, "_animate_assault"))
 	text_panel:animate(callback(self, self, "_animate_text"), nil, nil, nil)
 	self:_set_feedback_color(self._assault_color)
-	if self:has_waves() then
-	self._hud_panel:child("wave_panel"):set_visible(true)
+	
+	local panel = self._hud_panel:child("wave_panel")
+	local wave_text = panel:child("num_waves")
+	if self:has_waves() and wave_text then
+		wave_text:set_text(self:get_completed_waves_string())
+		self._hud_panel:child("wave_panel"):set_visible(true)
 	end
 	
 	if managers.skirmish:is_skirmish() and started_now then
 		self:_popup_wave_started()
 	end
-
 end
 
 function HUDAssaultCorner:_animate_assault_corner( corner_panel )
@@ -1132,7 +1134,7 @@ function HUDAssaultCorner:has_waves()
 end
 
 function HUDAssaultCorner:get_completed_waves_string()
-	return tostring(managers.groupai:state():get_assault_number() or 0)
+	return tostring(managers.network:session():is_host() and managers.groupai:state():get_assault_number() or self._wave_number or 0)
 end
 
 function HUDAssaultCorner:_get_noreturn_data(id)
