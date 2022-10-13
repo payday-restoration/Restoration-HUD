@@ -6,6 +6,8 @@ local is_x360 = SystemInfo:platform() == Idstring("X360")
 local is_xb1 = SystemInfo:platform() == Idstring("XB1")
 local is_ps4 = SystemInfo:platform() == Idstring("PS4")
 
+local xmas_ = false
+
 function CrimeNetGui:init(ws, fullscreeen_ws, node)
 	self._tweak_data = tweak_data.gui.crime_net
 	self._crimenet_enabled = true
@@ -437,6 +439,25 @@ function CrimeNetGui:init(ws, fullscreeen_ws, node)
 	})
 	mw = math.max(mw, self:make_fine_text(ghost_text))
 	next_y = ghost_text:bottom()
+	local holiday_icon = legend_panel:bitmap({
+		texture = "guis/textures/pd2/cn_mini_xmas",
+		x = 10,
+		y = next_y + 2,
+		color = tweak_data.screen_colors.event_color,
+		visible = xmas_
+	})
+	local holiday_text = legend_panel:text({
+		blend_mode = "add",
+		font = tweak_data.menu.pd2_small_font,
+		font_size = tweak_data.menu.pd2_small_font_size,
+		x = host_text:left(),
+		y = next_y,
+		text = managers.localization:to_upper_text("menu_cn_legend_holiday"),
+		color = tweak_data.screen_colors.event_color,
+		visible = xmas_
+	})
+	mw = math.max(mw, self:make_fine_text(holiday_text))
+	next_y = holiday_text:bottom()
 	local kick_none_icon = legend_panel:bitmap({
 		texture = "guis/textures/pd2/cn_kick_marker",
 		x = 10,
@@ -614,6 +635,27 @@ function CrimeNetGui:init(ws, fullscreeen_ws, node)
 				color = tweak_data.screen_colors.button_stage_2
 			})
 		end
+	end
+
+	if xmas_ then
+
+		local limited_bonus = (tweak_data:get_value("experience_manager", "limited_xmas_bonus_multiplier") or 1) - 1
+
+		if limited_bonus > 0 then
+			local limited_string = mul_to_procent_string(limited_bonus)
+			local limited_text = global_bonuses_panel:text({
+				blend_mode = "add",
+				align = "center",
+				font = tweak_data.menu.pd2_small_font,
+				font_size = tweak_data.menu.pd2_small_font_size,
+				text = managers.localization:to_upper_text("menu_cn_holiday_bonus", {
+					bonus = limited_string,
+					event_icon = managers.localization:get_default_macro("BTN_XMAS")
+				}),
+				color = tweak_data.screen_colors.event_color
+			})
+		end
+
 	end
 
 	if #global_bonuses_panel:children() > 1 then
@@ -1243,7 +1285,7 @@ function CrimeNetGui:update(t, dt)
 	local zoom_string = string.format( "%.2f", self._zoom )
 	self._panel:child("map_coord_text"):set_text( utf8.to_upper( managers.localization:text( "cn_menu_mapcoords", {zoom=zoom_string, x=x, y=y} ) ) )
 	
-	local num_jobs = -4
+	local num_jobs = 0
 	
 	for i, d in pairs( self._jobs ) do
 		num_jobs = num_jobs + 1
@@ -1777,10 +1819,10 @@ function CrimeNetGui:_create_job_gui(data, type, fixed_x, fixed_y, fixed_locatio
 	local friend_color = tweak_data.screen_colors.friend_color
 	local regular_color = tweak_data.screen_colors.regular_color
 	local pro_color = tweak_data.screen_colors.pro_color
-	local side_panel = self._pan_panel:panel({layer = 26, alpha = 0})
 	local mutator_category = data.mutators and managers.mutators:get_mutator_from_id(next(data.mutators)):main_category() or "mutator"
 	local mutator_color = managers.mutators:get_category_color(mutator_category)
-	local mutator_text_color = managers.mutators:get_category_text_color(mutator_category)
+	local mutator_text_color = managers.mutators:get_category_text_color(mutator_category)	
+	local side_panel = self._pan_panel:panel({layer = 26, alpha = 0})
 	local heat_glow
 	local stars_panel = side_panel:panel({
 		name = "stars_panel",
@@ -2127,7 +2169,11 @@ function CrimeNetGui:_create_job_gui(data, type, fixed_x, fixed_y, fixed_locatio
 		local _, _, w, h = one_down_label:text_rect()
 
 		one_down_label:set_size(w, h - 4)
-		one_down_label:set_top(difficulty_name:bottom() - 4)
+		if got_heat_text then
+			one_down_label:set_top(heat_name:bottom() - 4)
+		else
+			one_down_label:set_top(difficulty_name:bottom() - 4)
+		end
 		one_down_label:set_right(0)
 	end
 
@@ -2381,6 +2427,23 @@ function CrimeNetGui:_create_job_gui(data, type, fixed_x, fixed_y, fixed_locatio
 
 		ghost_icon:set_top(side_icons_top)
 		ghost_icon:set_right(next_icon_right)
+
+		next_icon_right = next_icon_right - 12
+	end
+
+	local christmas_icon = nil
+
+	if data.job_id and managers.job:is_christmas_job(data.job_id) and xmas_ then
+		christmas_icon = icon_panel:bitmap({
+			blend_mode = "add",
+			name = "christmas_icon",
+			texture = "guis/textures/pd2/cn_mini_xmas",
+			rotation = 360,
+			color = tweak_data.screen_colors.event_color
+		})
+
+		christmas_icon:set_top(side_icons_top)
+		christmas_icon:set_right(next_icon_right)
 
 		next_icon_right = next_icon_right - 12
 	end
