@@ -17,7 +17,7 @@
 	<text text="DoktorAkcel" type="name"/>
 	<text text="SC" type="name"/>
 	<text text="DMC" type="name"/>
-	<text text="Rino" type="name"/>
+	<text text="Reno" type="name"/>
 	<text text="Zdann" type="name"/>
 	<text text="Jarey" type="name"/>
 	<br/>
@@ -46,7 +46,9 @@
 	<text text="Nardo" type="name"/>
 	<text text="KLEITON" type="name"/>
 	<text text="Tom Blaine" type="name"/>
-	<text text="The-Rant-Man" type="name"/>
+	<text text="The Rant-Man" type="name"/>
+	<text text="RedFlame" type="name"/>
+	<text text="SonicSoapyBoi" type="name"/>
 	<br/>
 	<text text="Sound Contributions" type="title"/>
 	<br/>
@@ -67,5 +69,6 @@
 	<br/>
 	<text text="MsMarshie" type="name"/>
 	<text text="LR_Daring" type="name"/>
+	<text text="Gullwingdoor " type="name"/>
 	<command cmd="stop" offset="220"/>
 </table>
