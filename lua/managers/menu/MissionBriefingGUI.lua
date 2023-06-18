@@ -113,11 +113,11 @@ function DescriptionItem:init(panel, text, i, saved_descriptions)
 	local level_data = managers.job:current_level_data()
 	local name_id = stage_data.name_id or level_data.name_id
 	local briefing_id = managers.job:current_briefing_id()
-	
+
 	if managers.skirmish:is_skirmish() and not managers.skirmish:is_weekly_skirmish() then
 		briefing_id = "heist_skm_random_briefing"
 	end
-	
+
 	local title_text = self._panel:text({
 		name = "title_text",
 		text = managers.localization:to_upper_text(name_id),
@@ -170,7 +170,7 @@ function DescriptionItem:init(panel, text, i, saved_descriptions)
 		desc_text:set_text(text)
 	end
 	self:_chk_add_scrolling()
-	
+
 	if managers.skirmish:is_weekly_skirmish() then
 		managers.network:add_event_listener({}, "on_set_dropin", function ()
 			self:add_description_text("\n##" .. managers.localization:text("menu_weekly_skirmish_dropin_warning") .. "##")
@@ -282,7 +282,7 @@ function MissionBriefingGui:init(saferect_ws, fullrect_ws, node)
 	self._description_item = DescriptionItem:new(self._panel, utf8.to_upper(managers.localization:text("menu_description")), index, self._node:parameters().menu_component_data.saved_descriptions)
 	table.insert(self._items, self._description_item)
 	index = index + 1
-	
+
 	if not managers.skirmish:is_skirmish() then
 		self._assets_item = AssetsItem:new(self._panel, managers.preplanning:has_current_level_preplanning() and managers.localization:to_upper_text("menu_preplanning") or utf8.to_upper(managers.localization:text("menu_assets")), index, {}, nil, asset_data)
 		table.insert(self._items, self._assets_item)
@@ -373,6 +373,9 @@ function MissionBriefingGui:init(saferect_ws, fullrect_ws, node)
 	self._lobby_mutators_text:set_top(tweak_data.menu.pd2_large_font_size)
 	local mutators_active = managers.mutators:are_mutators_enabled() and managers.mutators:allow_mutators_in_level(managers.job:current_level_id())
 	self._lobby_mutators_text:set_visible(mutators_active)
+	self._lobby_code_text = LobbyCodeMenuComponent:new(self._safe_workspace, self._full_workspace)
+
+	self._lobby_code_text:panel():set_layer(2)
 	self._enabled = true
 	--self:flash_ready()
 end
@@ -381,7 +384,7 @@ function MissionBriefingGui:chk_reduce_to_small_font()
 	local max_x = alive(self._next_page) and self._next_page:left() - 5 or self._panel:w()
 
 	if self._reduced_to_small_font or self._reduced_to_small_font_mut or self._items[#self._items] and alive(self._items[#self._items]._tab_text) and max_x < self._items[#self._items]._tab_text:right() then
-		
+
 		for i, tab in ipairs(self._items) do
 			tab:reduce_to_small_font()
 		end
@@ -487,13 +490,12 @@ function MissionBriefingGui:mouse_pressed(button, x, y)
 				local peer = managers.network:session() and managers.network:session():peer(peer_id)
 
 				if peer then
-					Steam:overlay_activate("url", tweak_data.gui.fbi_files_webpage .. "/suspect/" .. peer:user_id() .. "/")
-
-					return
+					return peer:overlay_inspect()
 				end
 			end
 		end
 	end
+
 	for index, tab in ipairs(self._items) do
 		local pressed, cost = tab:mouse_pressed(button, x, y)
 		if pressed == true then
@@ -511,6 +513,11 @@ function MissionBriefingGui:mouse_pressed(button, x, y)
 	if self._ready_button:inside(x, y) then
 		self:on_ready_pressed()
 	end
+
+	if self._lobby_code_text then
+		self._lobby_code_text:mouse_pressed(button, x, y)
+	end
+
 	if not self._ready then
 		self._multi_profile_item:mouse_pressed(button, x, y)
 	end
@@ -557,6 +564,13 @@ function MissionBriefingGui:mouse_moved(x, y)
 	if managers.hud._hud_mission_briefing and managers.hud._hud_mission_briefing._backdrop then
 		managers.hud._hud_mission_briefing._backdrop:mouse_moved(x, y)
 	end
+	if self._lobby_code_text then
+		local success, mouse_state = self._lobby_code_text:mouse_moved(x, y)
+
+		if success then
+			return success, mouse_state
+		end
+	end
 	local u, p = self._multi_profile_item:mouse_moved(x, y)
 	return u or false, p or "arrow"
 end
@@ -594,6 +608,11 @@ function MissionBriefingGui:close()
 			managers.menu_component:unretrieve_texture(data.texture, data.index)
 		end
 	end
+
+	if self._lobby_code_text then
+		self._lobby_code_text:close()
+	end
+
 	if self._panel and alive(self._panel) then
 		self._panel:parent():remove(self._panel)
 	end
