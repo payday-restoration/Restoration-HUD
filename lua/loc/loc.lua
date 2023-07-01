@@ -816,23 +816,6 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 
 		["bm_menu_amount_locked"] = "NONE IN STOCK",
 
-		["pdth_hud_challenges"] = "Challenges",
-		["pdth_hud_challenges_hint"] = "View completed and active challenges.",
-		["pdth_hud_active_challenges"] = "Active Challenges",
-		["pdth_hud_active_challenges_hint"] = "Current and active challenges.",
-		["pdth_hud_completed_challenges"] = "Completed Challenges",
-		["pdth_hud_completed_challenges_hint"] = "Completed and rewarded challenges.",
-
-		["ch_vs_desc"] = "Using the $weapon, defeat $count $eneType. Using melee does not contribute to this challenge.",
-		["ch_vs_head_shots_desc"] = "Using the $weapon, defeat $count $eneType with Headshots.",
-		["ch_vs"] = "$weapons VS. $eneType $no",
-		["ch_vs_head_shots"] = "$weapon VS. $eneType HEADSHOTS $no",
-
-		["ene_law"] = "THE WORLD",
-		["ene_law_desc"] = "hostile units",
-
-		["menu_me"] = "HEISTER",
-
 		["RestorationModPDTHChallengesTitleID"] = "Show PDTH Challenges",
 		["RestorationModPDTHChallengesDescID"] = "Toggles the visibility of the PDTH challenges in the menu and the hud",
 
@@ -845,22 +828,6 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["hud_legend_exit"] = "$BTN_CANCEL Exit",
 		["RestorationModArmorFixTitleID"] = "Armor Flash Fix",
 		["RestorationModArmorFixDescID"] = "Enable or disable armor flash fix.",
-
-		-- /// Challenges Below ///
-
-		["ch_deploy_ammobag_hl"] = "Last Bullet!",
-		["ch_deploy_ammobag"] = "Deploy $count Ammo Bags.",
-		["ch_plant_tripmine_hl"] = "Laser Show",
-		["ch_plant_tripmine"] = "Deploy $count Trip Mines.",
-		["ch_deploy_medicbag_hl"] = "Insurance Benefits",
-		["ch_deploy_medicbag"] = "Deploy $count Medic Bags.",
-		["ch_deploy_ecm_hl"] = "System Crasher",
-		["ch_deploy_ecm"] = "Deploy $count ECM's.",
-		["ch_deploy_fak_hl"] = "Lifeline",
-		["ch_deploy_fak"] = "Deploy $count First Aid Kits.",
-		["ch_deploy_sentry_hl"] = "White Mesa Enthusiast",
-		["ch_deploy_sentry"] = "Deploy $count Sentries.",
-
 
 		["ch_watchdogs_d1_heavy_wpn1_hl"] = "HEAVY ARMOR, AND HEAVIER WEAPONS",
 		["ch_watchdogs_d1_heavy_wpn1"] = "Complete day one of the WATCHDOGS job, wearing an ICTV and using miniguns, the Thanatos sniper, or RPG's only, on the OVERKILL difficulty or above.  You must have played from the start of the heist to complete this challenge.",

@@ -754,23 +754,6 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_russian_Localization", function
 
 		["bm_menu_amount_locked"] = "НЕТ В НАЛИЧИИ",
 
-		["pdth_hud_challenges"] = "Испытания",
-		["pdth_hud_challenges_hint"] = "Посмотреть выполненные и активные испытания.",
-		["pdth_hud_active_challenges"] = "Активные испытания",
-		["pdth_hud_active_challenges_hint"] = "Текущие и активные испытания.",
-		["pdth_hud_completed_challenges"] = "Выполненные испытания",
-		["pdth_hud_completed_challenges_hint"] = "Завершенные испытания.",
-
-		["ch_vs_desc"] = "Используя $weapon, устраните $count $eneType. Убийства в ближнем бою не засчитываются для выполнения этого испытания.",
-		["ch_vs_head_shots_desc"] = "Используя $weapon, устраните $count $eneType выстрелами в голову.",
-		["ch_vs"] = "$weapon против $eneType $no",
-		["ch_vs_head_shots"] = "$weapon против $eneType В ГОЛОВУ $no",
-
-		["ene_law"] = "всех",
-		["ene_law_desc"] = "врагов",
-
-		["menu_me"] = "Грабитель",
-
 		["RestorationModPDTHChallengesTitleID"] = "Отображать испытания из PDTH",
 		["RestorationModPDTHChallengesDescID"] = "Включает отображение испытаний из PDTH в меню и на HUD.",
 

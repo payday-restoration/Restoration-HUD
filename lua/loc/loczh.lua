@@ -820,42 +820,6 @@ Hooks:Add("LocalizationManagerPostInit", "ResHUD_chinese_Localization", function
 
 		["bm_menu_amount_locked"] = "库存不足",
 
-
-		--These won't be used until Chinese font is supported. Will there be? Maybe(laugh).
-		--["pdth_hud_challenges"] = "挑战",
-		--["pdth_hud_challenges_hint"] = "查看已完成与已激活的挑战。",
-		--["pdth_hud_active_challenges"] = "已激活的挑战",
-		--["pdth_hud_active_challenges_hint"] = "当前已激活的挑战。",
-		--["pdth_hud_completed_challenges"] = "已完成的挑战",
-		--["pdth_hud_completed_challenges_hint"] = "已领取奖励的已完成挑战。",
-
-		--["ch_vs_desc"] = "使用$weapon消灭$count $eneType。使用近战攻击消灭的敌人不计入此挑战。",
-		--["ch_vs_head_shots_desc"] = "使用$weapon爆头消灭$count $eneType。",
-		--["ch_vs"] = "$weapons VS. $eneType $no",
-		--["ch_vs_head_shots"] = "$weapon VS. $eneType 爆头$no",
-
-		--["ene_law"] = "执法人员",
-		--["ene_law_desc"] = "敌对单位",
-
-		["pdth_hud_challenges"] = "Challenges",
-		["pdth_hud_challenges_hint"] = "View completed and active challenges.",
-		["pdth_hud_active_challenges"] = "Active Challenges",
-		["pdth_hud_active_challenges_hint"] = "Current and active challenges.",
-		["pdth_hud_completed_challenges"] = "Completed Challenges",
-		["pdth_hud_completed_challenges_hint"] = "Completed and rewarded challenges.",
-
-		["ch_vs_desc"] = "Using the $weapon, defeat $count $eneType. Using melee does not contribute to this challenge.",
-		["ch_vs_head_shots_desc"] = "Using the $weapon, defeat $count $eneType with Headshots.",
-		["ch_vs"] = "$weapons VS. $eneType $no",
-		["ch_vs_head_shots"] = "$weapon VS. $eneType HEADSHOTS $no",
-
-		["ene_law"] = "THE WORLD",
-		["ene_law_desc"] = "hostile units",
-
-
-
-		["menu_me"] = "劫匪",
-
 		["RestorationModPDTHChallengesTitleID"] = "显示 收获日：掠夺 挑战",
 		["RestorationModPDTHChallengesDescID"] = "设置 收获日：掠夺 挑战在菜单与HUD上是否可见",
 
