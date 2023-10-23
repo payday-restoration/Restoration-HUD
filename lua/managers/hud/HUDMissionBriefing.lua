@@ -159,7 +159,7 @@ function HUDMissionBriefing:init(hud, workspace)
 			voice:set_left( w + 2 )
 			criminal:set_w( w )
 			criminal:set_align( "right" )
-			criminal:set_text( "" )			
+			criminal:set_text( "" )
 			name:set_left( voice:right() + 2 )
 			local x, y, w, h = name:text_rect()
 			status:set_left( name:x() + w)
@@ -185,7 +185,7 @@ function HUDMissionBriefing:init(hud, workspace)
 	end
 	self._current_contact = managers.job:current_contact_id()
 	local level_id = Global.game_settings.level_id
-	
+
 	if show_contact_gui and level_id == "red2" and restoration.Options:GetValue("HUD/Extra/ClassicMovies") then
 		local contact_image = self._background_layer_two:video( { name="contact_image", video="movies/level_bank", width=1280, height=720, loop=true, alpha=0.5, blend_mode="add" } )
 	elseif show_contact_gui and level_id == "glace" and restoration.Options:GetValue("HUD/Extra/ClassicMovies") then
@@ -238,10 +238,10 @@ function HUDMissionBriefing:init(hud, workspace)
 		font = content_font,
 		color = tweak_data.screen_colors.text
 	})
-	
+
 	self._paygrade_panel:bitmap( { name="paygrade_icon", texture="guis/textures/pd2/mission_briefing/difficulty_icons", texture_rect={ 32, 0, 32, 32 }, x=0, y=0, w=32, h=32 } )
 	self._paygrade_panel:bitmap( { name="diff_icon", texture="guis/textures/pd2/mission_briefing/difficulty_icons", texture_rect={ 0, 0, 32, 32 }, x=0, y=35, w=32, h=32, color=tweak_data.screen_color_red } )
-	
+
 	local _, _, w, h = pg_text:text_rect()
 	pg_text:set_size(w, h)
 	local job_stars = managers.job:current_job_stars()
@@ -286,7 +286,7 @@ function HUDMissionBriefing:init(hud, workspace)
 		local alpha = (i>difficulty_stars) and 0.25 or 1
 		local rect = (i>difficulty_stars) and empty_star_rect or filled_star_rect
 		self._paygrade_panel:bitmap( { texture="guis/textures/pd2/mission_briefing/difficulty_icons", texture_rect=rect, color=tweak_data.screen_color_red, x=x, y=35, w=32, h=32, alpha=alpha } )
-		
+
 		x = x + star_size
 		num_stars = num_stars + 1
 	end
@@ -294,8 +294,8 @@ function HUDMissionBriefing:init(hud, workspace)
 	self._paygrade_panel:set_right(self._background_layer_one:w())
 	pg_text:set_right( self._paygrade_panel:left() )
 	df_text:set_right( self._paygrade_panel:left() )
-	
-	
+
+
 	self._job_schedule_panel = self._background_layer_one:panel({
 		h = 90,
 		w = self._background_layer_one:w() / 2
@@ -336,9 +336,9 @@ function HUDMissionBriefing:init(hud, workspace)
 		local day_font = text_font
 		local day_font_size = text_font_size
 		day_color = tweak_data.screen_colors.item_stage_1
-		
+
 		day_color = tweak_data.screen_color_white:with_alpha( ( (i > num_stages) and 0.1 ) or ( (i < managers.job:current_stage()) and 0.5 ) or 1 )
-		
+
 		local day_text = self._job_schedule_panel:text({
 			name = "day_" .. tostring(i),
 			text = ("D" .. tostring(i) ),
@@ -350,18 +350,18 @@ function HUDMissionBriefing:init(hud, workspace)
 			h = js_h,
 			color = day_color
 		})
-		
+
 		local poly = self._job_schedule_panel:polyline( { name="day_poly_"..tostring(i), color=day_color, blend_mode="add", x=1+((i-1)%7)*78, y=10+math.floor((i-1)/7)*55, w=73, h=50 } )
 		poly:set_points( { Vector3( 0, 0 ), Vector3( 73, 0 ), Vector3( 73, 50 ), Vector3( 0, 50 ) } )
 		poly:set_closed( true )
-		
+
 		poly = self._job_schedule_panel:polyline( { name="day_poly2_"..tostring(i), color=day_color:with_alpha(day_color.alpha*0.5), blend_mode="add", x=1+((i-1)%7)*78, y=10+math.floor((i-1)/7)*55, w=73, h=50 } )
 		poly:set_points( { Vector3( 1, 1 ), Vector3( 72, 1 ), Vector3( 72, 49 ), Vector3( 1, 49 ) } )
 		poly:set_closed( true )
-		
+
 		day_text:set_center( self._job_schedule_panel:child( "day_poly_"..tostring(i) ):center() )
 		day_text:move( -25, -14 )
-		
+
 		local ghost = self._job_schedule_panel:bitmap({
 			name = "ghost_" .. tostring(i),
 			texture = "guis/textures/pd2/cn_minighost",
@@ -517,7 +517,7 @@ function HUDMissionBriefing:init(hud, workspace)
 	big_text:set_world_x(self._foreground_layer_one:child("job_text"):world_x())
 	big_text:move(-13, 9)
 	self._backdrop:animate_bg_text(big_text)]]
-	
+
 	if managers.job:current_job_data().name_id == "heist_rvd" then
 		local day_1_text = self._job_schedule_panel:child("day_poly_1")
 		local day_1_sticker = self._job_schedule_panel:bitmap({
@@ -543,7 +543,7 @@ function HUDMissionBriefing:init(hud, workspace)
 		day_2_sticker:set_center(day_2_text:center())
 		day_2_sticker:move(math.random(4) - 2, math.random(4) - 2)
 	end
-	
+
 	if managers.crime_spree:is_active() then
 		self._paygrade_panel:set_visible(false)
 		self._job_schedule_panel:set_visible(false)
@@ -551,7 +551,7 @@ function HUDMissionBriefing:init(hud, workspace)
 		job_overview_text:set_visible(false)
 		df_text:set_visible(false)
 	end
-	
+
 	if managers.skirmish:is_skirmish() then
 		self._paygrade_panel:set_visible(false)
 		pg_text:set_visible(false)
@@ -574,11 +574,11 @@ function HUDMissionBriefing:init(hud, workspace)
 		wave_range_text:set_right(self._background_layer_one:w())
 		df_text:set_visible(false)
 	end
-	
+
 	if managers.skirmish:is_skirmish() then
 		text = managers.skirmish:is_weekly_skirmish() and managers.localization:to_upper_text("menu_weekly_skirmish") or managers.localization:to_upper_text("menu_skirmish")
 	end
-	
+
 	if managers.skirmish:is_skirmish() then
 		self._job_schedule_panel:set_visible(false)
  		self._skirmish_progress = SkirmishBriefingProgress:new(self._background_layer_one, {
@@ -749,6 +749,7 @@ function HUDMissionBriefing:set_contact_info(contact, interupt)
 		shatter = "guis/textures/restoration/mission_briefing/shatter",
 		akashic = "guis/textures/pd2/mission_briefing/hector/contact",
 		jiufeng = "guis/textures/restoration/mission_briefing/jiufeng",
+		shayu = "guis/textures/restoration/mission_briefing/shayu",
 		mcshay = "guis/textures/restoration/mission_briefing/mcshay",
 		blaine = "guis/textures/restoration/mission_briefing/blaine",
 		--Support for "Campaign Contract Sorting" mod (aka thanks OVK that you made random contractors and give them only 1 heist)
@@ -758,12 +759,15 @@ function HUDMissionBriefing:set_contact_info(contact, interupt)
 		--Holdout is exists, I guess
 		skirmish = "guis/textures/restoration/mission_briefing/event"
     }
-	local image = "guis/textures/restoration/mission_briefing/classic"
+	local image = "guis/textures/restoration/mission_briefing/unknown"
 	if set_image[contact] then
             image = set_image[contact]
     end
     local set_pattern = {
-        classic = "guis/textures/pd2/mission_briefing/bain/bd_pattern",
+        hector = "guis/textures/pd2/mission_briefing/hector/bd_pattern",
+		vlad = "guis/textures/pd2/mission_briefing/vlad/bd_pattern",
+		the_elephant = "guis/textures/pd2/mission_briefing/the_elephant/bd_pattern",
+		classic = "guis/textures/pd2/mission_briefing/bain/bd_pattern",
         events = "guis/textures/pd2/mission_briefing/bain/bd_pattern",
         hoxton = "guis/textures/pd2/mission_briefing/bain/bd_pattern",
         jimmy = "guis/dlcs/berry/textures/pd2/mission_briefing/bd_pattern",
@@ -774,14 +778,16 @@ function HUDMissionBriefing:set_contact_info(contact, interupt)
 		shatter = "guis/textures/restoration/mission_briefing/shatter_pattern",
 		akashic = "guis/textures/pd2/mission_briefing/hector/bd_pattern",
 		jiufeng = "guis/dlcs/chas/textures/pd2/mission_briefing/bd_pattern",	--Maybe someday they'll make this unique.
-		mcshay = "guis/textures/pd2/mission_briefing/bain/bd_pattern",
+		shayu = "guis/textures/pd2/mission_briefing/interupt/bd_pattern",  --Need to make unique patterns
+		mcshay = "guis/textures/pd2/mission_briefing/interupt/bd_pattern",
+		blaine = "guis/textures/pd2/mission_briefing/interupt/bd_pattern",
 		skirmish = "guis/textures/restoration/mission_briefing/shatter_pattern"
     }
 	local pattern = "guis/textures/pd2/mission_briefing/".. contact .."/bd_pattern"
 	if set_pattern[contact] then
-        pattern = set_pattern[contact]
+            pattern = set_pattern[contact]
 	else
-		pattern = "guis/textures/pd2/mission_briefing/bain/bd_pattern" -- Solve issue with missing pattern for custom heists
+            pattern = "guis/textures/pd2/mission_briefing/bain/bd_pattern" -- Solve issue with missing pattern for custom heists
     end
 	if interupt then
 		image = "guis/textures/pd2/mission_briefing/interupt/contact"
@@ -790,29 +796,29 @@ function HUDMissionBriefing:set_contact_info(contact, interupt)
 	return image, pattern
 	end
 end
- 
+
 --[[if not Global.level_data.level_id or not maps[Global.level_data.level_id] then
     return
 end]]--
- 
+
 local init_actual = HUDMissionBriefing.init
 if not restoration.Options:GetValue("HUD/UI/Loadouts") then
 function HUDMissionBriefing:init(hud, workspace, ...)
- 
+
     self._current_contact = managers.job:current_contact_id()
- 
+
     init_actual(self, hud, workspace, ...)
- 
+
     if self._current_contact ~= "shatter" then
         return
     end
- 
+
     local bg2 = self._background_layer_two
     -- Unlikely to ever happen, but just in case
     if not alive(bg2) then
         return
     end
- 
+
     -- Wipe everything on self._background_layer_two. Removing them while iterating is probably not a wise idea (may cause
     -- instability), so copy the references over to a new, temporary table first
     local tmp = {}
@@ -823,14 +829,14 @@ function HUDMissionBriefing:init(hud, workspace, ...)
         bg2:remove(panel)
     end
     tmp = nil
- 
+
     function making_video()
         --self._contact_image = bg2:bitmap( { name="contact_image", texture="guis/textures/restoration/mission_briefing/shatter", w=720, h=720 } )
         self._contact_image = bg2:video( { name="contact_image", video = "movies/contact_shatter1", width = 1280, height = 720, blend_mode="add", loop=true, alpha=1 } ) -- , color = tweak_data.screen_color_yellow } )
     end
     bg2:stop()
     bg2:animate(making_video)
- 
+
     self._backdrop:set_pattern( "guis/textures/restoration/mission_briefing/shatter_pattern", 0.10, "add" )
 end
 end
