@@ -156,7 +156,7 @@ if restoration.Options:GetValue("HUD/UI/Loadouts") then
 		local desc_text = self._scroll_panel:text({
 			name = "description_text",
 			text = desc_string,
-			font_size = 14,
+			font_size = tweak_data.menu.pd2_small_font_size + 4,
 			font = tweak_data.menu.small_font,
 			wrap = true,
 			word_wrap = true,
