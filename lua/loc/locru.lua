@@ -54,7 +54,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_russian_Localization", function
 		["menu_es_personal"] = "Личная",
 		["menu_es_bad"] = "Плохая",
 		["menu_es_other"] = "Прочая",
-		["RestorationPDTHHudNeeded"] = "PD:TH HUD REBORN IS REQUIRED!",
+		["RestorationPDTHHudNeeded"] = "PDTH CHALLENGES MOD IS REQUIRED!",
 		["menu_paygrade"] = "Степень оплаты: ",
 		["menu_diffgrade"] = "Сложность: ",
 		["menu_utility_radial_menu_name"] = "Utility Radial Menu",

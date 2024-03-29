@@ -53,7 +53,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["menu_es_personal"] = "Personal",
 		["menu_es_bad"] = "Bad",
 		["menu_es_other"] = "Other",
-		["RestorationPDTHHudNeeded"] = "PD:TH HUD REBORN IS REQUIRED!",
+		["RestorationPDTHHudNeeded"] = "PDTH CHALLENGES MOD IS REQUIRED!",
 		["menu_paygrade"] = "Pay grade: ",
 		["menu_diffgrade"] = "Difficulty: ",
 		["menu_utility_radial_menu_name"] = "Utility Radial Menu",

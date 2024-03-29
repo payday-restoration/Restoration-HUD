@@ -54,7 +54,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResHUD_chinese_Localization", function
 		["menu_es_personal"] = "个人数据",
 		["menu_es_bad"] = "不良数据",
 		["menu_es_other"] = "其他数据",
-		["RestorationPDTHHudNeeded"] = "需要先使用PD:TH HUD REBORN！",
+		["RestorationPDTHHudNeeded"] = "需要先使用PDTH CHALLENGES MOD！",
 		["menu_paygrade"] = "薪酬等级：",
 		["menu_diffgrade"] = "难度等级：",
 		["menu_utility_radial_menu_name"] = "多功能菜单",

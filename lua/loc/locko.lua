@@ -5,7 +5,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["menu_es_personal"] = "개인",
 		["menu_es_bad"] = "나쁨",
 		["menu_es_other"] = "기타",
-		["RestorationPDTHHudNeeded"] = "PD:TH HUD REBORN이 필요합니다!",
+		["RestorationPDTHHudNeeded"] = "PDTH CHALLENGES MOD이 필요합니다!",
 		["menu_paygrade"] = "급여 등급: ",
 		["menu_diffgrade"] = "난이도: ",
 		["menu_utility_radial_menu_name"] = "Utility Radial Menu",
