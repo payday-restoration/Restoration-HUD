@@ -8,7 +8,7 @@ function PlayerProfileGuiObject:init(ws)
 	local font = tweak_data.menu.default_font_no_outline
 	local font_size = 20
 	local bg_ring = panel:bitmap({
-		texture = "guis/textures/pd2/level_ring_small",
+		texture = "guis/textures/pd2/endscreen/exp_ring",
 		y = 10,
 		alpha = 0.4,
 		x = 10,
@@ -17,7 +17,7 @@ function PlayerProfileGuiObject:init(ws)
 		color = Color.black
 	})
 	local exp_ring = panel:bitmap({
-		texture = "guis/textures/pd2/level_ring_small",
+		texture = "guis/textures/pd2/endscreen/exp_ring",
 		render_template = "VertexColorTexturedRadial",
 		blend_mode = "add",
 		y = 10,
@@ -141,7 +141,7 @@ function PlayerProfileGuiObject:init(ws)
 		color = Color(managers.experience:get_prestige_xp_percentage_progress(), 1, 1),
 		alpha = managers.experience:reached_level_cap() and 1 or 0.3
 	})
-	
+
 	local player_text = panel:text({
 		y = 10,
 		font = font,
@@ -335,7 +335,7 @@ function PlayerProfileGuiObject:init(ws)
 
 	self._panel:set_size(exp_ring:w() + max_left_len + 15 + max_right_len + 10, math.max(skill_text and skill_text:bottom() or total_money_text:bottom(), hoxton_text:bottom()) + 8)
 	self._panel:set_bottom(self._panel:parent():h() - 60)
-	
+
 	mastermind_text:set_right(self._panel:w() - 10)
 	enforcer_text:set_right(self._panel:w() - 10)
 	technician_text:set_right(self._panel:w() - 10)
@@ -360,7 +360,8 @@ function PlayerProfileGuiObject:init(ws)
 	end
 
 	self:_rec_round_object(panel)
-	
+
 	self._panel:rect( { color=Color(0.5, 0, 0, 0), layer=-1 } )
 	self._panel:polyline( { color=tweak_data.screen_color_blue:with_alpha(0.5), blend_mode="add", line_width=1, closed=true, points={ Vector3( 0, 0, 0 ), Vector3( self._panel:w(), 0, 0 ), Vector3( self._panel:w(), self._panel:h(), 0 ), Vector3( 0, self._panel:h(), 0 ) } } )
+	self._panel:set_y(485)
 end

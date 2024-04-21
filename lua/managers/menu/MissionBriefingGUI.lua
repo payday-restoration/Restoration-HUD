@@ -113,11 +113,11 @@ if restoration.Options:GetValue("HUD/UI/Loadouts") then
 		local level_data = managers.job:current_level_data()
 		local name_id = stage_data.name_id or level_data.name_id
 		local briefing_id = managers.job:current_briefing_id()
-		
+
 		if managers.skirmish:is_skirmish() and not managers.skirmish:is_weekly_skirmish() then
 			briefing_id = "heist_skm_random_briefing"
 		end
-		
+
 		local title_text = self._panel:text({
 			name = "title_text",
 			text = managers.localization:to_upper_text(name_id),
@@ -170,7 +170,7 @@ if restoration.Options:GetValue("HUD/UI/Loadouts") then
 			desc_text:set_text(text)
 		end
 		self:_chk_add_scrolling()
-		
+
 		if managers.skirmish:is_weekly_skirmish() then
 			managers.network:add_event_listener({}, "on_set_dropin", function ()
 				self:add_description_text("\n##" .. managers.localization:text("menu_weekly_skirmish_dropin_warning") .. "##")
@@ -198,6 +198,29 @@ if restoration.Options:GetValue("HUD/UI/Loadouts") then
 					show_scroll_line_top and 2 or 0,
 					show_scroll_line_bottom and 2 or 0
 				}
+			})
+		end
+	end
+
+	function AssetsItem:init(panel, text, i, assets_names, max_assets, menu_component_data)
+		AssetsItem.super.init(self, panel, text, i)
+
+		self._num_items = managers.preplanning:has_current_level_preplanning() and 4 or 8
+
+		self._panel:set_w(self._main_panel:w() * self._num_items / 8)
+		self._panel:set_h(255)
+		self._panel:set_right(self._main_panel:w())
+
+		self._my_menu_component_data = menu_component_data
+
+		self:create_assets(assets_names, max_assets)
+
+		if #assets_names == 0 then
+			self._loading_text = self._panel:text({
+				rotation = 360,
+				font = tweak_data.menu.pd2_small_font,
+				font_size = tweak_data.menu.pd2_small_font_size,
+				text = managers.localization:to_upper_text("debug_loading_level")
 			})
 		end
 	end
@@ -282,7 +305,7 @@ if restoration.Options:GetValue("HUD/UI/Loadouts") then
 		self._description_item = DescriptionItem:new(self._panel, utf8.to_upper(managers.localization:text("menu_description")), index, self._node:parameters().menu_component_data.saved_descriptions)
 		table.insert(self._items, self._description_item)
 		index = index + 1
-		
+
 		if not managers.skirmish:is_skirmish() then
 			self._assets_item = AssetsItem:new(self._panel, managers.preplanning:has_current_level_preplanning() and managers.localization:to_upper_text("menu_preplanning") or utf8.to_upper(managers.localization:text("menu_assets")), index, {}, nil, asset_data)
 			table.insert(self._items, self._assets_item)
@@ -356,7 +379,7 @@ if restoration.Options:GetValue("HUD/UI/Loadouts") then
 		self._multi_profile_item:panel():set_bottom(self._panel:h())
 		self._multi_profile_item:panel():set_left(0)
 		self._multi_profile_item:set_name_editing_enabled(false)
-		
+
 		local mutators_panel = self._safe_workspace:panel()
 		local mutator_category = managers.mutators:get_enabled_active_mutator_category()
 		self._lobby_mutators_text = mutators_panel:text({
@@ -374,15 +397,15 @@ if restoration.Options:GetValue("HUD/UI/Loadouts") then
 		self._lobby_mutators_text:set_top(tweak_data.menu.pd2_large_font_size)
 		local mutators_active = managers.mutators:are_mutators_enabled() and managers.mutators:allow_mutators_in_level(managers.job:current_level_id())
 		self._lobby_mutators_text:set_visible(mutators_active)
-		
+
 		self._lobby_code_text = LobbyCodeMenuComponent:new(self._safe_workspace, self._full_workspace)
 
-		self._lobby_code_text:panel():set_layer(2)	
-		
+		self._lobby_code_text:panel():set_layer(2)
+
 		if managers.crime_spree:is_active() then
 			self._lobby_code_text:panel():set_position(600, self._lobby_code_text:panel():y())
-		end		
-		
+		end
+
 		local local_peer = managers.network:session():local_peer()
 
 		for peer_id, peer in pairs(managers.network:session():peers()) do
@@ -391,8 +414,8 @@ if restoration.Options:GetValue("HUD/UI/Loadouts") then
 
 				self:set_slot_outfit(peer_id, peer:character(), outfit)
 			end
-		end		
-		
+		end
+
 		self._enabled = true
 		--self:flash_ready()
 	end
@@ -401,7 +424,7 @@ if restoration.Options:GetValue("HUD/UI/Loadouts") then
 		local max_x = alive(self._next_page) and self._next_page:left() - 5 or self._panel:w()
 
 		if self._reduced_to_small_font or self._reduced_to_small_font_mut or self._items[#self._items] and alive(self._items[#self._items]._tab_text) and max_x < self._items[#self._items]._tab_text:right() then
-			
+
 			for i, tab in ipairs(self._items) do
 				tab:reduce_to_small_font()
 			end
@@ -526,19 +549,19 @@ if restoration.Options:GetValue("HUD/UI/Loadouts") then
 				end
 			end
 		end
-		
+
 		if self._ready_button:inside(x, y) then
 			self:on_ready_pressed()
 		end
-		
+
 		if self._lobby_code_text then
 			self._lobby_code_text:mouse_pressed(button, x, y)
-		end	
-		
+		end
+
 		if not self._ready then
 			self._multi_profile_item:mouse_pressed(button, x, y)
 		end
-		
+
 		return self._selected_item
 	end
 
@@ -582,7 +605,7 @@ if restoration.Options:GetValue("HUD/UI/Loadouts") then
 		if managers.hud._hud_mission_briefing and managers.hud._hud_mission_briefing._backdrop then
 			managers.hud._hud_mission_briefing._backdrop:mouse_moved(x, y)
 		end
-		
+
 		if self._lobby_code_text then
 			local success, mouse_state = self._lobby_code_text:mouse_moved(x, y)
 
@@ -590,7 +613,7 @@ if restoration.Options:GetValue("HUD/UI/Loadouts") then
 				return success, mouse_state
 			end
 		end
-		
+
 		local u, p = self._multi_profile_item:mouse_moved(x, y)
 		return u or false, p or "arrow"
 	end
@@ -623,35 +646,35 @@ if restoration.Options:GetValue("HUD/UI/Loadouts") then
 		WalletGuiObject.close_wallet(self._safe_workspace:panel())
 		managers.music:stop_listen_all()
 		self:close_asset()
-		
+
 		local requested_asset_textures = self._assets_item and self._assets_item:get_requested_textures()
-		
+
 		if requested_asset_textures then
 			for key, data in pairs(requested_asset_textures) do
 				managers.menu_component:unretrieve_texture(data.texture, data.index)
 			end
 		end
-		
+
 		if self._lobby_code_text then
 			self._lobby_code_text:close()
-		end		
-		
+		end
+
 		if self._panel and alive(self._panel) then
 			self._panel:parent():remove(self._panel)
 		end
-		
+
 		if self._fullscreen_panel and alive(self._fullscreen_panel) then
 			self._fullscreen_panel:parent():remove(self._fullscreen_panel)
 		end
-		
+
 		local level_tweak = tweak_data.levels[managers.job:current_level_id()]
-		
+
 		if level_tweak and level_tweak.on_enter_clbks then
 			for _, clbk in pairs(level_tweak.on_enter_clbks) do
 				clbk()
 			end
 		end
-		
+
 	end
 
 end
