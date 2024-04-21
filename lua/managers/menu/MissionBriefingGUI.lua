@@ -208,8 +208,8 @@ if restoration.Options:GetValue("HUD/UI/Loadouts") then
 		self._num_items = managers.preplanning:has_current_level_preplanning() and 4 or 8
 
 		self._panel:set_w(self._main_panel:w() * self._num_items / 8)
-		self._panel:set_h(255)
 		self._panel:set_right(self._main_panel:w())
+		self._panel:set_h(255)
 
 		self._my_menu_component_data = menu_component_data
 
