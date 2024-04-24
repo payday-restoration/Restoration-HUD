@@ -350,7 +350,7 @@ if restoration.Options:GetValue("HUD/UI/Loadouts") then
 			local _, _, lw, lh = legend_text:text_rect()
 	
 			legend_text:set_size(lw, lh)
-			legend_text:set_righttop(self._panel:w() - 5, -3)
+			legend_text:set_righttop(self._panel:w() - 5, 5)
 		end
 	
 		local first_rect = self._panel:child("bg_rect_1")
@@ -405,7 +405,7 @@ if restoration.Options:GetValue("HUD/UI/Loadouts") then
 			layer = 6
 		})
 		self._panel:set_right(self._safe_workspace:panel():w())
-		self._panel:set_top( self._safe_workspace:panel():h()/2 )
+		self._panel:set_top(300)
 		self._panel:grow( 0, -self._panel:top() )
 		self._ready = managers.network:session():local_peer():waiting_for_player_ready()
 		local ready_text = self:ready_text()
