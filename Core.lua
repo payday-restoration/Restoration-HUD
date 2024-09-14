@@ -21,6 +21,11 @@ restoration.assault_style = {
 	"alpha_assault"
 }
 
+restoration.newsfeed_style = {
+	"show_both",
+	"show_classic_newsfeed"
+}
+
 -- Needed to prenent a crash when the game language is set to another language
 if not PackageManager:loaded("core/packages/language_schinese") then
 	PackageManager:load("core/packages/language_schinese")

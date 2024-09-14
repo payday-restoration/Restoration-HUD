@@ -248,7 +248,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["RestorationModHolidayTitleID"] = "Holiday Effects",
 		["RestorationModHolidayDescID"] = "Enable or disable Holiday effects for the overhaul.",
 		["RestorationModRestoreHitFlashTitleID"] = "Restore Hit Flash",
-		["RestorationModRestoreHitFlashDescID"] = "Enable or disable the restored hit flash when taking damage.",	
+		["RestorationModRestoreHitFlashDescID"] = "Enable or disable the restored hit flash when taking damage.",
 		["RestorationModNotifyTitleID"] = "Feature Notification",
 		["RestorationModNotifyDescID"] = "Enable or disable the notification for this feature.",
 		["RestorationModPauseTitleID"] = "Alpha Pause Menu",
@@ -397,6 +397,8 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["restoration_level_data_junk"] = "TIME CLASSIFIED, LOCATION CLASSIFIED",
 		["restoration_level_data_holly"] = "5:00 PM, Los Angeles - Lukas' Mansion",
 		["restoration_level_data_lvl_friday"] = "5:00 PM, Shield Mall",
+		["restoration_level_data_skm_nightmare_lvl"] = "A laundromat? Are you here to wash away your sins?",
+		["restoration_level_data_bluewave"] = "TIME CLASSIFIED, Aurelian Warehouse",
 
 		--custom heists
 		["restoration_level_data_flatline_lvl"] = "10:26 PM, Больница им. Н.И. Пирогова", --Flatline
@@ -444,7 +446,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["restoration_level_data_crumch_returns"] = "12:50 PM, Shield Mall", --Mallcrasher Ranted
 		["restoration_level_data_mansion_stage1"] = "2:13 AM, Sir Elmsworth's Mansion", --Elmsworth Mansion
 		["restoration_level_data_skm_nmh"] = "9:12 PM, Mercy Hospital - Roof", --No Mercy SKM
-		["restoration_level_data_office_strike"] = "1:57 PM, Downtown FBI Offices", --Office Strike	
+		["restoration_level_data_office_strike"] = "1:57 PM, Downtown FBI Offices", --Office Strike
 		["restoration_level_data_highrise_stage1"] = "1:03 AM, Tremblay's Apartment", --Out of Frame
 		["restoration_level_data_constantine_bank_lvl"] = "12:00 PM, Pacific Bank", --Pacific Bank
 		["restoration_level_data_sh_raiders"] = "5:16 PM, Outskirts Warehouse", --Safehouse Raiders
@@ -485,9 +487,9 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["heist_contact_akashic"] = "Nico",
 
 		["menu_contacts_shatter"] = "CRIMENET Affiliates",
-		
+
 		["heist_contact_jackal_description"] = "Jackal started out working for GenSec, but quit after an incident with human trafficking, tied to GenSec and OMNIA.\n\nNow, he works for CRIMENET, bringing the fight to their front door.",
-		
+
 		["heist_contact_akashic_description"] = "Formerly a high ranking lieutenant working under Hector Morales, Nicolas 'Nico' René is now commanding the remnants of the Sinaloan Cartel operating in the USA.\nTheir numbers are small, and the larger Colombian cartel has no intention of helping them -- or repairing the relationship with CRIMENET.\n\nAbsorbing various smaller gangs operating on the east coast and allying with CRIMENET, he'll provide his resources in exchange for their services.",
 
 		["bm_msk_shatter_true"] = "Shatter",
@@ -704,8 +706,12 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["RestorationModPocoCrimenetScaleDescID"] = "Allows you to set the scale of CRIMENET.",
 		["RestorationModVoiceIconTitleID"] = "Voice Chat Icon",
 	    ["RestorationModVoiceIconDescID"] = "Displays when a player is using voice chat in-game.",
+		["RestorationModNewsFeedStyleTitleID"] = "Alpha Newsfeed Style",
+		["RestorationModNewsFeedStyleDescID"] = "Allows you to choose to show both newsfeed and newheists box or just the newsfeed.",
 		["alpha_assault"] = "Early Alpha Corner",
 		["beta_assault"] = "Alpha Tape",
+		["show_both"] = "Default",
+		["show_classic_newsfeed"] = "Classic",
 
 		["menu_ingame_manual"] = "Overhaul Guide",
 		["menu_ingame_manual_help"] = "View the guide for Restoration's Overhaul.",
@@ -835,7 +841,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 
 		["ch_watchdogs_d1_heavy_wpn1_hl"] = "HEAVY ARMOR, AND HEAVIER WEAPONS",
 		["ch_watchdogs_d1_heavy_wpn1"] = "Complete day one of the WATCHDOGS job, wearing an ICTV and using miniguns, the Thanatos sniper, or RPG's only, on the OVERKILL difficulty or above.  You must have played from the start of the heist to complete this challenge.",
-		
+
 		["test_net"] = "Fast.Net",
 		["menu_test"] = "",
 		["state_filter"] = "State",
@@ -847,27 +853,27 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 
 		["hud_instruct_mask_on"] = "Hold $BTN_USE_ITEM To put on Mask",
 		["hud_instruct_mask_on_alpha"] = "Hold $BTN_USE_ITEM to put on your mask",
-		
+
 		-- ///Stuff ripped from the various locale files we had ///
-		
+
 		--Halloween Dozer Sword
 		["bm_melee_halloween_sword"] = "Headless Bulldozer's Sword",
 		["menu_l_global_value_halloween_sword"] = "This is a Halloween 2013 item!",
-		
+
 		--S&W .500
 		["bm_w_shatters_fury"] = "Phoenix .500",
-		
+
 		["bm_wp_wpn_fps_pis_shatters_fury_b_comp1"] = "Horus Barrel",
 		["bm_wp_wpn_fps_pis_shatters_fury_b_comp2"] = "Shatter Barrel",
 		["bm_wp_wpn_fps_pis_shatters_fury_b_long"] = "Hathor Barrel",
 		["bm_wp_wpn_fps_pis_shatters_fury_b_short"] = "Firebird Barrel",
-		
+
 		["bm_wp_wpn_fps_pis_shatters_fury_g_ergo"] = "Ergo Grip",
-		
+
 		["bm_wp_wpn_fps_pis_shatters_fury_body_smooth"] = "Smooth Cylinder",
 
 		["menu_l_global_value_shatters_fury"] = "This is a VERITAS item!",
-		
+
 		--MK-23
 		--Semi-automatic pistol. Hold down ■ to aim. Release to fire.
 		["bm_w_socom"] = "Anubis .45",
@@ -881,44 +887,44 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 
 		["heist_nmh_res_name"] = "Mercy Hospital",
 		["heist_nmh_res_brief"] = "Our client needs a blood sample from a patient being kept in the isolation ward of Mercy Hospital. You gotta go in there, take out the surveillance, subdue the civilians and get me into the patient database so I can ID the guy. With the security in this place, it should be a nice clean job. I'll get you out via the roof when you're done. This job is a little shady, brokered through a third part, got some some serious shadow-company military industrial vibes, but worth the risk. The payday is something we're gonna need in the future, plus a nice cash bonus.",
-		
+
 		["heist_nmh_new"] = "Draw and analyze patient's blood",
 		["heist_nmh_new_desc"] = "You gotta find a centrifuge to validate the blood samples.",
-		
+
 		["heist_nmh_new2"] = "Call the elevator",
 		["heist_nmh_new2_desc"] = "Press the button and wait for the elevator",
-		
+
 		["heist_nmh_new3"] = "Call the elevator",
-		["heist_nmh_new3_desc"] = "Press the button and wait for the elevator",	
-		
+		["heist_nmh_new3_desc"] = "Press the button and wait for the elevator",
+
 		--OICW--
 		["bm_w_osipr"] = "SABR",
 		["bm_w_osipr_gl"] = "SABR Grenade Launcher",
-		
+
 		--GO Bank remastered
 		["menu_nh_mod_gobank_v2"] = "GO Bank Remastered",
-		
+
 		["heist_gobank_v2_name"] = "GO Bank Remastered",
 		["heist_gobank_v2_brief"] = "This is a classic bank job. Break the vault, empty the deposit boxes and get the loot out. Simple. Bain's intel says this branch has the lowest hit-rate in the country. It's time to change that.\n\n» Search the environment for keycards. Two are needed for the vault\n» Failing that, use a drill on the vault\n» Crack open the deposit boxes\n» Assemble the skyhook\n» Get the money out",
-		
+
 		["heist_roberts_v2_name"] = "Robert's Bank",
 		["heist_roberts_v2_brief"] = "We got a bank here. Not a big branch but I've learned the vault is temporarily holding stacks of cash in transit. Foreign exchange notes.\n\nAnyway, you know how to do it - your way. Sneak in silent, or unleash hell. Either way, I got a little idea for how to lift the money out of there. You'll see what I mean. I think you'll like it.",
 
 		["csgo_plane_timer_text"] = "Wait for the plane &&TIMER",
 		["csgo_plane_timer_desc"] = "Wait for the plane &&TIMER",
-		
+
 		["hud_equipment_pickup_spraycan"] = "Press $BTN_INTERACT to pickup Spraycan",
 		["hud_action_spraypaint"] = "Press $BTN_INTERACT to Spraypaint",
 		["hud_action_spraypaint_none"] = "Spraycan Required",
 		["spraycan_obtained"] = "Spraycan Obtained",
 		["hud_equipment_obtained_spraycan"] = "Spraycan Obtained",
-		
+
 		["trophy_csgo01"] = "Graffiti Box",
 		["trophy_csgo01_desc"] = "And you didnt even have to buy this one",
 		["trophy_csgo01_objective"] = "Find spraypaint and spray graffiti in the vault on GO Bank Remastered.",
 
-		["END"] = "END",	
-		
+		["END"] = "END",
+
 		--Whurr Heat Street Edit
 		["heist_heat_street_new_name"] = "Heat Street True Classic",
 		["heist_heat_street_new_brief"] = "Someone once said there is no such thing as a sure thing, but this job looks easy: get in, get the briefcase, get out. Your trusted wheelman Matt will be waiting for you in the alley and as long as you get to the van there is no way you can fail. Is there?",
@@ -929,7 +935,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["heist_skm_heat_street_name"] = "Uptown - Inkwell Industrial",
 		["heist_skm_heat_street_brief"] = "The kerels recently interrogated a prisoner that claims to have seen the face of Bain and can identify him. While we know it isn't true, the kerels don't, and neither do our rivals, so we're going to use the situation to gain some cash. Intercept the chop while they're transferring him to witness protection, near the old factory storage yard where that dumkop Matt crashed his car while trying to get away from us.",
 		["heist_skm_street_name"] = "Holdout: Uptown - Inkwell Industrial",
-		["heist_skm_street_brief"] = "The kerels recently interrogated a prisoner that claims to have seen the face of Bain and can identify him. While we know it isn't true, the kerels don't, and neither do our rivals, so we're going to use the situation to gain some cash. Intercept the chop while they're transferring him to witness protection, near the old factory storage yard where that dumkop Matt crashed his car while trying to get away from us.",	
+		["heist_skm_street_brief"] = "The kerels recently interrogated a prisoner that claims to have seen the face of Bain and can identify him. While we know it isn't true, the kerels don't, and neither do our rivals, so we're going to use the situation to gain some cash. Intercept the chop while they're transferring him to witness protection, near the old factory storage yard where that dumkop Matt crashed his car while trying to get away from us.",
 
 		--Xmas Hoxout and Breaking Feds
 		["heist_xmn_hox"] = "Hoxton Breakout Xmas",
@@ -938,9 +944,9 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["heist_xmn_hox2"] = "The Search Xmas",
 		["heist_xmn_hox_2_brief"] = "Well, lads, thanks for breakin' me out. But I shouldn't have been there to begin with. Someone set me up. I'm sure of it. The Feds had too much on me. Way more than those mingebag wankers could dig up. Someone ratted. Someone fucked me. And I'm gonna find out who.$NL;$NL;Now, it ain't gonna be easy. No fannying about around the edges, right? No shadowy deals or contacts, or that bollocks. We're going to the source. The biggest FBI nest. Gonna find out who screwed me.",
 		["heist_xmn_hox_brief"] = "The Dentist got Hoxton a re-trial. We're going to grab him right after the hearing. The plan is as loud as it gets: we blow up a wall, grab Hoxton and get him the hell out.$NL;$NL;» Free Hoxton$NL;» Take Hoxton to the armored truck$NL;» Escort the armored truck with Hoxton in it$NL;» Escape with Hoxton.",
-		
+
 		["heist_xmn_tag_name"] = "Breakin' Feds Xmas"
-	})	
-	
+	})
+
 end)
 

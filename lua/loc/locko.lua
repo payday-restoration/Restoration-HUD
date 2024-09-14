@@ -13,10 +13,10 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 
 		["res_credits"] = "레스트레이션 모드 크레딧",
 		["res_credits_help"] = "레스트레이션 모드에 대한 크레딧을 확인합니다.",
-	
+
 		["Warning_overhaul_title"] = "WARNING: Game closing to prevent save corruption.",
 		["dialog_show_overhaul_dialog"] = "You are DISABLING the Complete Overhaul. It is typically NOT RECOMMENDED to do this, and you should instead REMOVE the mod from your mods folder if you intend not to use the Overhaul actively.\n\nYour game will close automatically in $TIME seconds, or when you press OK.",
-		["dialog_enable_overhaul_dialog"] = "You are ENABLING the Complete Overhaul. The Overhaul should typically remain ON at all times, and only be disabled by removing the mod from your mods folder.\n\nYour game will close automatically in $TIME seconds, or when you press OK.",	
+		["dialog_enable_overhaul_dialog"] = "You are ENABLING the Complete Overhaul. The Overhaul should typically remain ON at all times, and only be disabled by removing the mod from your mods folder.\n\nYour game will close automatically in $TIME seconds, or when you press OK.",
 
 		["res_saveboost"] = "$BTN_INTERACT 키를 길게 눌려 레벨 100으로 올립니다.",
 
@@ -200,7 +200,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["RestorationModHolidayTitleID"] = "홀리데이 효과",
 		["RestorationModHolidayDescID"] = "오버홀를 위한 홀레데이 효과를 활성화하거나 비활성화합니다.",
 		["RestorationModRestoreHitFlashTitleID"] = "히트 플래시 복원",
-		["RestorationModRestoreHitFlashDescID"] = "피해를 입었을 때 복원된 히트 플래시를 활성화 또는 비활성화합니다.",	
+		["RestorationModRestoreHitFlashDescID"] = "피해를 입었을 때 복원된 히트 플래시를 활성화 또는 비활성화합니다.",
 		["RestorationModNotifyTitleID"] = "기능 알림",
 		["RestorationModNotifyDescID"] = "이 기능에 대한 알림을 활성화하거나 비활성화합니다.",
 		["RestorationModPauseTitleID"] = "알파 일시 중지 메뉴",
@@ -349,7 +349,69 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["restoration_level_data_junk"] = "시간 기밀, 위치 기밀",
 		["restoration_level_data_holly"] = "오후 5:00, 로스앤젤레스 - 루카스 맨션",
 		["restoration_level_data_lvl_friday"] = "오후 5:00, 실드 쇼핑몰",
-		
+		["restoration_level_data_skm_nightmare_lvl"] = "세탁소? 너는 너의 죄를 씻기 위해 여기에 왔는가?",
+
+		--custom heists
+		["restoration_level_data_flatline_lvl"] = "오후 10:26 볼니차 임. Н.И. 피로고프",
+		["restoration_level_data_ahopl"] = "오후 9:06, 유리의 개인 클럽", --A House of Pleasure
+		["restoration_level_data_atocl"] = "오후 7:03, 펜트하우스 파티", --A Touch of Class
+		["restoration_level_data_rusdl"] = "전 10:23, 가넷 그룹 주얼리 스토어", --Cold Stones
+		["restoration_level_data_crimepunishlvl"] = "오후 1:19, 러시아 어딘가의 교정 시설", --Crime and Punishment
+		["restoration_level_data_deadcargol"] = "오후 8:36, 보급 창고 아래 하수도", --Deadly Cargo
+		["restoration_level_data_hunter_party"] = "오후 3:56, 니콜라이의 펜트하우스", --Hunter and Hunted d1
+		["restoration_level_data_hunter_departure"] = "오후 10:13, 알렉산드르의 전용 공항", --Hunger and Hunted d2
+		["restoration_level_data_hunter_fall"] = "오전 1:36, 국제 해역 어딘가", --Hunter and Hunted d3
+		["restoration_level_data_ruswl"] = "오전 11:50, 러시아 어딘가", --Scorched Earth
+		["restoration_level_data_jambank"] = "오전 11:59, 하베스트 & 트러스티 은행", --Botched Bank
+		["restoration_level_data_2Fort"] = "초과전, 투포트 어딘가", --2fort
+		["restoration_level_data_anlh"] = "오후 2:35, 지안 리앙의 빌라", --An End to Liang
+		["restoration_level_data_lvl_fourmorestores"] = "오후 3:12, 점포 앞", --Four More Stores
+		["restoration_level_data_TonCont"] = "오전 11:01, 아트리움", --AT: Atrium
+		["restoration_level_data_amsdeal1"] = "오후 9:49, 골목길", --Armsdeal Alleyway
+		["restoration_level_data_ascension_III"] = "오후 10:53, 이클립스 연구 시설", --Ascension
+		["restoration_level_data_hwu"] = "오후 11:03, 아발론 물류 세이프하우스", --Avalon's Shadow
+		["restoration_level_data_vrc1"] = "오후 2:35, 다운타운 구역", --A Very Richie Christmas d1
+		["restoration_level_data_vrc2"] = "오후 6:46, 보관 창고", --A Very Richie Christmas d2
+		["restoration_level_data_vrc3"] = "오후 11:04, 젠섹 타워", --A Very Richie Christmas d3
+		["restoration_level_data_btms"] = "오전 4:40, 네바다 - 블랙 릿지 시설", --Blackridge Facility
+		["restoration_level_data_BloodMoney"] = "오후 8:00, 다운타임 사무소", --Blood Money
+		["restoration_level_data_brb_rant"] = "오후 6:53, 뉴욕, 브루클린 - 하베스트 & 트러스트 지점 은행", --Brooklyn Bank Ranted
+		["restoration_level_data_lit1"] = "오후 4:20, 캘리포니아 그린 스토어", --California Heat
+		["restoration_level_data_lit2"] = "오후 4:20, 알미르의 게임 스토어", --California Heat - Almir's Games
+		["restoration_level_data_dwn1"] = "오후 7:12, 캘리포니아 그린 창고", --Deep Inside
+		["restoration_level_data_the_factory"] = "오후 9:37, 이클립스 연구 시설", --Eclipse Research Facility
+		["restoration_level_data_Election_Funds"] = "오후 10:29, 선거 본사", --Election Funds
+		["restoration_level_data_constantine_mex_level"] = "오후 3:46, 멕시코 어딘가", --End of an Era
+		["restoration_level_data_battlearena"] = "오후 11:14, 조지타운", --FiveG
+		["restoration_level_data_funbank"] = "뭔가 잘못되었다...", --Funbank
+		["restoration_level_data_RogueCompany"] = "오후 8:20, 자칼의 영토", --Rogue Company
+		["restoration_level_data_bnktower"] = "시간 기밀, 젠섹 H.I.V.E.", --GenSec HIVE
+		["restoration_level_data_glb"] = "오전 11:19, 골든 로터스 은행", --Golden Lotus Bank
+		["restoration_level_data_constantine_harbor_lvl"] = "오후 9:12, 조선소 창고", --Harboring a Grudge
+		["restoration_level_data_tonmapjam22l"] = "오후 4:49, 하베스트 & 트러스티 은행", --Hard Cash
+		["restoration_level_data_hardware_store"] = "오후 7:36, 하드웨어 스토어", --Hardware Store
+		["restoration_level_data_tj_htsb"] = "오후 1:10, 하베스트 & 트러스티 은행", --H&T Southern Branch
+		["restoration_level_data_tj_htsb_escape_level"] = "탈출하라!", --H&T Southern Branch escape day? probably unused, dunno
+		["restoration_level_data_hntn"] = "오전 9:16, 하베스트 & 트러스티 은행", --H&T Northern Branch
+		["restoration_level_data_hidden_vault"] = "오후 11:08, 크라니치 시설 시내", --Hidden Vault
+		["restoration_level_data_crumch_returns"] = "오후 12:50, 실드 쇼핑몰", --Mallcrasher Ranted
+		["restoration_level_data_mansion_stage1"] = "오전 2:13, 엘름스워스 경의 저택", --Elmsworth Mansion
+		["restoration_level_data_skm_nmh"] = "오후 9:12, 머시 병원 - 지붕", --No Mercy SKM
+		["restoration_level_data_office_strike"] = "오후 1:57, 다운타운 FBI 사무소", --Office Strike
+		["restoration_level_data_highrise_stage1"] = "오전 1:03, 트렘블레이의 아파트", --Out of Frame
+		["restoration_level_data_constantine_bank_lvl"] = "오후 12:00, 퍼시픽 은행", --Pacific Bank
+		["restoration_level_data_sh_raiders"] = "오후 5:16, 외곽 창고", --Safehouse Raiders
+		["restoration_level_data_santas_hardware_store"] = "오후 3:47, 하드웨어 스토어", --Santa's Hardware Store
+		["restoration_level_data_schl"] = "오후 9:57, 스칼렛 클럽", --Scarlet Club
+		["restoration_level_data_skm_wd2_x"] = "오후 6:09, 알멘디아 물류 조선소", --Watchdogs d2 SKM revamp
+		["restoration_level_data_Skyscraper"] = "오전 2:13, 젠섹 기업 본사", --Skyscraper Heist
+		["restoration_level_data_tonisl1"] = "오후 3:31, 하베스트 & 트러스티 은행", --Grand Harvest
+		["restoration_level_data_ttr_yct_lvl"] = "오후 2:19, 웨이 쳉의 요트", --Triad Takedown Remastered
+		["restoration_level_data_Tonis2"] = "오후 1:31, 항구 창고", --Triple Threat
+		["restoration_level_data_trop"] = "오전 11:48, 국제 해역 어딘가", --Tropical Treasure
+		["restoration_level_data_Gambling_room"] = "오후 9:29, 트웬티 포 세븐 스토어", --Underground Bargains
+		["restoration_level_data_finsternis"] = "오후 5:24, 독일 - 슈바르츠발트", --Projekt Finsternis
+
 		["heist_greattrain_name"] = "Time Window",
 		["heist_easystore_name"] = "Twenty-Four Seven",
 		["heist_sin_villa_name"] = "SCORE: Villa Vivaldi",
@@ -371,14 +433,14 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["heist_jackal_surface_tension_brief"] = "PLACEHOLDER",
 
 		["heist_vivinite_name"] = "Zero Day",
-	
+
 		["heist_contact_shatter"] = "자칼",
 		["heist_contact_akashic"] = "니코",
 
 		["menu_contacts_shatter"] = "Crime.net 계약자",
-		
+
 		["heist_contact_jackal_description"] = "자칼은 젠섹에서 소속했었지만 젠섹 및 옴니아와 관련된 인신매매 사건 이후 그만두었습니다.\n\n지금은 Crime.net에서 소속하여 싸움을 그들의 문으로 데려갑니다.",
-		
+
 		["heist_contact_akashic_description"] = "이전에 헥터 모랄레스 아래에서 속해있는 고위 간부였던 니콜라스 '니코' 르네는 현재 미국에서 시날론 카르텔의 잔당을 지휘하고 있습니다.\n그들의 수는 적고 더 큰 콜롬비아 카르텔은 그들을 돕거나 Crime.net과의 관계를 회복할 의도가 없었습니다.\n\n동부 해안에서 활동하는 다양한 소규모 갱단을 흡수하고 Crime.net과 동맹을 맺은 그는 서비스에 대한 대가로 자원을 제공합니다.",
 
 		["bm_msk_shatter_true"] = "샤터",
@@ -594,9 +656,13 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["RestorationModPocoCrimenetScaleTitleID"] = "Poco CRIMENET 크기",
 		["RestorationModPocoCrimenetScaleDescID"] = "CRIMENET의 크기를 설정합니다.",
 		["RestorationModVoiceIconTitleID"] = "음성 채팅 아이콘",
-	    ["RestorationModVoiceIconDescID"] = "플레이어가 게임 내에서 음성 채팅을 사용할 때 표시합니다.",
+	   	["RestorationModVoiceIconDescID"] = "플레이어가 게임 내에서 음성 채팅을 사용할 때 표시합니다.",
+		["RestorationModNewsFeedStyleTitleID"] = "Alpha Newsfeed Style",
+		["RestorationModNewsFeedStyleDescID"] = "Allows you to choose to show both newsfeed and newheists box or just the newsfeed.",
 		["alpha_assault"] = "초기 알파 코너",
 		["beta_assault"] = "알파 테이프",
+		["show_both"] = "Default",
+		["show_classic_newsfeed"] = "Classic",
 
 		["menu_ingame_manual"] = "오버홀 가이드",
 		["menu_ingame_manual_help"] = "레스트레이션의 오버홀 가이드 봅니다.",
@@ -742,7 +808,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 
 		["ch_watchdogs_d1_heavy_wpn1_hl"] = "HEAVY ARMOR, AND HEAVIER WEAPONS",
 		["ch_watchdogs_d1_heavy_wpn1"] = "Complete day one of the WATCHDOGS job, wearing an ICTV and using miniguns, the Thanatos sniper, or RPG's only, on the OVERKILL difficulty or above.  You must have played from the start of the heist to complete this challenge.",
-		
+
 		["test_net"] = "Fast.Net",
 		["menu_test"] = "",
 		["state_filter"] = "State",
@@ -751,27 +817,27 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["menu_state_lobby"] = "Lobby",
 		["menu_state_loading"] = "Loading",
 		["menu_state_ingame"] = "Ingame",
-		
+
 		-- ///Stuff ripped from the various locale files we had ///
-		
+
 		--Halloween Dozer Sword
 		["bm_melee_halloween_sword"] = "목 없는 불도저의 검",
 		["menu_l_global_value_halloween_sword"] = "이 상품은 할로윈 2013 아이템입니다!",
-		
+
 		--S&W .500
 		["bm_w_shatters_fury"] = "Phoenix .500 리볼버",
-		
+
 		["bm_wp_wpn_fps_pis_shatters_fury_b_comp1"] = "호루스 총열",
 		["bm_wp_wpn_fps_pis_shatters_fury_b_comp2"] = "셰더 총열",
 		["bm_wp_wpn_fps_pis_shatters_fury_b_long"] = "하토르 총열",
 		["bm_wp_wpn_fps_pis_shatters_fury_b_short"] = "불새 총열",
-		
+
 		["bm_wp_wpn_fps_pis_shatters_fury_g_ergo"] = "Ergo 손잡이",
-		
+
 		["bm_wp_wpn_fps_pis_shatters_fury_body_smooth"] = "부드러운 실린더",
 
 		["menu_l_global_value_shatters_fury"] = "이 상품은 베리타스 아이템입니다!",
-		
+
 		--MK-23
 		--Semi-automatic pistol. Hold down ■ to aim. Release to fire.
 		["bm_w_socom"] = "Anubis .45 권총",
@@ -785,44 +851,44 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 
 		["heist_nmh_res_name"] = "자비 병원",
 		["heist_nmh_res_brief"] = "우리의 의뢰인께서 머시 병원의 격리 병동에 있는 환자의 혈액 샘플이 필요하다고 하더군. 너희들이 가서, 보안장치를 없애고, 시민들을 제압한 뒤에 내가 우리가 찾는 녀석의 신원을 확인할 수 있도록 환자 데이터베이스를 내쪽으로 연결해, 경비가 별로 삼엄하지는 않으니까, 쉽게 끝낼 수 있겠지. 너희들이 옥상으로 혈액 샘플을 가져오면 일은 끝이야. 이번 작업은 뭔가 비밀스럽고, 베일에 감춰진 군사 산업이 연루된 거 같지만, 그 정도의 리스크는 감수해야지. 우리 미래에 월급날은 필요한 것이고, 거기에 짭짤한 현금 보너스까지 붙는다고 생각해.",
-		
+
 		["heist_nmh_new"] = "환자의 혈액을 채취하고 분석하라",
 		["heist_nmh_new_desc"] = "혈액 샘플의 유효성을 검사하려면 원심분리기를 찾아라",
-		
+
 		["heist_nmh_new2"] = "엘리베이터를 불러라",
 		["heist_nmh_new2_desc"] = "버튼을 누르고 엘리베이터를 기다려라",
-		
+
 		["heist_nmh_new3"] = "엘리베이터를 불러라",
-		["heist_nmh_new3_desc"] = "버튼을 누르고 엘리베이터를 기다려라",	
-		
+		["heist_nmh_new3_desc"] = "버튼을 누르고 엘리베이터를 기다려라",
+
 		--OICW--
 		["bm_w_osipr"] = "SABR 소총",
 		["bm_w_osipr_gl"] = "SABR 유탄 발사기",
-		
+
 		--GO Bank remastered
 		["menu_nh_mod_gobank_v2"] = "GO Bank Remastered",
-		
+
 		["heist_gobank_v2_name"] = "GO Bank Remastered",
 		["heist_gobank_v2_brief"] = "This is a classic bank job. Break the vault, empty the deposit boxes and get the loot out. Simple. Bain's intel says this branch has the lowest hit-rate in the country. It's time to change that.\n\n» Search the environment for keycards. Two are needed for the vault\n» Failing that, use a drill on the vault\n» Crack open the deposit boxes\n» Assemble the skyhook\n» Get the money out",
-		
+
 		["heist_roberts_v2_name"] = "로버츠 은행",
 		["heist_roberts_v2_brief"] = "우리가 이벤에 노릴곳은 은행이야. 큰 지점은 아니지만, 이 은행의 금고안에 임시적으로 수송할 현글을 보관하고 있다는 정보를 얻었어. 대부분 외화라고 하더라고.\n\n어쨌든, 일은 어떻게 진행되는지 알고 있지? - 너희가 하고 싶은대로 하면돼. 조용히 처리하던가, 아니면 지옥을 펼치던가. 어느쪽을 선택하든, 돈을 빼돌릴 방법은 내가 마련해 놨어. 아마 상당히 마음에 들꺼야.",
 
 		["csgo_plane_timer_text"] = "Wait for the plane &&TIMER",
 		["csgo_plane_timer_desc"] = "Wait for the plane &&TIMER",
-		
+
 		["hud_equipment_pickup_spraycan"] = "Press $BTN_INTERACT to pickup Spraycan",
 		["hud_action_spraypaint"] = "Press $BTN_INTERACT to Spraypaint",
 		["hud_action_spraypaint_none"] = "Spraycan Required",
 		["spraycan_obtained"] = "Spraycan Obtained",
 		["hud_equipment_obtained_spraycan"] = "Spraycan Obtained",
-		
+
 		["trophy_csgo01"] = "Graffiti Box",
 		["trophy_csgo01_desc"] = "And you didnt even have to buy this one",
 		["trophy_csgo01_objective"] = "Find spraypaint and spray graffiti in the vault on GO Bank Remastered.",
 
-		["END"] = "END",	
-		
+		["END"] = "END",
+
 		--Whurr Heat Street Edit
 		["heist_heat_street_new_name"] = "Heat Street True Classic",
 		["heist_heat_street_new_brief"] = "Someone once said there is no such thing as a sure thing, but this job looks easy: get in, get the briefcase, get out. Your trusted wheelman Matt will be waiting for you in the alley and as long as you get to the van there is no way you can fail. Is there?",
@@ -833,7 +899,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["heist_skm_heat_street_name"] = "Uptown - Inkwell Industrial",
 		["heist_skm_heat_street_brief"] = "The kerels recently interrogated a prisoner that claims to have seen the face of Bain and can identify him. While we know it isn't true, the kerels don't, and neither do our rivals, so we're going to use the situation to gain some cash. Intercept the chop while they're transferring him to witness protection, near the old factory storage yard where that dumkop Matt crashed his car while trying to get away from us.",
 		["heist_skm_street_name"] = "홀드아웃: 업타운 - 잉크웰 산업장",
-		["heist_skm_street_brief"] = "The kerels recently interrogated a prisoner that claims to have seen the face of Bain and can identify him. While we know it isn't true, the kerels don't, and neither do our rivals, so we're going to use the situation to gain some cash. Intercept the chop while they're transferring him to witness protection, near the old factory storage yard where that dumkop Matt crashed his car while trying to get away from us.",	
+		["heist_skm_street_brief"] = "The kerels recently interrogated a prisoner that claims to have seen the face of Bain and can identify him. While we know it isn't true, the kerels don't, and neither do our rivals, so we're going to use the situation to gain some cash. Intercept the chop while they're transferring him to witness protection, near the old factory storage yard where that dumkop Matt crashed his car while trying to get away from us.",
 
 		--Xmas Hoxout and Breaking Feds
 		["heist_xmn_hox"] = "혹스턴 브레이크아웃 크리스마스 버전",
@@ -842,13 +908,13 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_english_Localization", function
 		["heist_xmn_hox2"] = "조사 크리스마스 버전",
 		["heist_xmn_hox_2_brief"] = "이런, 친구들, 날 빼내준 건 고마워. 그런데 애초에 난 빵에 들어가지 않았어야 했어. 분명 누군가가 나를 팔아넘긴 거야. 확실하다고. FBI 녀석들이 나에 대해 너무나도 자세히 알고 있었단 말이야. 그 병신 새끼들이 절대로 찾아낼 수 없던 내용까지도 말이야. 누군가 고발한 거야. 누군가가 나를 엿 먹였다고. 내가 반드시 찾아내고 말 거야.$NL;$NL;자, 이 일이 쉽지는 않겠지. 사태를 파악하거나 그런 거 없고. 은밀한 거리나 작업 같은 쓸모없는 일 같은 건 안 할 거야. 우리는 바로 내 정보의 출처로 향한다. FBI 본진으로 말이야. 누가 날르 엿 먹였는지 찾아내고 말겠어.",
 		["heist_xmn_hox_brief"] = "치과의사가 혹스턴이 재심을 받도록 손을 썻습니다. 우리는 재판이 끝난 직후 그를 빼내올 것입니다. 계획은 라우드로 진행될 것입니다: 벽을 날려 버리고, 혹스턴을 데리고 탈출하십시오.$NL;$NL;» 혹스턴 풀어주기$NL;» 혹스턴을 방탄 자량으로 데리고 가기$NL;» 혹스턴이 탄 방탄 차량을 엄호하기$NL;» 혹스턴과 함께 탈출하기",
-		
+
 		["heist_xmn_tag_name"] = "FBI 침입 크리스마스 버전",
 
 		["hud_instruct_mask_on"] = "$BTN_USE_ITEM 키를 눌러 마스크 착용",
 		["hud_instruct_mask_on_alpha"] = "$BTN_USE_ITEM 키를 눌러 마스크 착용"
 	})
-	
+
 end)
 
 local r = tweak_data.levels.ai_groups.russia

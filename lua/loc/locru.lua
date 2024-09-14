@@ -249,7 +249,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_russian_Localization", function
 		["RestorationModHolidayTitleID"] = "Праздничные эффекты",
 		["RestorationModHolidayDescID"] = "Включает или выключает праздничные эффекты в моде.",
 		["RestorationModRestoreHitFlashTitleID"] = "Вспышка при уроне",
-		["RestorationModRestoreHitFlashDescID"] = "Включить или выключить вспышку экрана при получении урона из старых версий игры.",	
+		["RestorationModRestoreHitFlashDescID"] = "Включить или выключить вспышку экрана при получении урона из старых версий игры.",
 		["RestorationModNotifyTitleID"] = "Уведомление",
 		["RestorationModNotifyDescID"] = "Включить или выключить уведомления мода.",
 		["RestorationModPauseTitleID"] = "Меню паузы из Альфы",
@@ -387,17 +387,32 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_russian_Localization", function
 		["restoration_level_data_pex"] = "ВРЕМЯ ЗАСЕКРЕЧЕНО, Мексика - Полицейский участок",
 		["restoration_level_data_fex"] = "ВРЕМЯ ЗАСЕКРЕЧЕНО, Мексика - Особняк Булука",
 		["restoration_level_data_chas"] = "20:30, Сан Франциско - Чайнатаун",
-		["restoration_level_data_sand"] = "22:30, Сан Франциско - Порт",		
+		["restoration_level_data_sand"] = "22:30, Сан Франциско - Порт",
 		["restoration_level_data_chca"] = "21:24, Залив Сан Франциско - Лайнер Black Cat",
 		["restoration_level_data_pent"] = "23:30, Сан Франциско - Пентхаус Юфу Венга",
 		["restoration_level_data_ranc"] = "18:24, Техас - Ранчо Мидленд",
 		["restoration_level_data_trai"] = "19:40, Форт-Уэрт - Дэлтон Ярд",
 		["restoration_level_data_corp"] = "8:35 PM, Даллас - Исследовательский центр корпорации SERA",
-		["restoration_level_data_deep"] = "9:00 PM, Gulf of Mexico - SERA's Oil Rig Tanker",
+		["restoration_level_data_deep"] = "9:00 PM, Мексиканский залив - Нефтяная вышка корпорации SERA",
 		["restoration_level_data_wetwork"] = "ВРЕМЯ ЗАСЕКРЕЧЕНО, ЛОКАЦИЯ ЗАСЕКРЕЧЕНА",
 		["restoration_level_data_junk"] = "ВРЕМЯ ЗАСЕКРЕЧЕНО, ЛОКАЦИЯ ЗАСЕКРЕЧЕНА",
 		["restoration_level_data_holly"] = "5:00 PM, Los Angeles - Lukas' Mansion",
 		["restoration_level_data_lvl_friday"] = "17:00, Торговый центр 'Щит'",
+		["restoration_level_data_skm_nightmare_lvl"] = "Прачечная? Хочешь отмыть грехи?",
+		["restoration_level_data_bluewave"] = "ВРЕМЯ ЗАСЕКРЕЧЕНО, Склад Aurelian",
+
+
+         --custom heists
+		["restoration_level_data_flatline_lvl"] = "10:26 PM, Больница им. Н.И. Пирогова", --Flatline
+		["restoration_level_data_ahopl"] = "9:06 PM, Yuri's Private Club", --A House of Pleasure
+		["restoration_level_data_atocl"] = "7:03 PM, Penthouse Party", --A Touch of Class
+		["restoration_level_data_rusdl"] = "10:23 AM, Garnet Group Jewelery Store", --Cold Stones
+		["restoration_level_data_crimepunishlvl"] = "1:19 PM, Correctional Facility Somewhere in Russia", --Crime and Punishment
+		["restoration_level_data_deadcargol"] = "8:36 PM, Sewers Under The Depot", --Deadly Cargo
+		["restoration_level_data_hunter_party"] = "3:56 PM, Nikolai's Penthouse", --Hunter and Hunted d1
+		["restoration_level_data_hunter_departure"] = "10:13 PM, Aleksandr's Private Airport", --Hunger and Hunted d2
+		["restoration_level_data_hunter_fall"] = "1:36 AM, Somewhere Over International Waters", --Hunter and Hunted d3
+		["restoration_level_data_ruswl"] = "11:50 AM, Somewhere in Russia", --Scorched Earth
 
 		["heist_greattrain_name"] = "Time Window",
 		["heist_easystore_name"] = "Twenty-Four Seven",
@@ -641,9 +656,13 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_russian_Localization", function
 		["RestorationModPocoCrimenetScaleTitleID"] = "Масштаб CRIMENET",
 		["RestorationModPocoCrimenetScaleDescID"] = "Позволяет менять масштаб CRIMENET.",
 		["RestorationModVoiceIconTitleID"] = "Голосовой чат",
-	        ["RestorationModVoiceIconDescID"] = "Отображает иконку, когда игрок использует голосовой чат.",
+		["RestorationModVoiceIconDescID"] = "Отображает иконку, когда игрок использует голосовой чат.",
+		["RestorationModNewsFeedStyleTitleID"] = "Alpha Newsfeed Style",
+		["RestorationModNewsFeedStyleDescID"] = "Allows you to choose to show both newsfeed and newheists box or just the newsfeed.",
 		["alpha_assault"] = "Уголок",
 		["beta_assault"] = "Лента",
+		["show_both"] = "Default",
+		["show_classic_newsfeed"] = "Classic",
 
 		["menu_ingame_manual"] = "Гайд по Restoration",
 		["menu_ingame_manual_help"] = "Просмотреть гайд по Restoration.",
@@ -789,7 +808,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_russian_Localization", function
 
 		["ch_watchdogs_d1_heavy_wpn1_hl"] = "ТОЛСТАЯ БРОНЯ, БОЛЬШИЕ ПУШКИ",
 		["ch_watchdogs_d1_heavy_wpn1"] = "Пройти первый день ограбления 'Сторожевые псы', используя только УКТЖ, миниганы, ракетомёты или снайперскую винтоку Thanatos, на уровни сложности OVERKILL или выше. Для выполнения этого испытания, ограбление нужно играть с самого начала.",
-		
+
 		["test_net"] = "Fast.Net",
 		["menu_test"] = "",
 		["state_filter"] = "Статус",
@@ -798,10 +817,10 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_russian_Localization", function
 		["menu_state_lobby"] = "В лобби",
 		["menu_state_loading"] = "Загружается",
 		["menu_state_ingame"] = "В игре",
-		
+
 		["hud_instruct_mask_on"] = "УДЕРЖИВАЙТЕ $BTN_USE_ITEM чтобы надеть маску",
 		["hud_instruct_mask_on_alpha"] = "УДЕРЖИВАЙТЕ $BTN_USE_ITEM чтобы надеть маску",
-				
+
 		-- ///Stuff ripped from the various locale files we had ///
 
 		--Halloween Dozer Sword
@@ -843,7 +862,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_russian_Localization", function
 		["heist_nmh_new2_desc"] = "Нажмите кнопку и ожидайте лифт",
 
 		["heist_nmh_new3"] = "Вызовите лифт",
-		["heist_nmh_new3_desc"] = "Нажмите кнопку и ожидайте лифт",	
+		["heist_nmh_new3_desc"] = "Нажмите кнопку и ожидайте лифт",
 
 		--OICW--
 		["bm_w_osipr"] = "SABR",
@@ -871,7 +890,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_russian_Localization", function
 		["trophy_csgo01_desc"] = "И за него даже не пришлось платить!",
 		["trophy_csgo01_objective"] = "На ограблении Банк GO - Ремастер, найдите краску и нарисуйте граффити в хранилище.",
 
-		["END"] = "КОНЕЦ",	
+		["END"] = "КОНЕЦ",
 
 		--Whurr Heat Street Edit
 		["heist_heat_street_new_name"] = "Схватка на улице (классика)",
@@ -883,7 +902,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResMod_russian_Localization", function
 		["heist_skm_heat_street_name"] = "Жилой район - здание 'Инквелл'",
 		["heist_skm_heat_street_brief"] = "Недавно копы допросили заключенного, который утверждает, что видел лицо Бейна и может его опознать. Разумеется, это неправда - но об этом не догадываются ни копы, ни наши враги, поэтому мы воспользуемся ситуацией, чтобы срубить немного денег. Перехватите заключенного, когда его будут перевозить около старой фабрики, где еще разбился тот идиот Мэтт, когда пытался убежать тот нас.",
 		["heist_skm_street_name"] = "Столкновение: Жилой район - здание 'Инквелл'",
-		["heist_skm_street_brief"] = "Недавно копы допросили заключенного, который утверждает, что видел лицо Бейна и может его опознать. Разумеется, это неправда - но об этом не догадываются ни копы, ни наши враги, поэтому мы воспользуемся ситуацией, чтобы срубить немного денег. Перехватите заключенного, когда его будут перевозить около старой фабрики, где еще разбился тот идиот Мэтт, когда пытался убежать тот нас.",	
+		["heist_skm_street_brief"] = "Недавно копы допросили заключенного, который утверждает, что видел лицо Бейна и может его опознать. Разумеется, это неправда - но об этом не догадываются ни копы, ни наши враги, поэтому мы воспользуемся ситуацией, чтобы срубить немного денег. Перехватите заключенного, когда его будут перевозить около старой фабрики, где еще разбился тот идиот Мэтт, когда пытался убежать тот нас.",
 
 		--Xmas Hoxout and Breaking Feds
 		["heist_xmn_hox"] = "Рождественское спасение Хокстона",

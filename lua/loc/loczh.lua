@@ -179,7 +179,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResHUD_chinese_Localization", function
 		["RestorationModClassicMoviesDescID"] = "选择是否在任务简报界面采用PD:TH的经典页面(仅适用于经典劫案)",
 		["RestorationModQuietRainTitleID"] = "减轻雨声",
 		["RestorationModQuietRainDescID"] = "在下雨的劫案中雨声不会那么嘈杂",
-		
+
 
 
 		["default"] = "默认",
@@ -251,7 +251,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResHUD_chinese_Localization", function
 		["RestorationModHolidayTitleID"] = "节日活动",
 		["RestorationModHolidayDescID"] = "开启或关闭 节日活动 对大修的影响",
 		["RestorationModRestoreHitFlashTitleID"] = "恢复Mod受击闪屏",
-		["RestorationModRestoreHitFlashDescID"] = "启用或禁用恢复Mod的受击闪屏",	
+		["RestorationModRestoreHitFlashDescID"] = "启用或禁用恢复Mod的受击闪屏",
 		["RestorationModNotifyTitleID"] = "功能及特色提示",
 		["RestorationModNotifyDescID"] = "启用或禁用对模组特色的通知和提示",
 		["RestorationModPauseTitleID"] = "Alpha 暂停菜单",
@@ -397,71 +397,72 @@ Hooks:Add("LocalizationManagerPostInit", "ResHUD_chinese_Localization", function
 	  ["restoration_level_data_trai"] = "傍晚7:40, 沃斯堡 - 道尔顿庭院",
 	  ["restoration_level_data_corp"] = "傍晚8:35, 达拉斯 - SERA研究所",
 	  ["restoration_level_data_deep"] = "9:00 PM, Gulf of Mexico - SERA's Oil Rig Tanker",
-      ["restoration_level_data_wetwork"] = "秘密的时间, 秘密的地点",
-      ["restoration_level_data_junk"] = "秘密的时间, 秘密的地点",
-      ["restoration_level_data_holly"] = "下午5:00 , 洛杉矶-卢卡斯的庄园",
-      ["restoration_level_data_lvl_friday"] = "下午5:00 , 大型购物中心",
+	  ["restoration_level_data_wetwork"] = "秘密的时间, 秘密的地点",
+	  ["restoration_level_data_junk"] = "秘密的时间, 秘密的地点",
+	  ["restoration_level_data_holly"] = "下午5:00 , 洛杉矶-卢卡斯的庄园",
+	  ["restoration_level_data_lvl_friday"] = "下午5:00 , 大型购物中心",
+	  ["restoration_level_data_skm_nightmare_lvl"] = "一家洗衣店？你是来洗脱你的罪恶的吗？",
 
-	   --custom heists
-	   ["restoration_level_data_flatline_lvl"] = "10:26 PM, Больница им. Н.И. Пирогова", --Flatline
-	   ["restoration_level_data_ahopl"] = "9:06 PM, Yuri's Private Club", --A House of Pleasure
-	   ["restoration_level_data_atocl"] = "7:03 PM, Penthouse Party", --A Touch of Class
-	   ["restoration_level_data_rusdl"] = "10:23 AM, Garnet Group Jewelery Store", --Cold Stones
-	   ["restoration_level_data_crimepunishlvl"] = "1:19 PM, Correctional Facility Somewhere in Russia", --Crime and Punishment
-	   ["restoration_level_data_deadcargol"] = "8:36 PM, Sewers Under The Depot", --Deadly Cargo
-	   ["restoration_level_data_hunter_party"] = "3:56 PM, Nikolai's Penthouse", --Hunter and Hunted d1
-	   ["restoration_level_data_hunter_departure"] = "10:13 PM, Aleksandr's Private Airport", --Hunger and Hunted d2
-	   ["restoration_level_data_hunter_fall"] = "1:36 AM, Somewhere Over International Waters", --Hunter and Hunted d3
-	   ["restoration_level_data_ruswl"] = "11:50 AM, Somewhere in Russia", --Scorched Earth
-	   ["restoration_level_data_jambank"] = "11:59 AM, Harvest & Trustee Bank", --Botched Bank
-	   ["restoration_level_data_2Fort"] = "Overime, Somewhere in Teufort", --2fort
-	   ["restoration_level_data_anlh"] = "2:35 PM, Jian Liang's Villa", --An End to Liang
-	   ["restoration_level_data_lvl_fourmorestores"] = "3:12 PM, Storefronts", --Four More Stores
-	   ["restoration_level_data_TonCont"] = "11:01 AM, Atrium", --AT: Atrium
-	   ["restoration_level_data_amsdeal1"] = "9:49 PM, Alleyways", --Armsdeal Alleyway
-	   ["restoration_level_data_ascension_III"] = "10:53 PM, Eclipse Research Facility", --Ascension
-	   ["restoration_level_data_hwu"] = "11:03 PM, Avalon Logistics Safehouse", --Avalon's Shadow
-	   ["restoration_level_data_vrc1"] = "2:35 PM, Downtown District", --A Very Richie Christmas d1
-	   ["restoration_level_data_vrc2"] = "6:46 PM, Storage Warehouse", --A Very Richie Christmas d2
-	   ["restoration_level_data_vrc3"] = "11:04 PM, GenSec Tower", --A Very Richie Christmas d3
-	   ["restoration_level_data_btms"] = "4:40 AM, Nevada - Black Ridge Facility", --Blackridge Facility
-	   ["restoration_level_data_BloodMoney"] = "8:00 PM, Downtime Offices", --Blood Money
-	   ["restoration_level_data_brb_rant"] = "6:53 PM, New York, BROOKLYN - Harvest & Trustee Branch Bank", --Brooklyn Bank Ranted
-	   ["restoration_level_data_lit1"] = "4:20 PM, California Green Store", --California Heat
-	   ["restoration_level_data_lit2"] = "4:20 PM, Almir's Games Store", --California Heat - Almir's Games
-	   ["restoration_level_data_dwn1"] = "7:12 PM, California Green depot", --Deep Inside
-	   ["restoration_level_data_the_factory"] = "9:37 PM, Eclipse Research Facility", --Eclipse Research Facility
-	   ["restoration_level_data_Election_Funds"] = "10:29 PM, Electoral Headquarter", --Election Funds
-	   ["restoration_level_data_constantine_mex_level"] = "3:46 PM, Somewhere in Mexico", --End of an Era
-	   ["restoration_level_data_battlearena"] = "11:14 PM, Georgetown", --FiveG
-	   ["restoration_level_data_funbank"] = "Something doesn't look right...", --Funbank
-	   ["restoration_level_data_RogueCompany"] = "8:20 PM, Jackals Territory", --Rogue Company
-	   ["restoration_level_data_bnktower"] = "TIME CLASSIFIED, GenSec H.I.V.E.", --GenSec HIVE
-	   ["restoration_level_data_glb"] = "11:19 AM, Golden Lotus Bank", --Golden Lotus Bank
-	   ["restoration_level_data_constantine_harbor_lvl"] = "9:12 PM, Dockyard Warehouses", --Harboring a Grudge
-	   ["restoration_level_data_tonmapjam22l"] = "4:49 PM, Harvest & Trustee Bank", --Hard Cash
-	   ["restoration_level_data_hardware_store"] = "7:36 PM, Hardware Store", --Hardware Store
-	   ["restoration_level_data_tj_htsb"] = "1:10 PM, Harvest & Trustee Bank", --H&T Southern Branch
-	   ["restoration_level_data_tj_htsb_escape_level"] = "Escape!", --H&T Southern Branch escape day? probably unused, dunno
-	   ["restoration_level_data_hntn"] = "9:16 AM, Harvest & Trustee Bank", --H&T Northern Branch
-	   ["restoration_level_data_hidden_vault"] = "11:08 PM, Kranich facility downtown", --Hidden Vault
-	   ["restoration_level_data_crumch_returns"] = "12:50 PM, Shield Mall", --Mallcrasher Ranted
-	   ["restoration_level_data_mansion_stage1"] = "2:13 AM, Sir Elmsworth's Mansion", --Elmsworth Mansion
-	   ["restoration_level_data_skm_nmh"] = "9:12 PM, Mercy Hospital - Roof", --No Mercy SKM
-	   ["restoration_level_data_office_strike"] = "1:57 PM, Downtown FBI Offices", --Office Strike	
-	   ["restoration_level_data_highrise_stage1"] = "1:03 AM, Tremblay's Apartment", --Out of Frame
-	   ["restoration_level_data_constantine_bank_lvl"] = "12:00 PM, Pacific Bank", --Pacific Bank
-	   ["restoration_level_data_sh_raiders"] = "5:16 PM, Outskirts Warehouse", --Safehouse Raiders
-	   ["restoration_level_data_santas_hardware_store"] = "3:47 PM, Hardware Store", --Santa's Hardware Store
-	   ["restoration_level_data_schl"] = "9:57 PM, The Scarlet Club", --Scarlet Club
-	   ["restoration_level_data_skm_wd2_x"] = "6:09 PM, Almendia Logistics Dockyard", --Watchdogs d2 SKM revamp
-	   ["restoration_level_data_Skyscraper"] = "2:13 AM, GenSec Corporate Headquarters", --Skyscraper Heist
-	   ["restoration_level_data_tonisl1"] = "3:31 PM, Harvest & Trustee Bank", --Grand Harvest
-	   ["restoration_level_data_ttr_yct_lvl"] = "2:19 PM, Wei Cheng's Yacht", --Triad Takedown Remastered
-	   ["restoration_level_data_Tonis2"] = "1:31 PM, Harbor Warehouses", --Triple Threat
-	   ["restoration_level_data_trop"] = "11:48 AM, Somewhere Over International Waters", --Tropical Treasure
-	   ["restoration_level_data_Gambling_room"] = "9:29 PM, Twenty Four Seven Store", --Underground Bargains
-	   ["restoration_level_data_finsternis"] = "5:24 PM, Germany - Schwarzwald", --Projekt Finsternis
+	  -- custom heists
+	  ["restoration_level_data_flatline_lvl"] = "10:26 PM, Больница им. Н.И. Пирогова", -- Flatline
+	  ["restoration_level_data_ahopl"] = "9:06 PM, Yuri's Private Club", -- A House of Pleasure
+	  ["restoration_level_data_atocl"] = "7:03 PM, Penthouse Party", -- A Touch of Class
+	  ["restoration_level_data_rusdl"] = "10:23 AM, Garnet Group Jewelery Store", -- Cold Stones
+	  ["restoration_level_data_crimepunishlvl"] = "1:19 PM, Correctional Facility Somewhere in Russia", -- Crime and Punishment
+	  ["restoration_level_data_deadcargol"] = "8:36 PM, Sewers Under The Depot", -- Deadly Cargo
+	  ["restoration_level_data_hunter_party"] = "3:56 PM, Nikolai's Penthouse", -- Hunter and Hunted d1
+	  ["restoration_level_data_hunter_departure"] = "10:13 PM, Aleksandr's Private Airport", -- Hunger and Hunted d2
+	  ["restoration_level_data_hunter_fall"] = "1:36 AM, Somewhere Over International Waters", -- Hunter and Hunted d3
+	  ["restoration_level_data_ruswl"] = "11:50 AM, Somewhere in Russia", -- Scorched Earth
+	  ["restoration_level_data_jambank"] = "11:59 AM, Harvest & Trustee Bank", -- Botched Bank
+	  ["restoration_level_data_2Fort"] = "Overime, Somewhere in Teufort", -- 2fort
+	  ["restoration_level_data_anlh"] = "2:35 PM, Jian Liang's Villa", -- An End to Liang
+	  ["restoration_level_data_lvl_fourmorestores"] = "3:12 PM, Storefronts", -- Four More Stores
+	  ["restoration_level_data_TonCont"] = "11:01 AM, Atrium", -- AT: Atrium
+	  ["restoration_level_data_amsdeal1"] = "9:49 PM, Alleyways", -- Armsdeal Alleyway
+	  ["restoration_level_data_ascension_III"] = "10:53 PM, Eclipse Research Facility", -- Ascension
+	  ["restoration_level_data_hwu"] = "11:03 PM, Avalon Logistics Safehouse", -- Avalon's Shadow
+	  ["restoration_level_data_vrc1"] = "2:35 PM, Downtown District", -- A Very Richie Christmas d1
+	  ["restoration_level_data_vrc2"] = "6:46 PM, Storage Warehouse", -- A Very Richie Christmas d2
+	  ["restoration_level_data_vrc3"] = "11:04 PM, GenSec Tower", -- A Very Richie Christmas d3
+	  ["restoration_level_data_btms"] = "4:40 AM, Nevada - Black Ridge Facility", -- Blackridge Facility
+	  ["restoration_level_data_BloodMoney"] = "8:00 PM, Downtime Offices", -- Blood Money
+	  ["restoration_level_data_brb_rant"] = "6:53 PM, New York, BROOKLYN - Harvest & Trustee Branch Bank", -- Brooklyn Bank Ranted
+	  ["restoration_level_data_lit1"] = "4:20 PM, California Green Store", -- California Heat
+	  ["restoration_level_data_lit2"] = "4:20 PM, Almir's Games Store", -- California Heat - Almir's Games
+	  ["restoration_level_data_dwn1"] = "7:12 PM, California Green depot", -- Deep Inside
+	  ["restoration_level_data_the_factory"] = "9:37 PM, Eclipse Research Facility", -- Eclipse Research Facility
+	  ["restoration_level_data_Election_Funds"] = "10:29 PM, Electoral Headquarter", -- Election Funds
+	  ["restoration_level_data_constantine_mex_level"] = "3:46 PM, Somewhere in Mexico", -- End of an Era
+	  ["restoration_level_data_battlearena"] = "11:14 PM, Georgetown", -- FiveG
+	  ["restoration_level_data_funbank"] = "Something doesn't look right...", -- Funbank
+	  ["restoration_level_data_RogueCompany"] = "8:20 PM, Jackals Territory", -- Rogue Company
+	  ["restoration_level_data_bnktower"] = "TIME CLASSIFIED, GenSec H.I.V.E.", -- GenSec HIVE
+	  ["restoration_level_data_glb"] = "11:19 AM, Golden Lotus Bank", -- Golden Lotus Bank
+	  ["restoration_level_data_constantine_harbor_lvl"] = "9:12 PM, Dockyard Warehouses", -- Harboring a Grudge
+	  ["restoration_level_data_tonmapjam22l"] = "4:49 PM, Harvest & Trustee Bank", -- Hard Cash
+	  ["restoration_level_data_hardware_store"] = "7:36 PM, Hardware Store", -- Hardware Store
+	  ["restoration_level_data_tj_htsb"] = "1:10 PM, Harvest & Trustee Bank", -- H&T Southern Branch
+	  ["restoration_level_data_tj_htsb_escape_level"] = "Escape!", -- H&T Southern Branch escape day? probably unused, dunno
+	  ["restoration_level_data_hntn"] = "9:16 AM, Harvest & Trustee Bank", -- H&T Northern Branch
+	  ["restoration_level_data_hidden_vault"] = "11:08 PM, Kranich facility downtown", -- Hidden Vault
+	  ["restoration_level_data_crumch_returns"] = "12:50 PM, Shield Mall", -- Mallcrasher Ranted
+	  ["restoration_level_data_mansion_stage1"] = "2:13 AM, Sir Elmsworth's Mansion", -- Elmsworth Mansion
+	  ["restoration_level_data_skm_nmh"] = "9:12 PM, Mercy Hospital - Roof", -- No Mercy SKM
+	  ["restoration_level_data_office_strike"] = "1:57 PM, Downtown FBI Offices", -- Office Strike
+	  ["restoration_level_data_highrise_stage1"] = "1:03 AM, Tremblay's Apartment", -- Out of Frame
+	  ["restoration_level_data_constantine_bank_lvl"] = "12:00 PM, Pacific Bank", -- Pacific Bank
+	  ["restoration_level_data_sh_raiders"] = "5:16 PM, Outskirts Warehouse", -- Safehouse Raiders
+	  ["restoration_level_data_santas_hardware_store"] = "3:47 PM, Hardware Store", -- Santa's Hardware Store
+	  ["restoration_level_data_schl"] = "9:57 PM, The Scarlet Club", -- Scarlet Club
+	  ["restoration_level_data_skm_wd2_x"] = "6:09 PM, Almendia Logistics Dockyard", -- Watchdogs d2 SKM revamp
+	  ["restoration_level_data_Skyscraper"] = "2:13 AM, GenSec Corporate Headquarters", -- Skyscraper Heist
+	  ["restoration_level_data_tonisl1"] = "3:31 PM, Harvest & Trustee Bank", -- Grand Harvest
+	  ["restoration_level_data_ttr_yct_lvl"] = "2:19 PM, Wei Cheng's Yacht", -- Triad Takedown Remastered
+	  ["restoration_level_data_Tonis2"] = "1:31 PM, Harbor Warehouses", -- Triple Threat
+	  ["restoration_level_data_trop"] = "11:48 AM, Somewhere Over International Waters", -- Tropical Treasure
+	  ["restoration_level_data_Gambling_room"] = "9:29 PM, Twenty Four Seven Store", -- Underground Bargains
+	  ["restoration_level_data_finsternis"] = "5:24 PM, Germany - Schwarzwald", -- Projekt Finsternis
 
 		["heist_greattrain_name"] = "Time Window",
 		["heist_easystore_name"] = "全年无休",
@@ -489,9 +490,9 @@ Hooks:Add("LocalizationManagerPostInit", "ResHUD_chinese_Localization", function
 		["heist_contact_akashic"] = "尼可",
 
 		["menu_contacts_shatter"] = "CRIMENET成员",
-		
+
 		["heist_contact_jackal_description"] = "胡狼起初为Gensec工作，但很快在一次牵扯到Gensec和OMNIA的人口贩卖事件后辞职。\n\n现在他为CRIMENET效力，将战斗带到它们的地盘上。",
-		
+
 		["heist_contact_akashic_description"] = "曾在赫克特·莫拉莱斯手下工作的高级中尉，尼古拉斯·\"尼可\"·雷内现在指挥着锡那罗亚贩毒集团在美国的残部。\n他们数量较少，因此规模更大的哥伦比亚贩毒集团不愿帮助他们，也不愿改善同CRIMNET的关系。\n\n于是尼可拉拢了在东海岸活动的各种小规模帮派并同CRIMENET结盟，他会提供他的资源以换取CRIME.NET的服务。",
 
 		["bm_msk_shatter_true"] = "刺眼火花",
@@ -708,8 +709,12 @@ Hooks:Add("LocalizationManagerPostInit", "ResHUD_chinese_Localization", function
 		["RestorationModPocoCrimenetScaleDescID"] = "允许您设置CRIMENET尺寸。",
 		["RestorationModVoiceIconTitleID"] = "语音聊天图标",
 	    ["RestorationModVoiceIconDescID"] = "当玩家使用游戏内语音聊天时显示。",
+		["RestorationModNewsFeedStyleTitleID"] = "Alpha Newsfeed Style",
+		["RestorationModNewsFeedStyleDescID"] = "Allows you to choose to show both newsfeed and newheists box or just the newsfeed.",
 		["alpha_assault"] = "早期Alpha类型",
 		["beta_assault"] = "Alpha类型",
+		["show_both"] = "Default",
+		["show_classic_newsfeed"] = "Classic",
 
 		["menu_ingame_manual"] = "大修指南",
 		["menu_ingame_manual_help"] = "阅览关于Restoration大修的指南。",
@@ -874,7 +879,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResHUD_chinese_Localization", function
 		["ch_watchdogs_d1_heavy_wpn1_hl"] = "HEAVY ARMOR, AND HEAVIER WEAPONS",
 		["ch_watchdogs_d1_heavy_wpn1"] = "Complete day one of the WATCHDOGS job, wearing an ICTV and using miniguns, the Thanatos sniper, or RPG's only, on the OVERKILL difficulty or above.  You must have played from the start of the heist to complete this challenge.",
 
-		
+
 		["test_net"] = "Fast.Net",
 		["menu_test"] = "",
 		["state_filter"] = "状态",
@@ -886,27 +891,27 @@ Hooks:Add("LocalizationManagerPostInit", "ResHUD_chinese_Localization", function
 
 		["hud_instruct_mask_on"] = "按下 $BTN_USE_ITEM 戴上面具",
 		["hud_instruct_mask_on_alpha"] = "按下 $BTN_USE_ITEM 戴上面具",
-		
+
 		-- ///Stuff ripped from the various locale files we had ///
-		
+
 		--Halloween Dozer Sword
 		["bm_melee_halloween_sword"] = "无头熊之剑",
 		["menu_l_global_value_halloween_sword"] = "这是一件Halloween 2013物品！",
-		
+
 		--S&W .500
 		["bm_w_shatters_fury"] = "Phoenix .500左轮手枪",
-		
+
 		["bm_wp_wpn_fps_pis_shatters_fury_b_comp1"] = "荷鲁斯枪管",
 		["bm_wp_wpn_fps_pis_shatters_fury_b_comp2"] = "粉碎枪管",
 		["bm_wp_wpn_fps_pis_shatters_fury_b_long"] = "哈索尔枪管",
 		["bm_wp_wpn_fps_pis_shatters_fury_b_short"] = "火鸟枪管",
-		
+
 		["bm_wp_wpn_fps_pis_shatters_fury_g_ergo"] = "人体工学握把",
-		
+
 		["bm_wp_wpn_fps_pis_shatters_fury_body_smooth"] = "丝滑弹巢",
 
 		["menu_l_global_value_shatters_fury"] = "这是一件VERITAS物品！",
-		
+
 		--MK-23
 		--Semi-automatic pistol. Hold down ■ to aim. Release to fire.
 		["bm_w_socom"] = "Anubis .45手枪",
@@ -920,44 +925,44 @@ Hooks:Add("LocalizationManagerPostInit", "ResHUD_chinese_Localization", function
 
 		["heist_nmh_res_name"] = "仁慈医院",
 		["heist_nmh_res_brief"] = "我们的客户要一个在仁慈医院隔离病房的患者的血样。你进到医院，弄掉监控、控制平民，然后把我接到患者数据库这样我就能找到这个人。就这个地方的安保水平而言，这会是一次干净利落的工作。等你们干完我就从屋顶把你们弄走。这一票有点可疑，经过一些有较重军事企业影子公司味道的第三方斡旋，但这值得冒险。报酬是我们将来需要的东西，再加上一笔可观的酬金。",
-		
+
 		["heist_nmh_new"] = "抽取并化验患者血液",
 		["heist_nmh_new_desc"] = "你需要找到一台离心机来化验血液样本。",
-		
+
 		["heist_nmh_new2"] = "呼叫电梯",
 		["heist_nmh_new2_desc"] = "按下按钮，等待电梯",
-		
+
 		["heist_nmh_new3"] = "呼叫电梯",
-		["heist_nmh_new3_desc"] = "按下按钮，等待电梯",	
-		
+		["heist_nmh_new3_desc"] = "按下按钮，等待电梯",
+
 		--OICW--
 		["bm_w_osipr"] = "SABR",
 		["bm_w_osipr_gl"] = "SABR榴弹发射器",
-		
+
 		--GO Bank remastered
 		["menu_nh_mod_gobank_v2"] = "GO银行重制版",
-		
+
 		["heist_gobank_v2_name"] = "GO银行重制版",
 		["heist_gobank_v2_brief"] = "这算是场经典银行劫案。流程跟以往基本一致：设法弄开金库大门，撬开或锯开保险箱，然后拿东西走人。简直不能再简单。从贝恩所获取的情报来看，这家分行的被劫率为全国最低，现在轮到你们来打脸了。\n\n»寻找钥匙卡，需要两张卡来打开金库大门\n»如不慎触发警报，就使用钻机钻开大门\n»撬开或锯开保险箱\n»组装好笼子和钩索\n»拿钱走人",
-		
+
 		["heist_roberts_v2_name"] = "罗伯特银行",
 		["heist_roberts_v2_brief"] = "这里有家银行。并不算太大，不过我听说这的金库里存有大量现金，国际外汇什么的。\n\n总之你们知道该怎么做——看你们了。悄悄溜进去，或者大闹一通。不管哪种方法，我都有办法把钱运走。你们到时候就会明白了，你们绝对会为我的机智所折服。",
 
 		["csgo_plane_timer_text"] = "等待飞机&&TIMER",
 		["csgo_plane_timer_desc"] = "等待飞机&&TIMER",
-		
+
 		["hud_equipment_pickup_spraycan"] = "按$BTN_INTERACT捡起喷罐",
 		["hud_action_spraypaint"] = "按$BTN_INTERACT喷涂",
 		["hud_action_spraypaint_none"] = "需要喷罐",
 		["spraycan_obtained"] = "已取得喷罐",
 		["hud_equipment_obtained_spraycan"] = "已取得喷罐",
-		
+
 		["trophy_csgo01"] = "涂鸦盒",
 		["trophy_csgo01_desc"] = "你甚至不需要买这个",
 		["trophy_csgo01_objective"] = "找到喷罐并在\"GO银行重制版\"的金库里喷涂鸦。",
 
-		["END"] = "END",	
-		
+		["END"] = "END",
+
 		--Whurr Heat Street Edit
 		["heist_heat_street_new_name"] = "热火街头经典·真",
 		["heist_heat_street_new_brief"] = "有人说世事无常，但这一单看起来真的很容易：进去，拿公文包，出来。你可靠的司机马特会在小巷里等你而且只要你到了撤离车你就不可能失败。可能失败吗？",
@@ -968,7 +973,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResHUD_chinese_Localization", function
 		["heist_skm_heat_street_name"] = "住宅区-英克韦尔工业区",
 		["heist_skm_heat_street_brief"] = "条子最近审问了一个声称曾看见过贝恩的脸而且可以认出他的囚犯。我们知道这不是真的，但条子们不知道，我们的对手也不知道，所以我们就用这个机会捞些钱。在警察转移他到靠近那个想逃走的傻逼马特撞了他的车的旧工厂仓库区的证人保护屋时，拦下他们。",
 		["heist_skm_street_name"] = "遭遇战：住宅区-英克韦尔工业区",
-		["heist_skm_street_brief"] = "条子最近审问了一个声称曾看见过贝恩的脸而且可以认出他的囚犯。我们知道这不是真的，但条子们不知道，我们的对手也不知道，所以我们就用这个机会捞些钱。在警察转移他到靠近那个想逃走的傻逼马特撞了他的车的旧工厂仓库区的证人保护屋时，拦下他们。",	
+		["heist_skm_street_brief"] = "条子最近审问了一个声称曾看见过贝恩的脸而且可以认出他的囚犯。我们知道这不是真的，但条子们不知道，我们的对手也不知道，所以我们就用这个机会捞些钱。在警察转移他到靠近那个想逃走的傻逼马特撞了他的车的旧工厂仓库区的证人保护屋时，拦下他们。",
 
 		--Xmas Hoxout and Breaking Feds
 		["heist_xmn_hox"] = "霍斯顿越狱记圣诞版",
@@ -977,7 +982,7 @@ Hooks:Add("LocalizationManagerPostInit", "ResHUD_chinese_Localization", function
 		["heist_xmn_hox2"] = "证物搜寻圣诞版",
 		["heist_xmn_hox_2_brief"] = "好啊，姑娘小伙们，感谢你们把爷从那救出来，但打一开始老子就不该进去。是有人下了套，我非常肯定。他们不应该会了解那么多，傻帽条子做事不可能有那么精明。我们中有内鬼，有人想搞死我。而我一定要找出来是谁。这可不是简单的活，但不入虎穴焉得虎子对吧？别跟我说什么要靠秘密交易或者合约之类的废话，我们要直捣黄龙，去联邦干预局最大的安乐窝。老子要看看到底是谁搞的我。",
 		["heist_xmn_hox_brief"] = "牙医为霍斯顿安排了一次重新审判，而我们可以在听证会结束之后的半路上把他救出来。计划听起来就很火爆：我们把法院的墙炸开，带上老霍撤退。$NL;$NL;»救出霍斯顿$NL;$NL;»将霍斯顿带上武装卡车$NL;$NL;»护送武装卡车前进$NL;$NL;»与霍斯顿一同撤离",
-		
+
 		["heist_xmn_tag_name"] = "虎口夺食圣诞版"
 	})
 end)

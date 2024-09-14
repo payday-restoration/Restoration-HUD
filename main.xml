@@ -6,7 +6,7 @@
     </Classes>
 	<ScriptMods directory="scriptdata/menus">
 		<mod file="start_menu.xml" type="custom_xml" target_file="gamedata/menus/start_menu" target_type="menu" merge_mode="script_merge"/>
-	</ScriptMods>	
+	</ScriptMods>
     <Hooks directory="lua">
 		<!--///RESTORATION HUD & UI\\\-->
 	    <hook file="tweak_data/tweakdata.lua" source_file="lib/tweak_data/tweakdata"/>
@@ -45,7 +45,7 @@
 		<hook file="managers/UserManager.lua" source_file="lib/managers/usermanager"/>
 		<hook file="managers/musicmanager.lua" source_file="lib/managers/musicmanager"/>
 		<hook file="managers/hud/HUDArmorFix.lua" source_file="lib/managers/hud/HUDTeammate"/>
-		
+
 		<hook file="tweak_data/assetstweakdata.lua" source_file="lib/tweak_data/assetstweakdata"/>
 		<hook file="tweak_data/interactiontweakdata.lua" source_file="lib/tweak_data/interactiontweakdata"/>
 		<hook file="managers/menumanagerpd2.lua" source_file="lib/managers/menumanagerpd2"/>
@@ -106,6 +106,7 @@
 						<option type="bool" default_value="false" name="Profile"/>
 						<option type="bool" default_value="false" name="Crimenet"/>
 						<option type="bool" default_value="false" name="Newsfeed"/>
+						<option type="multichoice" default_value="1" name="NewsFeedStyle" values_tbl="restoration.newsfeed_style"/>
 						<option type="bool" default_value="false" name="DifficultyMarkers"/>
 						<option type="bool" default_value="false" name="BlackScreen"/>
 						<option type="bool" default_value="false" name="Loadouts"/>
