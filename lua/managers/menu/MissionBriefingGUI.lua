@@ -390,7 +390,7 @@ if restoration.Options:GetValue("HUD/UI/Loadouts") then
 				color = tweak_data.screen_colors.button_stage_3
 			})
 
-			self.buy_all_button:set_top(-3)
+			self.buy_all_button:set_top(4.5)
 			self.buy_all_button:set_right(self._panel:w() - 5)
 		end
 	end
